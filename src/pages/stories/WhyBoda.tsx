@@ -15,7 +15,7 @@ const WhyBoda = () => {
             </Link>
           </div>
 
-          <h1 className="text-4xl font-bold text-foreground mb-4">Why Boda?</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-4">Why the name Boda?</h1>
           <p className="text-xl text-muted-foreground mb-12">The Boda Boda Name: A Timeline</p>
 
           <div className="space-y-12">
@@ -74,7 +74,10 @@ const WhyBoda = () => {
               At its heart, the boda-boda has always been about one thing: connection.
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              It connects people to places, goods to markets, and ambition to opportunity. It’s the thread that weaves through the urban and rural landscapes of Uganda. That same spirit is the driving force behind our name, Boda.
+              It connects people to places, goods to markets, and ambition to opportunity. It’s the thread that weaves through the urban and rural landscapes of Uganda.
+            </p>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              That same spirit is the driving force behind our name, Boda.
             </p>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Our mission is to Discover Uganda Like Never Before. Just like boda-bodas connect people across Uganda, we connect you to the rich tapestry of traditions, stories, and heritage that make this country extraordinary. We are your ride into the heart of the Pearl of Africa.

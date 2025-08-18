@@ -13,7 +13,7 @@ const storiesData = [
     image: "/src/assets/kintu-nambi-story.jpg",
   },
   {
-    title: "Why Boda?",
+    title: "Why the name Boda?",
     description: "The origin story of the boda-boda, from border-crossing bicycles to urban icons.",
     date: "2024-01-02",
     href: "/stories/why-boda",
