@@ -53,7 +53,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Link to="/tribes">
                   <BodaButton variant="secondary" size="lg">
-                    Explore Tribes
+                    Explore Culture
                   </BodaButton>
                 </Link>
                 <BodaButton variant="ghost" size="lg" className="flex items-center gap-2">
