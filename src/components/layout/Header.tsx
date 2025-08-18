@@ -1,19 +1,27 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
-    { name: "Home", href: "/" },
+  const exploreLinks = [
     { name: "Guides", href: "/tribes" },
     { name: "Etiquette", href: "/blog/etiquette-starter" },
     { name: "Stories", href: "/stories/kintu-and-nambi" },
     { name: "Food", href: "/food/luwombo" },
-    { name: "Book", href: "/book" },
+  ];
+
+  const navigation = [
+    { name: "The Book", href: "/book" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -35,22 +43,33 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-accent boda-underline ${
-                    isActive(item.href)
-                      ? "text-foreground"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
+                Explore <ChevronDown className="h-4 w-4 ml-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {exploreLinks.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.href}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3 py-2 text-sm font-medium transition-colors hover:text-accent boda-underline ${
+                  isActive(item.href)
+                    ? "text-foreground"
+                    : "text-muted-foreground"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Desktop Actions */}
@@ -58,8 +77,8 @@ const Header = () => {
             <Button variant="ghost" size="sm">
               <Search className="h-4 w-4" />
             </Button>
-            <Link to="/preorder">
-              <Button className="btn-primary">Pre-order</Button>
+            <Link to="/book">
+              <Button className="btn-primary">The Book</Button>
             </Link>
           </div>
 
@@ -82,6 +101,20 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
+              {exploreLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${
+                    isActive(item.href)
+                      ? "text-foreground bg-muted"
+                      : "text-muted-foreground"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -97,8 +130,8 @@ const Header = () => {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-border">
-                <Link to="/preorder" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full btn-primary">Pre-order</Button>
+                <Link to="/book" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full btn-primary">The Book</Button>
                 </Link>
               </div>
             </div>
