@@ -27,10 +27,10 @@ const Preorder = () => {
     },
     {
       id: "traveler",
-      name: "Traveler Edition", 
+      name: "Travel Guide",
       description: "Pocket-friendly guide for explorers",
       features: ["Compact size", "Essential insights", "Travel-ready", "Quick reference"],
-      badge: "Most Popular"
+      badge: "Getting Around"
     },
     {
       id: "children",
