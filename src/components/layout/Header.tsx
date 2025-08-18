@@ -20,7 +20,7 @@ const Header = () => {
   ];
 
   const navigation = [
-    { name: "Stories", href: "/stories/kintu-and-nambi" },
+    { name: "Stories", href: "/stories" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
