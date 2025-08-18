@@ -81,8 +81,42 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile Navigation */}
+          <div className="flex items-center md:hidden space-x-2 sm:space-x-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
+                Culture <ChevronDown className="h-4 w-4 ml-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {cultureLinks.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.href}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-2 py-1 sm:px-3 sm:py-2 text-sm font-medium transition-colors hover:text-accent boda-underline ${
+                  isActive(item.href)
+                    ? "text-foreground"
+                    : "text-muted-foreground"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+
+            <Link to="/preorder">
+              <Button size="sm" className="btn-primary">Preorder</Button>
+            </Link>
+          </div>
+
+          {/* Mobile menu button (hidden but kept for potential future use) */}
+          <div className="md:hidden hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -96,9 +130,9 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation (hidden but kept for potential future use) */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-muted-foreground rounded-md hover:text-accent hover:bg-muted">
@@ -137,8 +171,8 @@ const Header = () => {
         )}
       </nav>
 
-      {/* Mobile Bottom Navigation (Sticky) */}
-      <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border md:hidden z-50">
+      {/* Mobile Bottom Navigation (Sticky - hidden) */}
+      <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border md:hidden z-50 hidden">
         <div className="flex justify-around items-center h-16 px-4">
           <Link to="/" className="flex flex-col items-center justify-center">
             <span className={`text-xs ${isActive("/") ? "text-accent" : "text-muted-foreground"}`}>
