@@ -7,9 +7,9 @@ import heroBodaRider from "@/assets/hero-boda-rider.jpg";
 
 const Home = () => {
   const quickPathCards = [
+    { title: "Why Boda?", description: "The origin story of the boda-boda", href: "/stories/why-boda" },
     { title: "Before You Go", description: "Essential preparation tips", href: "/blog/etiquette-starter" },
     { title: "Greetings & Respect", description: "Cultural etiquette guide", href: "/blog/etiquette-starter" },
-    { title: "How to Ride a Boda", description: "Transportation basics", href: "/experiences" },
     { title: "Food You Must Try", description: "Culinary highlights", href: "/food/luwombo" },
     { title: "Stories in 60s", description: "Quick cultural insights", href: "/stories/kintu-and-nambi" },
     { title: "Packing & Dress", description: "What to wear and bring", href: "/attire/gomesi" },
@@ -53,7 +53,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Link to="/tribes">
                   <BodaButton variant="secondary" size="lg">
-                    Explore Tribes
+                    Explore Culture
                   </BodaButton>
                 </Link>
                 <BodaButton variant="ghost" size="lg" className="flex items-center gap-2">

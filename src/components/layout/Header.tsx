@@ -1,19 +1,26 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
-    { name: "Home", href: "/" },
+  const cultureLinks = [
     { name: "Guides", href: "/tribes" },
     { name: "Etiquette", href: "/blog/etiquette-starter" },
-    { name: "Stories", href: "/stories/kintu-and-nambi" },
     { name: "Food", href: "/food/luwombo" },
-    { name: "Book", href: "/book" },
+  ];
+
+  const navigation = [
+    { name: "Stories", href: "/stories" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -35,22 +42,33 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-accent boda-underline ${
-                    isActive(item.href)
-                      ? "text-foreground"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
+                Culture <ChevronDown className="h-4 w-4 ml-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {cultureLinks.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.href}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3 py-2 text-sm font-medium transition-colors hover:text-accent boda-underline ${
+                  isActive(item.href)
+                    ? "text-foreground"
+                    : "text-muted-foreground"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Desktop Actions */}
@@ -59,7 +77,7 @@ const Header = () => {
               <Search className="h-4 w-4" />
             </Button>
             <Link to="/preorder">
-              <Button className="btn-primary">Pre-order</Button>
+              <Button className="btn-primary">Preorder</Button>
             </Link>
           </div>
 
@@ -82,6 +100,19 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-muted-foreground rounded-md hover:text-accent hover:bg-muted">
+                  Culture <ChevronDown className="h-4 w-4 ml-1" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {cultureLinks.map((item) => (
+                    <DropdownMenuItem key={item.name} asChild>
+                      <Link to={item.href} onClick={() => setIsMenuOpen(false)}>{item.name}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -98,7 +129,7 @@ const Header = () => {
               ))}
               <div className="mt-4 pt-4 border-t border-border">
                 <Link to="/preorder" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full btn-primary">Pre-order</Button>
+                  <Button className="w-full btn-primary">Preorder</Button>
                 </Link>
               </div>
             </div>
@@ -116,16 +147,12 @@ const Header = () => {
           </Link>
           <Link to="/tribes" className="flex flex-col items-center justify-center">
             <span className={`text-xs ${isActive("/tribes") ? "text-accent" : "text-muted-foreground"}`}>
-              Guides
+              Culture
             </span>
           </Link>
-          <button className="flex flex-col items-center justify-center">
-            <Search className="h-5 w-5 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">Search</span>
-          </button>
-          <Link to="/join" className="flex flex-col items-center justify-center">
-            <span className={`text-xs ${isActive("/join") ? "text-accent" : "text-muted-foreground"}`}>
-              Join
+          <Link to="/preorder" className="flex flex-col items-center justify-center">
+            <span className={`text-xs ${isActive("/preorder") ? "text-accent" : "text-muted-foreground"}`}>
+              Preorder
             </span>
           </Link>
         </div>
