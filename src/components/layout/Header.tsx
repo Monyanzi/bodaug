@@ -20,7 +20,7 @@ const Header = () => {
   ];
 
   const navigation = [
-    { name: "Stories", href: "/stories/kintu-and-nambi" },
+    { name: "Stories", href: "/stories" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -150,10 +150,6 @@ const Header = () => {
               Culture
             </span>
           </Link>
-          <button className="flex flex-col items-center justify-center" onClick={() => alert("Search functionality to be implemented")}>
-            <Search className="h-5 w-5 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">Search</span>
-          </button>
           <Link to="/preorder" className="flex flex-col items-center justify-center">
             <span className={`text-xs ${isActive("/preorder") ? "text-accent" : "text-muted-foreground"}`}>
               Preorder
