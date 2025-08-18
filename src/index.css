@@ -149,14 +149,14 @@
   .boda-card {
     @apply bg-card border border-border rounded-lg;
     @apply hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5;
-    @apply transition-all duration-180 ease-out;
+    @apply transition-all duration-200 ease-out;
   }
   
   /* Boda Chips/Filters */
   .boda-chip {
     @apply px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-medium;
     @apply hover:bg-accent hover:text-accent-foreground;
-    @apply transition-all duration-120 ease-out;
+    @apply transition-all duration-150 ease-out;
   }
   
   .boda-chip.active {
