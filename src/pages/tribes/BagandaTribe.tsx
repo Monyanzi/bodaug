@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Crown, MapPin, Users, Book, Utensils, Shirt, Home } from "lucide-react";
+import bagandaTribeImage from "@/assets/baganda-tribe.jpg";
 
 const BagandaTribe = () => {
   const relatedContent = [
@@ -27,11 +28,19 @@ const BagandaTribe = () => {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto mb-12">
           <div className="relative rounded-lg overflow-hidden mb-8">
-            <div className="aspect-video bg-gradient-to-br from-accent/30 to-muted flex items-center justify-center">
-              <div className="text-center">
-                <Crown className="h-16 w-16 text-accent mx-auto mb-4" />
-                <h1 className="text-5xl font-bold text-foreground mb-2">Baganda</h1>
-                <p className="text-xl text-muted-foreground">The Kingdom Builders</p>
+            <div className="aspect-video relative">
+              <img 
+                src={bagandaTribeImage} 
+                alt="Baganda people in traditional dress" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <Crown className="h-16 w-16 text-yellow-400 mx-auto mb-4" />
+                  <h1 className="text-5xl font-bold mb-2">Baganda</h1>
+                  <p className="text-xl">The Kingdom Builders</p>
+                </div>
               </div>
             </div>
           </div>

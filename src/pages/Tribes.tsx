@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Users, MapPin, Filter } from "lucide-react";
+import tribesCollageImage from "@/assets/uganda-tribes-collage.jpg";
 
 const Tribes = () => {
   const tribes = [
@@ -87,14 +88,24 @@ const Tribes = () => {
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            Uganda's Cultural Tapestry
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover the diverse tribes that make Uganda extraordinary. Each community brings unique traditions, wisdom, and stories that have shaped the nation for centuries.
-          </p>
+        {/* Hero Section */}
+        <div className="relative py-16 md:py-20 rounded-xl mb-12 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={tribesCollageImage} 
+              alt="Diverse Ugandan tribes and cultures" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          </div>
+          <div className="relative z-10 text-center text-white px-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Uganda's Cultural Tapestry
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Discover the diverse tribes that make Uganda extraordinary. Each community brings unique traditions, wisdom, and stories that have shaped the nation for centuries.
+            </p>
+          </div>
         </div>
 
         {/* Filters */}

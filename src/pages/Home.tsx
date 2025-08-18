@@ -3,6 +3,7 @@ import { BodaButton } from "@/components/ui/boda-button";
 import PreorderModule from "@/components/PreorderModule";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, ArrowRight } from "lucide-react";
+import heroBodaRider from "@/assets/hero-boda-rider.jpg";
 
 const Home = () => {
   const quickPathCards = [
@@ -26,19 +27,26 @@ const Home = () => {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background gradient - simulating golden hour */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-background to-muted"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroBodaRider} 
+            alt="Boda rider at golden hour in Uganda" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+        </div>
         
         {/* Hero content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column - Main content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Discover Uganda Like Never Before
               </h1>
               
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
+              <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl">
                 Just like boda-bodas connect people across Uganda, we connect you to the rich tapestry of traditions, stories, and heritage that make Uganda extraordinary.
               </p>
               

@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Book, Users, GraduationCap, Briefcase, Baby } from "lucide-react";
+import bookSeriesImage from "@/assets/boda-book-series.jpg";
 
 const BookPage = () => {
   const editions = [
@@ -66,26 +67,36 @@ const BookPage = () => {
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            The Boda Book Series
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-            From a luxury Definitive Edition to a pocket-friendly Traveler's Edition, a joyful Children's Book, 
-            a rigorous Scholar Edition, and a focused Investor Guide — one master knowledge base, many beautiful books.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/preorder">
-              <BodaButton variant="primary" size="lg">
-                Pre-order Any Edition
-              </BodaButton>
-            </Link>
-            <Link to="/tribes">
-              <BodaButton variant="secondary" size="lg">
-                Explore Content Preview
-              </BodaButton>
-            </Link>
+        {/* Hero Section */}
+        <div className="relative py-16 md:py-20 rounded-xl mb-16 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={bookSeriesImage} 
+              alt="Boda Book Series collection" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          </div>
+          <div className="relative z-10 text-center text-white px-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              The Boda Book Series
+            </h1>
+            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-6">
+              From a luxury Definitive Edition to a pocket-friendly Traveler's Edition, a joyful Children's Book, 
+              a rigorous Scholar Edition, and a focused Investor Guide — one master knowledge base, many beautiful books.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/preorder">
+                <BodaButton variant="primary" size="lg">
+                  Pre-order Any Edition
+                </BodaButton>
+              </Link>
+              <Link to="/tribes">
+                <BodaButton variant="secondary" size="lg">
+                  Explore Content Preview
+                </BodaButton>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -194,7 +205,7 @@ const BookPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/preorder">
-              <BodaButton variant="hero" size="lg">
+              <BodaButton variant="primary" size="lg">
                 Pre-order Now
               </BodaButton>
             </Link>

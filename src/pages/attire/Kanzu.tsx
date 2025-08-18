@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Shirt, Calendar, Users, MapPin, ArrowLeft, Crown } from "lucide-react";
+import kanzuImage from "@/assets/kanzu-traditional.jpg";
 
 const Kanzu = () => {
   return (
@@ -24,14 +25,24 @@ const Kanzu = () => {
           </Link>
 
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Crown className="h-8 w-8 text-accent" />
+          <div className="relative py-16 md:py-20 rounded-xl mb-8 overflow-hidden">
+            <div className="absolute inset-0">
+              <img 
+                src={kanzuImage} 
+                alt="Traditional Ugandan Kanzu robe" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
             </div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Kanzu</h1>
-            <p className="text-xl text-muted-foreground">
-              The distinguished traditional robe of Baganda men
-            </p>
+            <div className="relative z-10 text-center text-white px-8">
+              <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Crown className="h-8 w-8 text-yellow-400" />
+              </div>
+              <h1 className="text-4xl font-bold mb-4">Kanzu</h1>
+              <p className="text-xl">
+                The distinguished traditional robe of Baganda men
+              </p>
+            </div>
           </div>
 
           {/* Main Content */}
