@@ -1,40 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Boda Design System - Uganda Flag-Inspired Palette */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - Flag-inspired palette */
+    --background: 0 0% 100%; /* White #FFFFFF */
+    --foreground: 0 0% 0%; /* Black #000000 */
+
+    /* Boda Brand Colors */
+    --boda-black: 0 0% 0%; /* #000000 */
+    --boda-yellow: 51 100% 50%; /* #FFD100 */
+    --boda-red: 357 75% 47%; /* #D21F26 */
+    --boda-white: 0 0% 100%; /* #FFFFFF */
+    
+    /* Grays derived from black */
+    --boda-ink: 0 0% 7%; /* #111111 */
+    --boda-subheads: 0 0% 20%; /* #333333 */
+    --boda-hairlines: 0 0% 93%; /* #EDEDED */
+    --boda-alt-bg: 0 0% 97%; /* #F7F7F7 */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 0%; /* Black for primary text/surfaces */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 97%; /* Alt background */
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 93%; /* Hairlines */
+    --muted-foreground: 0 0% 20%; /* Subheads */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 51 100% 50%; /* Yellow accent */
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 357 75% 47%; /* Red for errors only */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 93%; /* Hairlines */
+    --input: 0 0% 93%;
+    --ring: 51 100% 50%; /* Yellow focus rings */
 
     --radius: 0.5rem;
 
@@ -92,14 +105,105 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Typography - Inter font system */
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv08", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground font-medium;
+  }
+  
+  h1 { @apply text-5xl leading-tight; } /* 48-56px */
+  h2 { @apply text-4xl leading-tight; } /* 36-40px */
+  h3 { @apply text-3xl leading-tight; } /* 28-32px */
+  
+  p, body {
+    @apply text-lg leading-relaxed; /* 18-20px, line-height 1.6 */
+  }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  /* Boda Button Variants */
+  .btn-primary {
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium;
+    @apply hover:shadow-md hover:shadow-black/10 hover:border hover:border-primary;
+    @apply transition-all duration-150 ease-out;
   }
-
-  body {
-    @apply bg-background text-foreground;
+  
+  .btn-secondary {
+    @apply bg-background text-foreground border border-primary px-6 py-3 rounded-lg font-medium;
+    @apply hover:border-2 hover:border-primary;
+    @apply transition-all duration-150 ease-out;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-foreground px-6 py-3 rounded-lg font-medium;
+    @apply hover:bg-muted;
+    @apply transition-all duration-150 ease-out;
+  }
+  
+  /* Boda Cards */
+  .boda-card {
+    @apply bg-card border border-border rounded-lg;
+    @apply hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5;
+    @apply transition-all duration-180 ease-out;
+  }
+  
+  /* Boda Chips/Filters */
+  .boda-chip {
+    @apply px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-medium;
+    @apply hover:bg-accent hover:text-accent-foreground;
+    @apply transition-all duration-120 ease-out;
+  }
+  
+  .boda-chip.active {
+    @apply bg-accent text-accent-foreground border-b border-b-destructive;
+  }
+  
+  /* Boda Form Elements */
+  .boda-input {
+    @apply w-full px-4 py-3 bg-background border border-border rounded-lg;
+    @apply text-foreground placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent;
+    @apply transition-all duration-150 ease-out;
+    min-height: 48px; /* Accessibility requirement */
+  }
+  
+  /* Boda Dividers */
+  .boda-divider {
+    @apply w-full h-px bg-border;
+  }
+  
+  .boda-divider-accent {
+    @apply w-full h-px bg-destructive;
+  }
+  
+  /* Boda Underline Animation */
+  .boda-underline {
+    @apply relative;
+  }
+  
+  .boda-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-destructive;
+    @apply scale-x-0 origin-bottom-right;
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .boda-underline:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+  
+  /* Success state for forms */
+  .boda-success {
+    @apply bg-accent/10 text-foreground border border-accent/20;
+  }
+  
+  /* Alt section backgrounds */
+  .boda-alt-section {
+    @apply bg-secondary;
   }
 }

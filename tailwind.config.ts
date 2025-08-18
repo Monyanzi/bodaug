@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +55,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'boda-black': 'hsl(var(--boda-black))',
+				'boda-yellow': 'hsl(var(--boda-yellow))',
+				'boda-red': 'hsl(var(--boda-red))',
+				'boda-white': 'hsl(var(--boda-white))',
+				'boda-ink': 'hsl(var(--boda-ink))',
+				'boda-subheads': 'hsl(var(--boda-subheads))',
+				'boda-hairlines': 'hsl(var(--boda-hairlines))',
+				'boda-alt-bg': 'hsl(var(--boda-alt-bg))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
