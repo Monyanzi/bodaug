@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -83,7 +84,11 @@ const Tribes = () => {
   ];
 
   const regions = ["All", "Central", "Eastern", "Northern", "Western"];
-  const selectedRegion = "All";
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredTribes = activeFilter === 'All'
+    ? tribes
+    : tribes.filter(tribe => tribe.region === activeFilter);
 
   return (
     <div className="min-h-screen py-12">
@@ -118,7 +123,8 @@ const Tribes = () => {
             {regions.map((region) => (
               <button
                 key={region}
-                className={`boda-chip ${selectedRegion === region ? 'active' : ''}`}
+                onClick={() => setActiveFilter(region)}
+                className={activeFilter === region ? 'boda-chip-active' : 'boda-chip'}
               >
                 {region}
               </button>
@@ -128,7 +134,7 @@ const Tribes = () => {
 
         {/* Tribes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {tribes.map((tribe, index) => (
+          {filteredTribes.map((tribe, index) => (
             <Link key={index} to={tribe.href} className="group">
               <Card className="boda-card h-full overflow-hidden">
                 {tribe.featured && (
