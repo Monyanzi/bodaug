@@ -15,6 +15,7 @@ import Kanzu from "./pages/attire/Kanzu";
 import BarkCloth from "./pages/materials/BarkCloth";
 import Mukasa from "./pages/names/Mukasa";
 import Luwombo from "./pages/food/Luwombo";
+import RolexPage from './pages/food/RolexPage';
 import KintuAndNambi from "./pages/stories/KintuAndNambi";
 import WhyBoda from "./pages/stories/WhyBoda";
 import Stories from "./pages/Stories";
@@ -54,6 +55,7 @@ const App = () => (
               <Route path="/materials/bark-cloth" element={<BarkCloth />} />
               <Route path="/names/mukasa" element={<Mukasa />} />
               <Route path="/food/luwombo" element={<Luwombo />} />
+              <Route path="/food/rolex" element={<RolexPage />} />
               <Route path="/stories/kintu-and-nambi" element={<KintuAndNambi />} />
               <Route path="/stories/why-boda" element={<WhyBoda />} />
               <Route path="/stories" element={<Stories />} />
