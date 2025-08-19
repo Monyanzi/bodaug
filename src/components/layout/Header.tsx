@@ -14,9 +14,11 @@ const Header = () => {
   const location = useLocation();
 
   const cultureLinks = [
-    { name: "Guides", href: "/tribes" },
-    { name: "Etiquette", href: "/blog/etiquette-starter" },
-    { name: "Food", href: "/food/luwombo" },
+    { name: "Tribes", href: "/tribes" },
+    { name: "Attire", href: "/attire" },
+    { name: "Food", href: "/food" },
+    { name: "Materials", href: "/materials" },
+    { name: "Names", href: "/names" },
   ];
 
   const navigation = [
