@@ -27,6 +27,10 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
+import AttireIndexPage from "./pages/AttireIndexPage";
+import FoodIndexPage from "./pages/FoodIndexPage";
+import MaterialsIndexPage from "./pages/MaterialsIndexPage";
+import NamesIndexPage from "./pages/NamesIndexPage";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +64,10 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/attire" element={<AttireIndexPage />} />
+              <Route path="/food" element={<FoodIndexPage />} />
+              <Route path="/materials" element={<MaterialsIndexPage />} />
+              <Route path="/names" element={<NamesIndexPage />} />
               <Route path="/privacy" element={<Privacy />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

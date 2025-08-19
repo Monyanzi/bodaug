@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Bark Cloth",
+    "link": "/materials/bark-cloth",
+    "icon": "fabric-icon",
+    "metadata": { "Tribe": "Baganda", "Use": "Textiles" },
+    "teaser": "An ancient craft of creating cloth from tree bark.",
+    "detail": "Recognized by UNESCO as a masterpiece of oral and intangible heritage."
+  },
+  {
+    "title": "Cowrie Shells",
+    "link": "/materials/cowrie-shells",
+    "icon": "shell-icon",
+    "metadata": { "Use": "Currency, Adornment", "Region": "Various" },
+    "teaser": "Once used as a form of currency, now used in crafts.",
+    "detail": "Symbolizes wealth, spirituality, and fertility."
+  }
+]

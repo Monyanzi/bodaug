@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Gomesi",
+    "link": "/attire/gomesi",
+    "icon": "dress-icon",
+    "metadata": { "Tribe": "Baganda", "Occasion": "Ceremony" },
+    "teaser": "A symbol of elegance and modesty in formal ceremonies.",
+    "detail": "Characterized by its pointed shoulders and floor-length sash."
+  },
+  {
+    "title": "Kanzu",
+    "link": "/attire/kanzu",
+    "icon": "shirt-icon",
+    "metadata": { "Tribe": "Baganda", "Gender": "Men" },
+    "teaser": "A dignified, simple garment worn for formal events.",
+    "detail": "Often worn with a modern suit jacket."
+  }
+]
