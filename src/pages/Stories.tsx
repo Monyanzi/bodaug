@@ -51,13 +51,13 @@ const StoriesPage = () => {
 
         <div className="flex justify-center gap-4 mb-8">
           <Button
-            variant={sortOrder === "date" ? "primary" : "secondary"}
+            variant={sortOrder === "date" ? "default" : "secondary"}
             onClick={() => sortStories("date")}
           >
             Sort by Latest
           </Button>
           <Button
-            variant={sortOrder === "name" ? "primary" : "secondary"}
+            variant={sortOrder === "name" ? "default" : "secondary"}
             onClick={() => sortStories("name")}
           >
             Sort by Name
