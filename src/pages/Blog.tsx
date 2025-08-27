@@ -28,10 +28,82 @@ const Blog = () => {
             </div>
           </div>
           
-          <div className="text-center">
-            <p className="text-xl text-muted-foreground mb-8">
-              Cultural blog content - Coming Soon
+          {/* Blog Categories */}
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {["All Stories", "Travel Tips", "Cultural Guides", "Food & Recipes", "Traditional Crafts", "Languages"].map((category, index) => (
+                <span key={index} className="boda-chip">
+                  {category}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Featured Articles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Cultural Etiquette 101",
+                description: "Essential cultural practices for respectful engagement with Ugandan communities",
+                category: "Cultural Guides",
+                readTime: "8 min read",
+                href: "/blog/etiquette-starter"
+              },
+              {
+                title: "Why the Name Boda?",
+                description: "The fascinating origin story of Uganda's iconic boda-boda transport",
+                category: "Cultural Stories", 
+                readTime: "5 min read",
+                href: "/stories/why-boda"
+              },
+              {
+                title: "The Legend of Kintu and Nambi",
+                description: "Buganda's foundational creation story and its cultural significance",
+                category: "Traditional Stories",
+                readTime: "12 min read", 
+                href: "/stories/kintu-and-nambi"
+              }
+            ].map((article, index) => (
+              <a key={index} href={article.href} className="group boda-card block">
+                <div className="bg-card border border-border rounded-lg overflow-hidden">
+                  <div className="bg-muted h-48 flex items-center justify-center">
+                    <span className="text-muted-foreground">Featured Image</span>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="boda-chip text-xs">{article.category}</span>
+                      <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {article.description}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="bg-secondary rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              Stay Updated with New Stories
+            </h2>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Get notified when we publish new cultural guides, travel stories, and heritage insights.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input 
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 boda-input"
+              />
+              <button className="btn-primary">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
       </div>

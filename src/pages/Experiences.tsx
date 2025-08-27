@@ -28,10 +28,82 @@ const Experiences = () => {
             </div>
           </div>
           
-          <div className="text-center">
-            <p className="text-xl text-muted-foreground mb-8">
-              Interactive map & partner directory - Coming Soon
-            </p>
+          {/* Content Section */}
+          <div className="space-y-12">
+            {/* Experience Categories */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Cultural Centers",
+                  description: "Visit authentic cultural sites and heritage centers",
+                  items: ["Uganda Museum", "Kasubi Royal Tombs", "Traditional Craft Centers", "Cultural Villages"]
+                },
+                {
+                  title: "Traditional Markets",
+                  description: "Experience vibrant local markets and trading culture",
+                  items: ["Owino Market", "Nakasero Market", "Local Village Markets", "Craft Markets"]
+                },
+                {
+                  title: "Authentic Lodges",
+                  description: "Stay at culturally immersive accommodations",
+                  items: ["Community-run Lodges", "Traditional Homesteads", "Cultural Camps", "Heritage Hotels"]
+                }
+              ].map((category, index) => (
+                <div key={index} className="bg-card border border-border rounded-lg p-6 boda-card">
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{category.title}</h3>
+                  <p className="text-muted-foreground mb-4">{category.description}</p>
+                  <ul className="space-y-2">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-sm text-muted-foreground">
+                        <div className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Featured Experiences */}
+            <div className="bg-secondary rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-foreground text-center mb-8">
+                Featured Cultural Experiences
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Royal Palace Tours",
+                    description: "Visit traditional kingdoms and learn about monarchy structures",
+                    location: "Buganda Kingdom",
+                    duration: "Half Day"
+                  },
+                  {
+                    title: "Traditional Craft Workshops",
+                    description: "Learn bark cloth making, pottery, and basket weaving",
+                    location: "Various Villages",
+                    duration: "Full Day"
+                  }
+                ].map((experience, index) => (
+                  <div key={index} className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">{experience.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-3">{experience.description}</p>
+                    <div className="flex justify-between text-xs text-muted-foreground">
+                      <span>{experience.location}</span>
+                      <span>{experience.duration}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="text-center mt-8">
+                <p className="text-muted-foreground mb-4">
+                  More experiences and interactive partner directory launching soon
+                </p>
+                <button className="btn-primary">
+                  Join Waitlist for Early Access
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
