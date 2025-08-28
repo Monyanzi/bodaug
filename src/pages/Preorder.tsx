@@ -212,13 +212,13 @@ const Preorder = () => {
           </div>
 
           {/* Pre-order Form */}
-          {selectedEditions.length > 0 && (
-            <Card className="max-w-2xl mx-auto boda-card mb-12">
-              <CardHeader>
-                <CardTitle className="text-xl text-center">Your Selection</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+          <Card className="max-w-2xl mx-auto boda-card mb-12">
+            <CardHeader>
+              <CardTitle className="text-xl text-center">Your Pre-order</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {selectedEditions.length > 0 ? (
                   <div className="space-y-4">
                     {selectedEditions.map((edition, index) => (
                       <div
@@ -251,61 +251,66 @@ const Preorder = () => {
                       </div>
                     ))}
                   </div>
+                ) : (
+                  <p className="text-center text-muted-foreground">
+                    Select one or more editions above to begin your pre-order.
+                  </p>
+                )}
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Input
-                      placeholder="Your name *"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData((prev) => ({ ...prev, name: e.target.value }))
-                      }
-                      className="boda-input"
-                      required
-                    />
-                    <Input
-                      type="email"
-                      placeholder="Your email *"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          email: e.target.value,
-                        }))
-                      }
-                      className="boda-input"
-                      required
-                    />
-                  </div>
-
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input
-                    placeholder="Country (optional)"
-                    value={formData.country}
+                    placeholder="Your name *"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData((prev) => ({ ...prev, name: e.target.value }))
+                    }
+                    className="boda-input"
+                    required
+                  />
+                  <Input
+                    type="email"
+                    placeholder="Your email *"
+                    value={formData.email}
                     onChange={(e) =>
                       setFormData((prev) => ({
                         ...prev,
-                        country: e.target.value,
+                        email: e.target.value,
                       }))
                     }
                     className="boda-input"
+                    required
                   />
+                </div>
 
-                  <BodaButton
-                    type="submit"
-                    variant="hero"
-                    size="lg"
-                    className="w-full"
-                  >
-                    Reserve your copies
-                  </BodaButton>
+                <Input
+                  placeholder="Country (optional)"
+                  value={formData.country}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      country: e.target.value,
+                    }))
+                  }
+                  className="boda-input"
+                />
 
-                  <p className="text-xs text-muted-foreground text-center">
-                    * Required fields. No spam - you'll only receive launch
-                    updates and early access.
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
-          )}
+                <BodaButton
+                  type="submit"
+                  variant="hero"
+                  size="lg"
+                  className="w-full"
+                  disabled={selectedEditions.length === 0}
+                >
+                  Reserve your copies
+                </BodaButton>
+
+                <p className="text-xs text-muted-foreground text-center">
+                  * Required fields. No spam - you'll only receive launch
+                  updates and early access.
+                </p>
+              </form>
+            </CardContent>
+          </Card>
 
           {/* FAQ Section */}
           <div className="mt-16 max-w-2xl mx-auto">
