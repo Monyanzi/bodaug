@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,23 +10,57 @@ const PreorderModule = () => {
   const [edition, setEdition] = useState("");
   const { toast } = useToast();
 
+  useEffect(() => {
+    const storedEmail = localStorage.getItem("preorderEmail");
+    if (storedEmail) {
+      setEmail(storedEmail);
+    }
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) {
+    if (!email || !edition) {
       toast({
-        title: "Email required",
-        description: "Please enter your email address to reserve your copy.",
+        title: "Missing information",
+        description: "Please enter your email and select an edition.",
         variant: "destructive",
       });
       return;
     }
     
-    // Simulate form submission
+    localStorage.setItem("preorderEmail", email);
+
+    const newPreorder = {
+      email,
+      edition,
+      id: `${new Date().toISOString()}-${edition}`,
+      date: new Date().toISOString(),
+    };
+
+    const existingPreorders = JSON.parse(localStorage.getItem("preorders") || "[]");
+
+    const isDuplicate = existingPreorders.some(
+      (order: any) => order.email === newPreorder.email && order.edition === newPreorder.edition
+    );
+
+    if (isDuplicate) {
+      toast({
+        title: "Already Pre-ordered",
+        description: "You have already pre-ordered this edition.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const updatedPreorders = [...existingPreorders, newPreorder];
+    localStorage.setItem("preorders", JSON.stringify(updatedPreorders));
+
     toast({
       title: "Reserved successfully!",
       description: "You'll receive launch updates and early access.",
     });
-    setEmail("");
+
+    // Don't clear email, but clear edition
     setEdition("");
   };
 

@@ -7,6 +7,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Home from "./pages/Home";
 import Preorder from "./pages/Preorder";
+import PreordersPage from "./pages/Preorders";
 import Book from "./pages/Book";
 import Tribes from "./pages/Tribes";
 import BagandaTribe from "./pages/tribes/BagandaTribe";
@@ -56,6 +57,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/preorder" element={<Preorder />} />
+              <Route path="/preorders" element={<PreordersPage />} />
               <Route path="/book" element={<Book />} />
               <Route path="/tribes" element={<Tribes />} />
               <Route path="/tribes/baganda" element={<BagandaTribe />} />

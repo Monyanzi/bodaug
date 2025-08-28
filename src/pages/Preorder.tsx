@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,19 @@ const Preorder = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const editionFromUrl = params.get('edition');
+    if (editionFromUrl) {
+      setFormData(prev => ({ ...prev, edition: editionFromUrl }));
+    }
+
+    const storedEmail = localStorage.getItem("preorderEmail");
+    if (storedEmail) {
+      setFormData(prev => ({...prev, email: storedEmail}));
+    }
+  }, []);
 
   const editions = [
     {
@@ -57,20 +70,53 @@ const Preorder = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) {
+    if (!formData.name || !formData.email || !formData.edition) {
       toast({
         title: "Missing information",
-        description: "Please fill in your name and email address.",
+        description: "Please fill in your name, email, and select an edition.",
         variant: "destructive",
       });
       return;
     }
+
+    // Save user's email for future pre-orders
+    localStorage.setItem("preorderEmail", formData.email);
+
+    const newPreorder = {
+      ...formData,
+      id: `${new Date().toISOString()}-${formData.edition}`,
+      date: new Date().toISOString(),
+    }
+
+    const existingPreorders = JSON.parse(localStorage.getItem("preorders") || "[]");
+
+    // Prevent duplicate pre-orders for the same edition
+    const isDuplicate = existingPreorders.some(
+      (order: any) => order.email === newPreorder.email && order.edition === newPreorder.edition
+    );
+
+    if (isDuplicate) {
+      toast({
+        title: "Already Pre-ordered",
+        description: "You have already pre-ordered this edition.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const updatedPreorders = [...existingPreorders, newPreorder];
+    localStorage.setItem("preorders", JSON.stringify(updatedPreorders));
     
     setIsSubmitted(true);
     toast({
-      title: "Pre-order confirmed!",
-      description: "You'll receive launch updates and early access.",
+      title: "Pre-order Confirmed!",
+      description: `Thank you for pre-ordering the ${
+        editions.find(e => e.id === formData.edition)?.name
+      }.`,
     });
+
+    // Optionally reset parts of the form
+    setFormData(prev => ({ ...prev, edition: '' }));
   };
 
   if (isSubmitted) {
@@ -82,17 +128,17 @@ const Preorder = () => {
               <Check className="h-8 w-8 text-accent-foreground" />
             </div>
             <h1 className="text-2xl font-bold text-foreground mb-4">
-              Thank you for pre-ordering!
+              Thank you for your pre-order!
             </h1>
             <p className="text-muted-foreground mb-6">
-              You'll be the first to know when the Boda Book Series launches. Share with friends who love Uganda!
+              You can pre-order another edition below or view all your pre-orders.
             </p>
             <div className="space-y-3">
-              <BodaButton variant="primary" className="w-full">
-                Share with Friends
+              <BodaButton variant="primary" className="w-full" onClick={() => setIsSubmitted(false)}>
+                Pre-order Another Edition
               </BodaButton>
-              <BodaButton variant="secondary" className="w-full" onClick={() => window.location.href = "/tribes"}>
-                Explore Tribes
+              <BodaButton variant="secondary" className="w-full" onClick={() => window.location.href = "/preorders"}>
+                View My Pre-orders
               </BodaButton>
             </div>
           </CardContent>
