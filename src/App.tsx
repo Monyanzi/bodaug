@@ -10,6 +10,9 @@ import Preorder from "./pages/Preorder";
 import Book from "./pages/Book";
 import Tribes from "./pages/Tribes";
 import BagandaTribe from "./pages/tribes/BagandaTribe";
+import AlurTribe from "./pages/tribes/AlurTribe";
+import LangoTribe from "./pages/tribes/LangoTribe";
+import KaramojongTribe from "./pages/tribes/KaramojongTribe";
 import Gomesi from "./pages/attire/Gomesi";
 import Kanzu from "./pages/attire/Kanzu";
 import BarkCloth from "./pages/materials/BarkCloth";
@@ -50,6 +53,9 @@ const App = () => (
               <Route path="/book" element={<Book />} />
               <Route path="/tribes" element={<Tribes />} />
               <Route path="/tribes/baganda" element={<BagandaTribe />} />
+              <Route path="/tribes/alur" element={<AlurTribe />} />
+              <Route path="/tribes/lango" element={<LangoTribe />} />
+              <Route path="/tribes/karamojong" element={<KaramojongTribe />} />
               <Route path="/attire/gomesi" element={<Gomesi />} />
               <Route path="/attire/kanzu" element={<Kanzu />} />
               <Route path="/materials/bark-cloth" element={<BarkCloth />} />

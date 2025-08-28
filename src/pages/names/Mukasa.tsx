@@ -1,3 +1,5 @@
+import { BodaButton } from "@/components/ui/boda-button";
+
 const Mukasa = () => {
   return (
     <div className="min-h-screen py-12">
@@ -134,12 +136,12 @@ const Mukasa = () => {
               Discover the rich meanings and cultural stories behind traditional Ugandan names and their connections to heritage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+              <BodaButton variant="primary">
                 Browse Name Meanings
-              </button>
-              <button className="btn-secondary">
+              </BodaButton>
+              <BodaButton variant="secondary">
                 Learn About Naming Traditions
-              </button>
+              </BodaButton>
             </div>
           </div>
         </div>

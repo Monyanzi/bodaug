@@ -1,4 +1,5 @@
 import culturalStoriesImage from "@/assets/cultural-stories-blog.jpg";
+import { BodaButton } from "@/components/ui/boda-button";
 
 const Blog = () => {
   return (
@@ -100,9 +101,9 @@ const Blog = () => {
                 placeholder="Enter your email"
                 className="flex-1 boda-input"
               />
-              <button className="btn-primary">
+              <BodaButton variant="primary">
                 Subscribe
-              </button>
+              </BodaButton>
             </div>
           </div>
         </div>

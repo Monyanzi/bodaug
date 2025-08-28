@@ -1,4 +1,5 @@
 import luwomboImage from "@/assets/luwombo-dish.jpg";
+import { BodaButton } from "@/components/ui/boda-button";
 
 const Luwombo = () => {
   return (
@@ -169,12 +170,12 @@ const Luwombo = () => {
                 Taste this royal delicacy at traditional restaurants or join a cooking class to learn the time-honored techniques.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-primary">
+                <BodaButton variant="primary">
                   Find Luwombo Restaurants
-                </button>
-                <button className="btn-secondary">
+                </BodaButton>
+                <BodaButton variant="secondary">
                   Join Cooking Experience
-                </button>
+                </BodaButton>
               </div>
             </div>
           </div>

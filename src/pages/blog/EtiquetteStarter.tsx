@@ -1,3 +1,5 @@
+import { BodaButton } from "@/components/ui/boda-button";
+
 const EtiquetteStarter = () => {
   return (
     <div className="min-h-screen py-12">
@@ -130,12 +132,12 @@ const EtiquetteStarter = () => {
               Use these guidelines as your foundation for meaningful cultural connections in Uganda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+              <BodaButton variant="primary">
                 Explore Tribes & Culture
-              </button>
-              <button className="btn-secondary">
+              </BodaButton>
+              <BodaButton variant="secondary">
                 Plan Your Cultural Journey
-              </button>
+              </BodaButton>
             </div>
           </div>
         </div>

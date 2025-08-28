@@ -1,4 +1,5 @@
 import experiencesImage from "@/assets/uganda-experiences.jpg";
+import { BodaButton } from "@/components/ui/boda-button";
 
 const Experiences = () => {
   return (
@@ -99,9 +100,9 @@ const Experiences = () => {
                 <p className="text-muted-foreground mb-4">
                   More experiences and interactive partner directory launching soon
                 </p>
-                <button className="btn-primary">
+                <BodaButton variant="primary">
                   Join Waitlist for Early Access
-                </button>
+                </BodaButton>
               </div>
             </div>
           </div>

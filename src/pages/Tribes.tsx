@@ -5,85 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Users, MapPin, Filter } from "lucide-react";
 import tribesCollageImage from "@/assets/uganda-tribes-collage.jpg";
+import tribes from "@/data/tribes.json";
 
 const Tribes = () => {
-  const tribes = [
-    {
-      name: "Baganda",
-      region: "Central",
-      language: "Luganda",
-      summary: "The kingdom builders and cultural custodians",
-      proverb: "Obutaka bw'omukazi si bwamsigwa - A woman's land is not inherited",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/baganda",
-      featured: true
-    },
-    {
-      name: "Banyoro", 
-      region: "Western",
-      language: "Runyoro",
-      summary: "The ancient kingdom with rich oral traditions",
-      proverb: "Akasozi k'eyaka, tikamanya kindi - One hill doesn't know another",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/banyoro"
-    },
-    {
-      name: "Bakiga",
-      region: "Western",
-      language: "Rukiga", 
-      summary: "Mountain people known for terraced farming",
-      proverb: "Akabaare k'omwiha tikagwa - A small stone in the wind doesn't fall",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/bakiga"
-    },
-    {
-      name: "Basoga",
-      region: "Eastern",
-      language: "Lusoga",
-      summary: "River people with strong fishing traditions",
-      proverb: "Amazzi tegakomerera mumiro - Water doesn't compete with fire",
-      image: "/api/placeholder/400/300", 
-      href: "/tribes/basoga"
-    },
-    {
-      name: "Iteso",
-      region: "Eastern",
-      language: "Ateso",
-      summary: "Pastoral nomads with rich cattle culture",
-      proverb: "Ejok nguna atap nu - Good fortune follows good people",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/iteso"  
-    },
-    {
-      name: "Acholi",
-      region: "Northern", 
-      language: "Luo",
-      summary: "Warriors and peace-makers of the north",
-      proverb: "Piny ogik i Acholi - The earth belongs to the Acholi",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/acholi"
-    },
-    {
-      name: "Lugbara",
-      region: "Northern",
-      language: "Lugbara",
-      summary: "Border people with ancient traditions",
-      proverb: "A'di mi oku Lugbara - The Lugbara way is strong",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/lugbara"
-    },
-    {
-      name: "Bakonzo",
-      region: "Western",
-      language: "Lukonzo",
-      summary: "Mountain dwellers of the Rwenzori",
-      proverb: "Omukama w'orukonzo - The king of Konzo land",
-      image: "/api/placeholder/400/300",
-      href: "/tribes/bakonzo"
-    }
-  ];
-
-  const regions = ["All", "Central", "Eastern", "Northern", "Western"];
+  const regions = ["All", ...Array.from(new Set(tribes.map(t => t.region)))];
   const [activeFilter, setActiveFilter] = useState('All');
 
   const filteredTribes = activeFilter === 'All'
