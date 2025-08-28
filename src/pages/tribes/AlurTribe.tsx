@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Shield, MapPin, Users, Book, Utensils, Shirt, Home } from "lucide-react";
-import tribeImage from "@/assets/uganda-tribes-collage.jpg"; // Placeholder
+import alurHeroImage from "@/assets/alur-tribe-hero.jpg";
 
 const AlurTribe = () => {
   return (
@@ -15,8 +15,8 @@ const AlurTribe = () => {
           <div className="relative rounded-lg overflow-hidden mb-8">
             <div className="aspect-video relative">
               <img
-                src={tribeImage}
-                alt="Alur people"
+                src={alurHeroImage}
+                alt="Alur highland warrior in traditional attire"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
@@ -39,8 +39,8 @@ const AlurTribe = () => {
             <Badge variant="outline">Luo Language Family</Badge>
           </div>
 
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            The Alur are a resilient highland people from the West Nile region of Uganda, known for their strong chiefdoms and deep connection to their ancestral lands.
+          <p className="text-lg text-muted-foreground leading-relaxed prose">
+            The Alur are a resilient highland people from the West Nile region of Uganda, distinguished by their sophisticated chiefdom system and profound spiritual connection to the mountainous terrain they call home. Known for their warrior traditions and skilled craftsmanship, the Alur have maintained their cultural identity while serving as guardians of Uganda's northwestern frontiers.
           </p>
         </div>
 

@@ -121,7 +121,17 @@
   h3 { @apply text-3xl leading-tight; } /* 28-32px */
   
   p, body {
-    @apply text-lg leading-relaxed; /* 18-20px, line-height 1.6 */
+    @apply text-lg leading-relaxed text-justify; /* 18-20px, line-height 1.6, justified */
+  }
+  
+  /* Override justified alignment for specific elements */
+  .text-center p, .text-right p, .text-left p {
+    @apply text-left;
+  }
+  
+  /* Justified content class for better readability */
+  .prose p, .content p, .description {
+    @apply text-justify leading-relaxed;
   }
 }
 

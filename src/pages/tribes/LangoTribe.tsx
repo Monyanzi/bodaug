@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Sun, MapPin, Users, Book, Utensils, Shirt, Home } from "lucide-react";
-import tribeImage from "@/assets/uganda-tribes-collage.jpg"; // Placeholder
+import langoHeroImage from "@/assets/lango-tribe-hero.jpg";
 
 const LangoTribe = () => {
   return (
@@ -15,8 +15,8 @@ const LangoTribe = () => {
           <div className="relative rounded-lg overflow-hidden mb-8">
             <div className="aspect-video relative">
               <img
-                src={tribeImage}
-                alt="Lango people"
+                src={langoHeroImage}
+                alt="Lango plains dweller in traditional attire"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
@@ -39,8 +39,8 @@ const LangoTribe = () => {
             <Badge variant="outline">Farming & Hunting</Badge>
           </div>
 
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            The Lango people are a prominent ethnic group from the plains of north-central Uganda, recognized for their strong agricultural traditions and historical hunting prowess.
+          <p className="text-lg text-muted-foreground leading-relaxed prose">
+            The Lango people are master cultivators of the fertile plains of north-central Uganda, renowned for their advanced agricultural techniques and legendary hunting traditions. Their society celebrates the harmony between human settlement and the natural world, with customs that have evolved from centuries of successful adaptation to the savanna ecosystem.
           </p>
         </div>
 
