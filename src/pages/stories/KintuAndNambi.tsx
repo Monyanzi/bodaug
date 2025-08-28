@@ -1,6 +1,6 @@
 import storyImage from "@/assets/kintu-nambi-story.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
-import StoryExcerptCTA from "@/components/StoryExcerptCTA";
+import { Link } from "react-router-dom";
 
 const KintuAndNambi = () => {
   return (
@@ -31,16 +31,20 @@ const KintuAndNambi = () => {
           </div>
 
           {/* Story Content */}
-          <div className="space-y-12">
-            <div className="prose prose-lg max-w-none text-center">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Coming Soon
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                The full story of Kintu and Nambi is being prepared and will be available here soon. Thank you for your patience.
-              </p>
-            </div>
-            <StoryExcerptCTA />
+          <div className="text-center bg-secondary rounded-lg p-8 my-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Content Coming Soon
+            </h2>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              This section is currently under development. The complete, unabridged
+              content will be available in the Boda Book Series. Pre-order now to
+              be the first to get access.
+            </p>
+            <Link to="/preorder">
+              <BodaButton variant="primary" size="lg">
+                Pre-order the Boda Book Series
+              </BodaButton>
+            </Link>
           </div>
         </div>
       </div>

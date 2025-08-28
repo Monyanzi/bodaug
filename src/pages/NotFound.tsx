@@ -6,7 +6,7 @@ import { Home, Search, Book, Users, ArrowRight } from "lucide-react";
 const NotFound = () => {
   const quickLinks = [
     { title: "Explore Tribes", description: "Discover Uganda's cultural diversity", href: "/tribes", icon: Users },
-    { title: "Boda Book Series", description: "Pre-order the complete guide", href: "/book", icon: Book },
+    { title: "Boda Book Series", description: "Pre-order the complete guide", href: "/preorder", icon: Book },
     { title: "Cultural Stories", description: "Read traditional legends", href: "/stories/kintu-and-nambi", icon: Book },
     { title: "Join Our Community", description: "Get cultural insights weekly", href: "/join", icon: Users }
   ];
