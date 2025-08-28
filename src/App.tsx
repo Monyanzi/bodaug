@@ -19,7 +19,6 @@ import BarkCloth from "./pages/materials/BarkCloth";
 import Mukasa from "./pages/names/Mukasa";
 import Luwombo from "./pages/food/Luwombo";
 import RolexPage from './pages/food/RolexPage';
-import KintuAndNambi from "./pages/stories/KintuAndNambi";
 import WhyBoda from "./pages/blog/WhyBoda";
 import GipirAndLabong from "./pages/stories/GipirAndLabong";
 import CovenantOfMasaba from "./pages/stories/CovenantOfMasaba";
@@ -69,7 +68,6 @@ const App = () => (
               <Route path="/names/mukasa" element={<Mukasa />} />
               <Route path="/food/luwombo" element={<Luwombo />} />
               <Route path="/food/rolex" element={<RolexPage />} />
-              <Route path="/stories/kintu-and-nambi" element={<KintuAndNambi />} />
               <Route path="/stories/gipir-and-labong" element={<GipirAndLabong />} />
               <Route path="/stories/covenant-of-masaba" element={<CovenantOfMasaba />} />
               <Route path="/stories/sorrow-of-ishe-katabazi" element={<SorrowOfIsheKatabazi />} />
