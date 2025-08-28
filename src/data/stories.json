@@ -12,5 +12,54 @@
     "date": "2024-01-02",
     "href": "/stories/why-boda",
     "image": "/src/assets/hero-boda-rider.jpg"
+  },
+  {
+    "title": "The Parting of Gipir and Labong",
+    "description": "The classic version, centered on the bead and the spear, that explains the origin of the Acholi and Alur peoples.",
+    "date": "2024-01-03",
+    "href": "/stories/gipir-and-labong",
+    "image": "/placeholder.svg"
+  },
+  {
+    "title": "The Covenant of Masaba",
+    "description": "The foundational story of the Bagisu and the first Imbalu, as commanded by the mountain's spirit.",
+    "date": "2024-01-04",
+    "href": "/stories/covenant-of-masaba",
+    "image": "/placeholder.svg"
+  },
+  {
+    "title": "The Sorrow of Ishe-Katabazi",
+    "description": "The great Ankole epic of the hero who challenged the underworld for his family.",
+    "date": "2024-01-05",
+    "href": "/stories/sorrow-of-ishe-katabazi",
+    "image": "/placeholder.svg"
+  },
+  {
+    "title": "The Man Who Faced Adroa",
+    "description": "The cautionary tale from the Lugbara about the half-bodied spirit and the price of greed.",
+    "date": "2024-01-06",
+    "href": "/stories/man-who-faced-adroa",
+    "image": "/placeholder.svg"
+  },
+  {
+    "title": "The Indecision of the Bat",
+    "description": "The well-known Baganda fable explaining why the bat is a creature of the night.",
+    "date": "2024-01-07",
+    "href": "/stories/indecision-of-the-bat",
+    "image": "/placeholder.svg"
+  },
+  {
+    "title": "Ndahura at the Gate of Bukuku",
+    "description": "The origin epic of the Bachwezi dynasty, establishing their rightful rule.",
+    "date": "2024-01-08",
+    "href": "/stories/ndahura-at-the-gate-of-bukuku",
+    "image": "/placeholder.svg"
+  },
+  {
+    "title": "The Departure of the Bachwezi",
+    "description": "The legendary conclusion to the Bachwezi saga, explaining their mystical disappearance.",
+    "date": "2024-01-09",
+    "href": "/stories/departure-of-the-bachwezi",
+    "image": "/placeholder.svg"
   }
 ]
