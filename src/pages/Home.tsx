@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { BodaButton } from "@/components/ui/boda-button";
-import PreorderModule from "@/components/PreorderModule";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, ArrowRight } from "lucide-react";
 import heroBodaRider from "@/assets/hero-boda-rider.jpg";
@@ -65,7 +64,11 @@ const Home = () => {
             
             {/* Right column - Preorder module */}
             <div className="flex justify-center lg:justify-end">
-              <PreorderModule />
+              <Link to="/preorder">
+                <BodaButton variant="hero" size="lg">
+                  Pre-order Now
+                </BodaButton>
+              </Link>
             </div>
           </div>
         </div>
