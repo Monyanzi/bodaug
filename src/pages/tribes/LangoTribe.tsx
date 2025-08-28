@@ -57,51 +57,105 @@ const LangoTribe = () => {
             </TabsList>
 
             <TabsContent value="overview">
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-semibold text-foreground">Content Coming Soon</h3>
-                <p className="text-muted-foreground mt-2">
-                  Detailed information about the Lango tribe is being prepared.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
             <TabsContent value="clothing">
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-semibold text-foreground">Content Coming Soon</h3>
-                <p className="text-muted-foreground mt-2">
-                  Detailed information about Lango clothing is being prepared.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
             <TabsContent value="food">
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-semibold text-foreground">Content Coming Soon</h3>
-                <p className="text-muted-foreground mt-2">
-                  Detailed information about Lango food is being prepared.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
             <TabsContent value="traditions">
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-semibold text-foreground">Content Coming Soon</h3>
-                <p className="text-muted-foreground mt-2">
-                  Detailed information about Lango traditions is being prepared.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
             <TabsContent value="names">
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-semibold text-foreground">Content Coming Soon</h3>
-                <p className="text-muted-foreground mt-2">
-                  Detailed information about Lango names is being prepared.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
             <TabsContent value="places">
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-semibold text-foreground">Content Coming Soon</h3>
-                <p className="text-muted-foreground mt-2">
-                  Detailed information about Lango places is being prepared.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
           </Tabs>

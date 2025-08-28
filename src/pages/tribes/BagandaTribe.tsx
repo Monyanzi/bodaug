@@ -217,11 +217,20 @@ const BagandaTribe = () => {
             </TabsContent>
 
             <TabsContent value="traditions">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-foreground">Coming Soon</h3>
-                <p className="text-muted-foreground">
-                  Detailed information about Baganda ceremonies, rituals, and traditional practices will be available soon.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
 
@@ -251,11 +260,20 @@ const BagandaTribe = () => {
             </TabsContent>
 
             <TabsContent value="places">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-foreground">Coming Soon</h3>
-                <p className="text-muted-foreground">
-                  Information about important Baganda historical sites, palaces, and cultural landmarks.
+              <div className="text-center bg-secondary rounded-lg p-8 my-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Content Coming Soon
+                </h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  This section is currently under development. The complete, unabridged
+                  content will be available in the Boda Book Series. Pre-order now to
+                  be the first to get access.
                 </p>
+                <Link to="/preorder">
+                  <BodaButton variant="primary" size="lg">
+                    Pre-order the Boda Book Series
+                  </BodaButton>
+                </Link>
               </div>
             </TabsContent>
           </Tabs>
