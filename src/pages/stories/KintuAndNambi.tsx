@@ -1,4 +1,5 @@
 import storyImage from "@/assets/kintu-nambi-story.jpg";
+import { BodaButton } from "@/components/ui/boda-button";
 
 const KintuAndNambi = () => {
   return (
@@ -123,12 +124,12 @@ const KintuAndNambi = () => {
                 traditional education, and cultural celebrations across Uganda.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-primary">
+                <BodaButton variant="primary">
                   Explore More Buganda Stories
-                </button>
-                <button className="btn-secondary">
+                </BodaButton>
+                <BodaButton variant="secondary">
                   Visit Cultural Sites
-                </button>
+                </BodaButton>
               </div>
             </div>
           </div>

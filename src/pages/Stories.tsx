@@ -3,23 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
-const storiesData = [
-  {
-    title: "Kintu and Nambi",
-    description: "The creation story of the Baganda people, a foundational myth of Uganda.",
-    date: "2024-01-01",
-    href: "/stories/kintu-and-nambi",
-    image: "/src/assets/kintu-nambi-story.jpg",
-  },
-  {
-    title: "Why the name Boda?",
-    description: "The origin story of the boda-boda, from border-crossing bicycles to urban icons.",
-    date: "2024-01-02",
-    href: "/stories/why-boda",
-    image: "/src/assets/hero-boda-rider.jpg",
-  },
-];
+import storiesData from "@/data/stories.json";
 
 const StoriesPage = () => {
   const [stories, setStories] = useState(storiesData);
