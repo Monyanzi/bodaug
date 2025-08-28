@@ -7,7 +7,7 @@ import heroBodaRider from "@/assets/hero-boda-rider.jpg";
 
 const Home = () => {
   const quickPathCards = [
-    { title: "Why the name Boda?", description: "The origin story of the boda-boda, from border-crossing bicycles to urban icons.", href: "/stories/why-boda" },
+    { title: "Why the name Boda?", description: "The origin story of the boda-boda, from border-crossing bicycles to urban icons.", href: "/blog/why-boda" },
     { title: "Before You Go", description: "Essential preparation tips", href: "/blog/etiquette-starter" },
     { title: "Greetings & Respect", description: "Cultural etiquette guide", href: "/blog/etiquette-starter" },
     { title: "Food You Must Try", description: "Culinary highlights", href: "/food/luwombo" },

@@ -1,7 +1,40 @@
+import { useState } from "react";
 import culturalStoriesImage from "@/assets/cultural-stories-blog.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
 
+const articles = [
+  {
+    title: "Cultural Etiquette 101",
+    description: "Essential cultural practices for respectful engagement with Ugandan communities",
+    category: "Cultural Guides",
+    readTime: "8 min read",
+    href: "/blog/etiquette-starter"
+  },
+  {
+    title: "Why the Name Boda?",
+    description: "The fascinating origin story of Uganda's iconic boda-boda transport",
+    category: "Cultural Stories",
+    readTime: "5 min read",
+    href: "/blog/why-boda"
+  },
+  {
+    title: "The Legend of Kintu and Nambi",
+    description: "Buganda's foundational creation story and its cultural significance",
+    category: "Traditional Stories",
+    readTime: "12 min read",
+    href: "/stories/kintu-and-nambi"
+  }
+];
+
+const categories = ["All Stories", "Travel Tips", "Cultural Guides", "Food & Recipes", "Traditional Crafts", "Languages", "Cultural Stories", "Traditional Stories"];
+
 const Blog = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All Stories");
+
+  const filteredArticles = selectedCategory === "All Stories"
+    ? articles
+    : articles.filter(article => article.category === selectedCategory);
+
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -9,9 +42,9 @@ const Blog = () => {
           {/* Hero Section */}
           <div className="relative py-16 md:py-20 rounded-xl mb-8 overflow-hidden">
             <div className="absolute inset-0">
-              <img 
-                src={culturalStoriesImage} 
-                alt="Traditional African storytelling and cultural heritage" 
+              <img
+                src={culturalStoriesImage}
+                alt="Traditional African storytelling and cultural heritage"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
@@ -28,43 +61,25 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          
+
           {/* Blog Categories */}
           <div className="mb-12">
             <div className="flex flex-wrap gap-4 justify-center">
-              {["All Stories", "Travel Tips", "Cultural Guides", "Food & Recipes", "Traditional Crafts", "Languages"].map((category, index) => (
-                <span key={index} className="boda-chip">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`boda-chip ${selectedCategory === category ? 'bg-accent text-accent-foreground' : ''}`}
+                >
                   {category}
-                </span>
+                </button>
               ))}
             </div>
           </div>
 
           {/* Featured Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                title: "Cultural Etiquette 101",
-                description: "Essential cultural practices for respectful engagement with Ugandan communities",
-                category: "Cultural Guides",
-                readTime: "8 min read",
-                href: "/blog/etiquette-starter"
-              },
-              {
-                title: "Why the Name Boda?",
-                description: "The fascinating origin story of Uganda's iconic boda-boda transport",
-                category: "Cultural Stories", 
-                readTime: "5 min read",
-                href: "/stories/why-boda"
-              },
-              {
-                title: "The Legend of Kintu and Nambi",
-                description: "Buganda's foundational creation story and its cultural significance",
-                category: "Traditional Stories",
-                readTime: "12 min read", 
-                href: "/stories/kintu-and-nambi"
-              }
-            ].map((article, index) => (
+            {filteredArticles.map((article, index) => (
               <a key={index} href={article.href} className="group boda-card block">
                 <div className="bg-card border border-border rounded-lg overflow-hidden">
                   <div className="bg-muted h-48 flex items-center justify-center">
@@ -96,7 +111,7 @@ const Blog = () => {
               Get notified when we publish new cultural guides, travel stories, and heritage insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
+              <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 boda-input"
