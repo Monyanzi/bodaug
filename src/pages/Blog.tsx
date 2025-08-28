@@ -17,13 +17,6 @@ const articles = [
     readTime: "5 min read",
     href: "/blog/why-boda"
   },
-  {
-    title: "The Legend of Kintu and Nambi",
-    description: "Buganda's foundational creation story and its cultural significance",
-    category: "Traditional Stories",
-    readTime: "12 min read",
-    href: "/stories/kintu-and-nambi"
-  }
 ];
 
 const categories = ["All Stories", "Travel Tips", "Cultural Guides", "Food & Recipes", "Traditional Crafts", "Languages", "Cultural Stories", "Traditional Stories"];
