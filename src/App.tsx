@@ -20,7 +20,7 @@ import Mukasa from "./pages/names/Mukasa";
 import Luwombo from "./pages/food/Luwombo";
 import RolexPage from './pages/food/RolexPage';
 import KintuAndNambi from "./pages/stories/KintuAndNambi";
-import WhyBoda from "./pages/stories/WhyBoda";
+import WhyBoda from "./pages/blog/WhyBoda";
 import GipirAndLabong from "./pages/stories/GipirAndLabong";
 import CovenantOfMasaba from "./pages/stories/CovenantOfMasaba";
 import SorrowOfIsheKatabazi from "./pages/stories/SorrowOfIsheKatabazi";
@@ -70,7 +70,6 @@ const App = () => (
               <Route path="/food/luwombo" element={<Luwombo />} />
               <Route path="/food/rolex" element={<RolexPage />} />
               <Route path="/stories/kintu-and-nambi" element={<KintuAndNambi />} />
-              <Route path="/stories/why-boda" element={<WhyBoda />} />
               <Route path="/stories/gipir-and-labong" element={<GipirAndLabong />} />
               <Route path="/stories/covenant-of-masaba" element={<CovenantOfMasaba />} />
               <Route path="/stories/sorrow-of-ishe-katabazi" element={<SorrowOfIsheKatabazi />} />
@@ -82,6 +81,7 @@ const App = () => (
               <Route path="/experiences" element={<Experiences />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/etiquette-starter" element={<EtiquetteStarter />} />
+              <Route path="/blog/why-boda" element={<WhyBoda />} />
               <Route path="/join" element={<Join />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
