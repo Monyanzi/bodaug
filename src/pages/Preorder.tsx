@@ -2,31 +2,26 @@ import { useState, useEffect } from "react";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import { Check, Book } from "lucide-react";
+import { Check, X, Book } from "lucide-react";
 
 const Preorder = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     country: "",
-    edition: ""
   });
+  const [selectedEditions, setSelectedEditions] = useState<
+    { id: string; quantity: number }[]
+  >([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const editionFromUrl = params.get('edition');
-    if (editionFromUrl) {
-      setFormData(prev => ({ ...prev, edition: editionFromUrl }));
-    }
-
     const storedEmail = localStorage.getItem("preorderEmail");
     if (storedEmail) {
-      setFormData(prev => ({...prev, email: storedEmail}));
+      setFormData((prev) => ({ ...prev, email: storedEmail }));
     }
   }, []);
 
@@ -68,55 +63,68 @@ const Preorder = () => {
     }
   ];
 
+  const handleAddEdition = (editionId: string) => {
+    if (selectedEditions.some((e) => e.id === editionId)) {
+      toast({
+        title: "Already Selected",
+        description: "You have already selected this edition.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setSelectedEditions([...selectedEditions, { id: editionId, quantity: 1 }]);
+  };
+
+  const handleRemoveEdition = (index: number) => {
+    const newEditions = [...selectedEditions];
+    newEditions.splice(index, 1);
+    setSelectedEditions(newEditions);
+  };
+
+  const handleQuantityChange = (index: number, quantity: number) => {
+    if (quantity < 1) {
+        return;
+    }
+    const newEditions = [...selectedEditions];
+    newEditions[index].quantity = quantity;
+    setSelectedEditions(newEditions);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.edition) {
+    if (!formData.name || !formData.email || selectedEditions.length === 0) {
       toast({
         title: "Missing information",
-        description: "Please fill in your name, email, and select an edition.",
+        description:
+          "Please fill in your name, email, and select at least one edition.",
         variant: "destructive",
       });
       return;
     }
 
-    // Save user's email for future pre-orders
     localStorage.setItem("preorderEmail", formData.email);
 
-    const newPreorder = {
+    const newPreorders = selectedEditions.map((edition) => ({
       ...formData,
-      id: `${new Date().toISOString()}-${formData.edition}`,
+      edition: edition.id,
+      quantity: edition.quantity,
+      id: `${new Date().toISOString()}-${edition.id}`,
       date: new Date().toISOString(),
-    }
+    }));
 
-    const existingPreorders = JSON.parse(localStorage.getItem("preorders") || "[]");
-
-    // Prevent duplicate pre-orders for the same edition
-    const isDuplicate = existingPreorders.some(
-      (order: any) => order.email === newPreorder.email && order.edition === newPreorder.edition
+    const existingPreorders = JSON.parse(
+      localStorage.getItem("preorders") || "[]"
     );
-
-    if (isDuplicate) {
-      toast({
-        title: "Already Pre-ordered",
-        description: "You have already pre-ordered this edition.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    const updatedPreorders = [...existingPreorders, newPreorder];
+    const updatedPreorders = [...existingPreorders, ...newPreorders];
     localStorage.setItem("preorders", JSON.stringify(updatedPreorders));
-    
+
     setIsSubmitted(true);
     toast({
       title: "Pre-order Confirmed!",
-      description: `Thank you for pre-ordering the ${
-        editions.find(e => e.id === formData.edition)?.name
-      }.`,
+      description: `Thank you for your pre-order.`,
     });
 
-    // Optionally reset parts of the form
-    setFormData(prev => ({ ...prev, edition: '' }));
+    setSelectedEditions([]);
   };
 
   if (isSubmitted) {
@@ -131,14 +139,15 @@ const Preorder = () => {
               Thank you for your pre-order!
             </h1>
             <p className="text-muted-foreground mb-6">
-              You can pre-order another edition below or view all your pre-orders.
+              You can pre-order another edition below.
             </p>
             <div className="space-y-3">
-              <BodaButton variant="primary" className="w-full" onClick={() => setIsSubmitted(false)}>
+              <BodaButton
+                variant="primary"
+                className="w-full"
+                onClick={() => setIsSubmitted(false)}
+              >
                 Pre-order Another Edition
-              </BodaButton>
-              <BodaButton variant="secondary" className="w-full" onClick={() => window.location.href = "/preorders"}>
-                View My Pre-orders
               </BodaButton>
             </div>
           </CardContent>
@@ -156,23 +165,24 @@ const Preorder = () => {
               Pre-order the Boda Book Series
             </h1>
             <p className="text-xl text-muted-foreground">
-              Reserve your copy and be the first to own the definitive cultural & travel showcase of Uganda.
+              Reserve your copy and be the first to own the definitive cultural &
+              travel showcase of Uganda.
             </p>
           </div>
 
           {/* Edition Selection */}
           <div className="mb-12">
             <h2 className="text-2xl font-semibold text-foreground mb-6 text-center">
-              Choose Your Edition
+              Choose Your Edition(s)
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {editions.map((edition) => (
-                <Card 
+                <Card
                   key={edition.id}
                   className={`boda-card cursor-pointer transition-all ${
-                    formData.edition === edition.id ? 'border-accent border-2' : ''
+                    selectedEditions.some(e => e.id === edition.id) ? 'border-accent border-2' : ''
                   }`}
-                  onClick={() => setFormData(prev => ({ ...prev, edition: edition.id }))}
+                  onClick={() => handleAddEdition(edition.id)}
                 >
                   <CardHeader className="pb-3">
                     <div className="flex items-start justify-between">
@@ -202,9 +212,9 @@ const Preorder = () => {
           </div>
 
           {/* Pre-order Form */}
-          <Card className="max-w-2xl mx-auto boda-card">
+          <Card className="max-w-2xl mx-auto boda-card mb-12">
             <CardHeader>
-              <CardTitle className="text-xl text-center">Reserve Your Copy</CardTitle>
+              <CardTitle className="text-xl text-center">Your Details</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -212,7 +222,9 @@ const Preorder = () => {
                   <Input
                     placeholder="Your name *"
                     value={formData.name}
-                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                    onChange={(e) =>
+                      setFormData((prev) => ({ ...prev, name: e.target.value }))
+                    }
                     className="boda-input"
                     required
                   />
@@ -220,38 +232,77 @@ const Preorder = () => {
                     type="email"
                     placeholder="Your email *"
                     value={formData.email}
-                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        email: e.target.value,
+                      }))
+                    }
                     className="boda-input"
                     required
                   />
                 </div>
-                
                 <Input
                   placeholder="Country (optional)"
                   value={formData.country}
-                  onChange={(e) => setFormData(prev => ({ ...prev, country: e.target.value }))}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      country: e.target.value,
+                    }))
+                  }
                   className="boda-input"
                 />
-                
-                <Select value={formData.edition} onValueChange={(value) => setFormData(prev => ({ ...prev, edition: value }))}>
-                  <SelectTrigger className="boda-input">
-                    <SelectValue placeholder="Select preferred edition" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {editions.map((edition) => (
-                      <SelectItem key={edition.id} value={edition.id}>
-                        {edition.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
 
-                <BodaButton type="submit" variant="hero" size="lg" className="w-full">
-                  Reserve your copy
+                {selectedEditions.length > 0 && (
+                  <div className="space-y-4 pt-4">
+                    <h3 className="text-lg font-medium text-center">Your Selection</h3>
+                    {selectedEditions.map((edition, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center space-x-2"
+                      >
+                        <Input
+                          value={editions.find(e => e.id === edition.id)?.name}
+                          className="boda-input"
+                          readOnly
+                        />
+                        <Input
+                          type="number"
+                          min="1"
+                          value={edition.quantity}
+                          onChange={(e) =>
+                            handleQuantityChange(
+                              index,
+                              parseInt(e.target.value)
+                            )
+                          }
+                          className="boda-input w-24"
+                        />
+                        <BodaButton
+                          variant="destructive"
+                          onClick={() => handleRemoveEdition(index)}
+                        >
+                          <X className="h-4 w-4" />
+                        </BodaButton>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <BodaButton
+                  type="submit"
+                  variant="hero"
+                  size="lg"
+                  className="w-full"
+                  disabled={selectedEditions.length === 0}
+                >
+                  Reserve Your Copies
                 </BodaButton>
-                
+
                 <p className="text-xs text-muted-foreground text-center">
-                  * Required fields. No spam - you'll only receive launch updates and early access.
+                  * Required fields. No spam - you'll only receive launch
+                  updates and early access.
                 </p>
               </form>
             </CardContent>
