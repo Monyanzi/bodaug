@@ -1,5 +1,12 @@
 [
   {
+    "title": "Kintu and Nambi",
+    "description": "The creation story of the Baganda people, a foundational myth of Uganda.",
+    "date": "2024-01-01",
+    "href": "/stories/kintu-and-nambi",
+    "image": "/src/assets/kintu-nambi-story.jpg"
+  },
+  {
     "title": "The Parting of Gipir and Labong",
     "description": "The classic version, centered on the bead and the spear, that explains the origin of the Acholi and Alur peoples.",
     "date": "2024-01-03",
