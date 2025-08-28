@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Users, MapPin, Filter } from "lucide-react";
 import tribesCollageImage from "@/assets/uganda-tribes-collage.jpg";
+import alurCultureImage from "@/assets/alur-culture-card.jpg";
+import langoCultureImage from "@/assets/lango-culture-card.jpg";
+import karamojongCultureImage from "@/assets/karamojong-culture-card.jpg";
 import tribes from "@/data/tribes.json";
 
 const Tribes = () => {
@@ -14,6 +17,16 @@ const Tribes = () => {
   const filteredTribes = activeFilter === 'All'
     ? tribes
     : tribes.filter(tribe => tribe.region === activeFilter);
+
+  // Contextual images for specific tribes
+  const getTribalImage = (tribeName: string) => {
+    switch(tribeName) {
+      case 'Alur': return alurCultureImage;
+      case 'Lango': return langoCultureImage;
+      case 'Karamojong': return karamojongCultureImage;
+      default: return null;
+    }
+  };
 
   return (
     <div className="min-h-screen py-12">
@@ -59,49 +72,60 @@ const Tribes = () => {
 
         {/* Tribes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredTribes.map((tribe, index) => (
-            <Link key={index} to={tribe.href} className="group">
-              <Card className="boda-card h-full overflow-hidden">
-                {tribe.featured && (
-                  <div className="absolute top-4 left-4 z-10">
-                    <Badge className="bg-accent text-accent-foreground">Featured</Badge>
-                  </div>
-                )}
-                
-                <div className="aspect-video bg-muted overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-muted flex items-center justify-center">
-                    <Users className="h-12 w-12 text-accent" />
-                  </div>
-                </div>
-                
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl group-hover:text-accent transition-colors">
-                      {tribe.name}
-                    </CardTitle>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="h-3 w-3 mr-1" />
-                      {tribe.region}
+          {filteredTribes.map((tribe, index) => {
+            const tribalImage = getTribalImage(tribe.name);
+            return (
+              <Link key={index} to={tribe.href} className="group">
+                <Card className="boda-card h-full overflow-hidden hover:scale-105 transition-transform duration-200">
+                  {tribe.featured && (
+                    <div className="absolute top-4 left-4 z-10">
+                      <Badge className="bg-accent text-accent-foreground">Featured</Badge>
                     </div>
+                  )}
+                  
+                  <div className="aspect-video bg-muted overflow-hidden">
+                    {tribalImage ? (
+                      <img 
+                        src={tribalImage} 
+                        alt={`${tribe.name} cultural heritage`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-accent/20 to-muted flex items-center justify-center">
+                        <Users className="h-12 w-12 text-accent" />
+                      </div>
+                    )}
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Language: {tribe.language}
-                  </p>
-                </CardHeader>
-                
-                <CardContent>
-                  <p className="text-sm text-foreground mb-3">
-                    {tribe.summary}
-                  </p>
-                  <blockquote className="border-l-2 border-accent pl-3 py-2 bg-muted/50 rounded-r">
-                    <p className="text-xs italic text-muted-foreground">
-                      "{tribe.proverb}"
+                  
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-xl group-hover:text-accent transition-colors">
+                        {tribe.name}
+                      </CardTitle>
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <MapPin className="h-3 w-3 mr-1" />
+                        {tribe.region}
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Language: {tribe.language}
                     </p>
-                  </blockquote>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <p className="text-sm text-foreground mb-3 prose">
+                      {tribe.summary}
+                    </p>
+                    <blockquote className="border-l-2 border-accent pl-3 py-2 bg-muted/50 rounded-r">
+                      <p className="text-xs italic text-muted-foreground">
+                        "{tribe.proverb}"
+                      </p>
+                    </blockquote>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA Section */}
