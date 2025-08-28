@@ -1,5 +1,6 @@
 import storyImage from "@/assets/kintu-nambi-story.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
+import { StoryExcerptCTA } from "@/components/ui/StoryExcerptCTA";
 
 const KintuAndNambi = () => {
   return (
@@ -133,6 +134,7 @@ const KintuAndNambi = () => {
               </div>
             </div>
           </div>
+          <StoryExcerptCTA storyName="Kintu and Nambi" />
         </div>
       </div>
     </div>

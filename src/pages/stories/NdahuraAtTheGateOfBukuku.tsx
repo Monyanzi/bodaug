@@ -1,5 +1,6 @@
 import storyImage from "/placeholder.svg";
 import { BodaButton } from "@/components/ui/boda-button";
+import { StoryExcerptCTA } from "@/components/ui/StoryExcerptCTA";
 
 const NdahuraAtTheGateOfBukuku = () => {
   return (
@@ -108,6 +109,7 @@ const NdahuraAtTheGateOfBukuku = () => {
               </div>
             </div>
           </div>
+          <StoryExcerptCTA storyName="Ndahura at the Gate of Bukuku" />
         </div>
       </div>
     </div>

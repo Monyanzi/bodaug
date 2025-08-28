@@ -84,6 +84,7 @@ const BookPage = () => {
             <p className="text-xl text-white/90 max-w-4xl mx-auto mb-6">
               From a luxury Definitive Edition to a pocket-friendly Traveler's Edition, a joyful Children's Book, 
               a rigorous Scholar Edition, and a focused Investor Guide — one master knowledge base, many beautiful books.
+              The Boda Book Series is the ultimate collection of Ugandan culture, containing the full, unabridged versions of all the stories, articles, and guides found on our website, plus exclusive content you won't find anywhere else.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/preorder">

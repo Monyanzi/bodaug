@@ -1,5 +1,6 @@
 import storyImage from "/placeholder.svg";
 import { BodaButton } from "@/components/ui/boda-button";
+import { StoryExcerptCTA } from "@/components/ui/StoryExcerptCTA";
 
 const IndecisionOfTheBat = () => {
   return (
@@ -108,6 +109,7 @@ const IndecisionOfTheBat = () => {
               </div>
             </div>
           </div>
+          <StoryExcerptCTA storyName="The Indecision of the Bat" />
         </div>
       </div>
     </div>

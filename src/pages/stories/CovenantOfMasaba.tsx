@@ -1,5 +1,6 @@
 import storyImage from "/placeholder.svg";
 import { BodaButton } from "@/components/ui/boda-button";
+import { StoryExcerptCTA } from "@/components/ui/StoryExcerptCTA";
 
 const CovenantOfMasaba = () => {
   return (
@@ -114,6 +115,7 @@ const CovenantOfMasaba = () => {
               </div>
             </div>
           </div>
+          <StoryExcerptCTA storyName="The Covenant of Masaba" />
         </div>
       </div>
     </div>

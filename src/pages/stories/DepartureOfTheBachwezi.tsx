@@ -1,5 +1,6 @@
 import storyImage from "/placeholder.svg";
 import { BodaButton } from "@/components/ui/boda-button";
+import { StoryExcerptCTA } from "@/components/ui/StoryExcerptCTA";
 
 const DepartureOfTheBachwezi = () => {
   return (
@@ -108,6 +109,7 @@ const DepartureOfTheBachwezi = () => {
               </div>
             </div>
           </div>
+          <StoryExcerptCTA storyName="The Departure of the Bachwezi" />
         </div>
       </div>
     </div>
