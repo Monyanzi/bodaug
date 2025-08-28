@@ -1,41 +1,117 @@
-import { ContentTile } from "@/components/ui/ContentTile";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { BodaButton } from "@/components/ui/boda-button";
+import { Shirt, Filter } from "lucide-react";
+import attireImage from "@/assets/gomesi-traditional.jpg";
 import attireData from "@/data/attire.json";
-import { Filter } from "lucide-react";
 
 const AttireIndexPage = () => {
+  const tribes = ["All", ...Array.from(new Set(attireData.map(a => a.metadata.Tribe)))];
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredAttire = activeFilter === 'All'
+    ? attireData
+    : attireData.filter(attire => attire.metadata.Tribe === activeFilter);
+
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Attire</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore the traditional and modern clothing of Uganda.
-          </p>
+        <div className="relative py-16 md:py-20 rounded-xl mb-12 overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src={attireImage}
+              alt="Traditional Ugandan attire"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          </div>
+          <div className="relative z-10 text-center text-white px-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              The Threads of Uganda
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Explore the vibrant and meaningful traditional attire of Uganda, where every garment tells a story of identity, ceremony, and history.
+            </p>
+          </div>
         </div>
 
         {/* Filters */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <div className="flex items-center gap-2">
             <Filter className="h-5 w-5 text-muted-foreground" />
-            <span className="text-sm font-medium text-foreground">Filter by:</span>
+            <span className="text-sm font-medium text-foreground">Filter by tribe:</span>
           </div>
-          {/* Placeholder for filter buttons */}
+          <div className="flex flex-wrap gap-2">
+            {tribes.map((tribe) => (
+              <button
+                key={tribe}
+                onClick={() => setActiveFilter(tribe)}
+                className={activeFilter === tribe ? 'boda-chip-active' : 'boda-chip'}
+              >
+                {tribe}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Content Grid */}
+        {/* Attire Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {attireData.map((item, index) => (
-            <ContentTile
-              key={index}
-              title={item.title}
-              link={item.link}
-              icon={item.icon}
-              metadata={item.metadata}
-              teaser={item.teaser}
-              detail={item.detail}
-            />
+          {filteredAttire.map((item, index) => (
+            <Link key={index} to={item.link} className="group">
+              <Card className="boda-card h-full overflow-hidden">
+                <div className="aspect-video bg-muted overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-muted flex items-center justify-center">
+                    <Shirt className="h-12 w-12 text-accent" />
+                  </div>
+                </div>
+
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-xl group-hover:text-accent transition-colors">
+                      {item.title}
+                    </CardTitle>
+                    <Badge variant="outline">{item.metadata.Tribe}</Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {item.detail}
+                  </p>
+                </CardHeader>
+
+                <CardContent>
+                  <blockquote className="border-l-2 border-accent pl-3 py-2 bg-muted/50 rounded-r">
+                    <p className="text-xs italic text-muted-foreground">
+                      "{item.teaser}"
+                    </p>
+                  </blockquote>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-secondary rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-foreground mb-4">
+            Discover More About Ugandan Culture
+          </h2>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Attire is just one part of the rich cultural tapestry. Explore tribes, food, and stories to get a complete picture.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/tribes">
+              <BodaButton variant="primary">
+                Explore Tribes
+              </BodaButton>
+            </Link>
+            <Link to="/food">
+              <BodaButton variant="secondary">
+                Discover Ugandan Food
+              </BodaButton>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

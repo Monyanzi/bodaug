@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SearchModal } from "@/components/SearchModal";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,7 +12,19 @@ import {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setIsSearchOpen((open) => !open);
+      }
+    };
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   const cultureLinks = [
     { name: "Tribes", href: "/tribes" },
@@ -78,13 +91,14 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={() => setIsSearchOpen(true)} aria-label="Search">
               <Search className="h-4 w-4" />
             </Button>
             <Link to="/preorder">
               <Button className="btn-primary">Preorder</Button>
             </Link>
           </div>
+          <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
           {/* Mobile Navigation */}
           <div className="flex items-center md:hidden space-x-2 sm:space-x-4">
