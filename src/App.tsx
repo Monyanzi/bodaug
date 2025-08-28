@@ -21,6 +21,13 @@ import Luwombo from "./pages/food/Luwombo";
 import RolexPage from './pages/food/RolexPage';
 import KintuAndNambi from "./pages/stories/KintuAndNambi";
 import WhyBoda from "./pages/stories/WhyBoda";
+import GipirAndLabong from "./pages/stories/GipirAndLabong";
+import CovenantOfMasaba from "./pages/stories/CovenantOfMasaba";
+import SorrowOfIsheKatabazi from "./pages/stories/SorrowOfIsheKatabazi";
+import ManWhoFacedAdroa from "./pages/stories/ManWhoFacedAdroa";
+import IndecisionOfTheBat from "./pages/stories/IndecisionOfTheBat";
+import NdahuraAtTheGateOfBukuku from "./pages/stories/NdahuraAtTheGateOfBukuku";
+import DepartureOfTheBachwezi from "./pages/stories/DepartureOfTheBachwezi";
 import Stories from "./pages/Stories";
 import Experiences from "./pages/Experiences";
 import Blog from "./pages/Blog";
@@ -64,6 +71,13 @@ const App = () => (
               <Route path="/food/rolex" element={<RolexPage />} />
               <Route path="/stories/kintu-and-nambi" element={<KintuAndNambi />} />
               <Route path="/stories/why-boda" element={<WhyBoda />} />
+              <Route path="/stories/gipir-and-labong" element={<GipirAndLabong />} />
+              <Route path="/stories/covenant-of-masaba" element={<CovenantOfMasaba />} />
+              <Route path="/stories/sorrow-of-ishe-katabazi" element={<SorrowOfIsheKatabazi />} />
+              <Route path="/stories/man-who-faced-adroa" element={<ManWhoFacedAdroa />} />
+              <Route path="/stories/indecision-of-the-bat" element={<IndecisionOfTheBat />} />
+              <Route path="/stories/ndahura-at-the-gate-of-bukuku" element={<NdahuraAtTheGateOfBukuku />} />
+              <Route path="/stories/departure-of-the-bachwezi" element={<DepartureOfTheBachwezi />} />
               <Route path="/stories" element={<Stories />} />
               <Route path="/experiences" element={<Experiences />} />
               <Route path="/blog" element={<Blog />} />
