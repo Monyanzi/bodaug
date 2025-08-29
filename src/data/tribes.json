@@ -5,7 +5,7 @@
     "language": "Luganda",
     "summary": "The kingdom builders and cultural custodians",
     "proverb": "Obutaka bw'omukazi si bwamsigwa - A woman's land is not inherited",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/baganda-tribe.jpg",
     "href": "/tribes/baganda",
     "featured": true
   },
@@ -42,7 +42,7 @@
     "language": "Ateso",
     "summary": "Pastoral nomads with rich cattle culture",
     "proverb": "Ejok nguna atap nu - Good fortune follows good people",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/iteso-tribe.jpg",
     "href": "/tribes/iteso"
   },
   {
@@ -51,7 +51,7 @@
     "language": "Luo",
     "summary": "Warriors and peace-makers of the north",
     "proverb": "Piny ogik i Acholi - The earth belongs to the Acholi",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/acholi-tribe.jpg",
     "href": "/tribes/acholi"
   },
   {
@@ -60,7 +60,7 @@
     "language": "Lugbara",
     "summary": "Border people with ancient traditions",
     "proverb": "A'di mi oku Lugbara - The Lugbara way is strong",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/lugbara-tribe.jpg",
     "href": "/tribes/lugbara"
   },
   {
@@ -69,7 +69,7 @@
     "language": "Lukonzo",
     "summary": "Mountain dwellers of the Rwenzori",
     "proverb": "Omukama w'orukonzo - The king of Konzo land",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/bakonzo-tribe.jpg",
     "href": "/tribes/bakonzo"
   },
   {
@@ -78,7 +78,7 @@
     "language": "Alur",
     "summary": "Highland people with a rich history of chiefdoms",
     "proverb": "Wang ma gweno pe neno, gweno neno - What the eye of a chicken doesn't see, the chicken sees",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/alur-culture-card.jpg",
     "href": "/tribes/alur"
   },
   {
@@ -87,7 +87,7 @@
     "language": "Lango",
     "summary": "Plains people known for their hunting and farming skills",
     "proverb": "Apwoyo pe dong iye abila - A rabbit does not return to a burnt field",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/lango-culture-card.jpg",
     "href": "/tribes/lango"
   },
   {
@@ -96,7 +96,7 @@
     "language": "Karamojong",
     "summary": "Pastoralist warriors of the semi-arid plains",
     "proverb": "Akinu ngesi akolong - The sun is the shield",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/karamojong-culture-card.jpg",
     "href": "/tribes/karamojong"
   }
 ]
