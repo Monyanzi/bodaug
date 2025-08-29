@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, ArrowRight } from "lucide-react";
-import heroBodaRider from "@/assets/hero-boda-rider.jpg";
+import heroBodaRider from "@/assets/uganda-culture-hero.jpg";
 
 const Home = () => {
   const quickPathCards = [
