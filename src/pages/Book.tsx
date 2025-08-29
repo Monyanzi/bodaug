@@ -14,7 +14,7 @@ const BookPage = () => {
       format: "Premium hardcover, 500+ pages",
       description: "The complete cultural encyclopedia of Uganda with exclusive photography and detailed cultural maps.",
       features: ["Premium hardcover binding", "500+ pages of content", "Exclusive photography", "Cultural heritage maps", "Limited edition numbering"],
-      mockup: "/api/placeholder/300/400",
+      mockup: "/src/assets/book-definitive-edition.jpg",
       badge: "Most Complete",
       icon: Book
     },
@@ -25,7 +25,7 @@ const BookPage = () => {
       format: "Compact paperback, travel-ready",
       description: "Essential cultural guide perfect for travelers who want to connect authentically with Uganda.",
       features: ["Pocket-friendly size", "Essential cultural insights", "Quick reference guides", "Travel etiquette tips", "Waterproof cover"],
-      mockup: "/api/placeholder/300/400",
+      mockup: "/src/assets/book-traveler-edition.jpg",
       badge: "Most Popular",
       icon: Users
     },
@@ -36,7 +36,7 @@ const BookPage = () => {
       format: "Illustrated storybook format",
       description: "Colorful stories and traditions designed to introduce young minds to Uganda's rich cultural heritage.",
       features: ["Beautiful illustrations", "Age-appropriate language", "Interactive elements", "Cultural activities", "Parent/teacher guides"],
-      mockup: "/api/placeholder/300/400", 
+      mockup: "/src/assets/book-children-edition.jpg",
       badge: "Family Friendly",
       icon: Baby
     },
@@ -47,7 +47,7 @@ const BookPage = () => {
       format: "Academic reference, 600+ pages", 
       description: "Comprehensive academic resource with extensive research, citations, and detailed cultural analysis.",
       features: ["Extensive bibliography", "Research methodologies", "Academic citations", "Peer-reviewed content", "University-grade analysis"],
-      mockup: "/api/placeholder/300/400",
+      mockup: "/src/assets/book-scholar-edition.jpg",
       badge: "In-Depth",
       icon: GraduationCap
     },
@@ -58,7 +58,7 @@ const BookPage = () => {
       format: "Business guide, market insights",
       description: "Business-focused guide covering investment opportunities, market culture, and economic insights.",
       features: ["Market analysis", "Investment opportunities", "Business etiquette", "Economic data", "Success case studies"],
-      mockup: "/api/placeholder/300/400",
+      mockup: "/src/assets/book-investor-edition.jpg",
       badge: "Business Focus", 
       icon: Briefcase
     }

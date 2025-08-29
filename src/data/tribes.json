@@ -15,7 +15,7 @@
     "language": "Runyoro",
     "summary": "The ancient kingdom with rich oral traditions",
     "proverb": "Akasozi k'eyaka, tikamanya kindi - One hill doesn't know another",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/banyoro-tribe.jpg",
     "href": "/tribes/banyoro"
   },
   {
@@ -24,7 +24,7 @@
     "language": "Rukiga",
     "summary": "Mountain people known for terraced farming",
     "proverb": "Akabaare k'omwiha tikagwa - A small stone in the wind doesn't fall",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/bakiga-tribe.jpg",
     "href": "/tribes/bakiga"
   },
   {
@@ -33,7 +33,7 @@
     "language": "Lusoga",
     "summary": "River people with strong fishing traditions",
     "proverb": "Amazzi tegakomerera mumiro - Water doesn't compete with fire",
-    "image": "/api/placeholder/400/300",
+    "image": "/src/assets/basoga-tribe.jpg",
     "href": "/tribes/basoga"
   },
   {

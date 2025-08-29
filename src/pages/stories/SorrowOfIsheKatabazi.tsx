@@ -1,4 +1,4 @@
-import storyImage from "/placeholder.svg";
+import storyImage from "@/assets/ishe-katabazi-story.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
 import StoryExcerptCTA from "@/components/StoryExcerptCTA";
 
