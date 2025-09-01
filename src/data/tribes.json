@@ -5,7 +5,7 @@
     "language": "Luganda",
     "summary": "The kingdom builders and cultural custodians",
     "proverb": "Obutaka bw'omukazi si bwamsigwa - A woman's land is not inherited",
-    "image": "/src/assets/baganda-tribe.jpg",
+    "image": "/baganda-tribe.jpg",
     "href": "/tribes/baganda",
     "featured": true
   },
@@ -15,7 +15,7 @@
     "language": "Runyoro",
     "summary": "The ancient kingdom with rich oral traditions",
     "proverb": "Akasozi k'eyaka, tikamanya kindi - One hill doesn't know another",
-    "image": "/src/assets/banyoro-tribe.jpg",
+    "image": "/banyoro-tribe.jpg",
     "href": "/tribes/banyoro"
   },
   {
@@ -24,7 +24,7 @@
     "language": "Rukiga",
     "summary": "Mountain people known for terraced farming",
     "proverb": "Akabaare k'omwiha tikagwa - A small stone in the wind doesn't fall",
-    "image": "/src/assets/bakiga-tribe.jpg",
+    "image": "/bakiga-tribe.jpg",
     "href": "/tribes/bakiga"
   },
   {
@@ -33,7 +33,7 @@
     "language": "Lusoga",
     "summary": "River people with strong fishing traditions",
     "proverb": "Amazzi tegakomerera mumiro - Water doesn't compete with fire",
-    "image": "/src/assets/basoga-tribe.jpg",
+    "image": "/basoga-tribe.jpg",
     "href": "/tribes/basoga"
   },
   {
@@ -42,7 +42,7 @@
     "language": "Ateso",
     "summary": "Pastoral nomads with rich cattle culture",
     "proverb": "Ejok nguna atap nu - Good fortune follows good people",
-    "image": "/src/assets/iteso-tribe.jpg",
+    "image": "/iteso-tribe.jpg",
     "href": "/tribes/iteso"
   },
   {
@@ -51,7 +51,7 @@
     "language": "Luo",
     "summary": "Warriors and peace-makers of the north",
     "proverb": "Piny ogik i Acholi - The earth belongs to the Acholi",
-    "image": "/src/assets/acholi-tribe.jpg",
+    "image": "/acholi-tribe.jpg",
     "href": "/tribes/acholi"
   },
   {
@@ -60,7 +60,7 @@
     "language": "Lugbara",
     "summary": "Border people with ancient traditions",
     "proverb": "A'di mi oku Lugbara - The Lugbara way is strong",
-    "image": "/src/assets/lugbara-tribe.jpg",
+    "image": "/lugbara-tribe.jpg",
     "href": "/tribes/lugbara"
   },
   {
@@ -69,7 +69,7 @@
     "language": "Lukonzo",
     "summary": "Mountain dwellers of the Rwenzori",
     "proverb": "Omukama w'orukonzo - The king of Konzo land",
-    "image": "/src/assets/bakonzo-tribe.jpg",
+    "image": "/bakonzo-tribe.jpg",
     "href": "/tribes/bakonzo"
   },
   {
@@ -78,7 +78,7 @@
     "language": "Alur",
     "summary": "Highland people with a rich history of chiefdoms",
     "proverb": "Wang ma gweno pe neno, gweno neno - What the eye of a chicken doesn't see, the chicken sees",
-    "image": "/src/assets/alur-culture-card.jpg",
+    "image": "/alur-culture-card.jpg",
     "href": "/tribes/alur"
   },
   {
@@ -87,7 +87,7 @@
     "language": "Lango",
     "summary": "Plains people known for their hunting and farming skills",
     "proverb": "Apwoyo pe dong iye abila - A rabbit does not return to a burnt field",
-    "image": "/src/assets/lango-culture-card.jpg",
+    "image": "/lango-culture-card.jpg",
     "href": "/tribes/lango"
   },
   {
@@ -96,7 +96,7 @@
     "language": "Karamojong",
     "summary": "Pastoralist warriors of the semi-arid plains",
     "proverb": "Akinu ngesi akolong - The sun is the shield",
-    "image": "/src/assets/karamojong-culture-card.jpg",
+    "image": "/karamojong-culture-card.jpg",
     "href": "/tribes/karamojong"
   }
 ]
