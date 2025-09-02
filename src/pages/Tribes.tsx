@@ -30,10 +30,10 @@ const Tribes = () => {
           </div>
           <div className="relative z-10 text-center text-white px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Uganda's Cultural Tapestry
+              Ugandan Communities & Heritage
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Discover the diverse tribes that make Uganda extraordinary. Each community brings unique traditions, wisdom, and stories that have shaped the nation for centuries.
+              Meet the remarkable communities that call Uganda home. Each tribe preserves ancient traditions and contributes unique stories to the nation's collective identity.
             </p>
           </div>
         </div>

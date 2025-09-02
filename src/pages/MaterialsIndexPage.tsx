@@ -30,10 +30,10 @@ const MaterialsIndexPage = () => {
           </div>
           <div className="relative z-10 text-center text-white px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              The Hands of a Nation
+              Traditional Crafts & Materials
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              From ancient textiles to symbolic beads, discover the raw materials that are woven into the fabric of Ugandan culture and craftsmanship.
+              Explore the natural resources and traditional materials that form the foundation of Ugandan craftsmanship and cultural expression.
             </p>
           </div>
         </div>

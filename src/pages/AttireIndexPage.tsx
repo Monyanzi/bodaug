@@ -30,10 +30,10 @@ const AttireIndexPage = () => {
           </div>
           <div className="relative z-10 text-center text-white px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              The Threads of Uganda
+              Traditional Ugandan Attire
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Explore the vibrant and meaningful traditional attire of Uganda, where every garment tells a story of identity, ceremony, and history.
+              Discover the rich heritage of Ugandan clothing traditions, where each garment carries deep cultural meaning and celebrates ancestral wisdom.
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ const AttireIndexPage = () => {
             Discover More About Ugandan Culture
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Attire is just one part of the rich cultural tapestry. Explore tribes, food, and stories to get a complete picture.
+            Clothing is just one aspect of Uganda's diverse cultural heritage. Explore tribes, food, and stories to understand the complete picture.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/tribes">

@@ -30,10 +30,10 @@ const FoodIndexPage = () => {
           </div>
           <div className="relative z-10 text-center text-white px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              The Flavors of Uganda
+              Ugandan Cuisine Traditions
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              From traditional royal dishes to modern street food, taste the diverse and delicious cuisine that Uganda has to offer.
+              Experience the authentic tastes of Uganda, from time-honored royal recipes to beloved street food that brings communities together.
             </p>
           </div>
         </div>

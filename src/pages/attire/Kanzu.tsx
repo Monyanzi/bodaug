@@ -231,8 +231,8 @@ const Kanzu = () => {
               Discover More Cultural Traditions
             </h2>
             <p className="text-muted-foreground mb-6">
-              The Kanzu represents just one facet of Uganda's rich cultural tapestry. 
-              Explore more traditions, stories, and heritage from across the country.
+              The Kanzu represents just one aspect of Uganda's diverse cultural heritage. 
+              Explore more traditions, stories, and customs from across the country.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/tribes/baganda">
