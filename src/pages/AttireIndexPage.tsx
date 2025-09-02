@@ -63,9 +63,18 @@ const AttireIndexPage = () => {
             <Link key={index} to={item.link} className="group">
               <Card className="boda-card h-full overflow-hidden">
                 <div className="aspect-video bg-muted overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-muted flex items-center justify-center">
-                    <Shirt className="h-12 w-12 text-accent" />
-                  </div>
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-accent/20 to-muted flex items-center justify-center">
+                      <Shirt className="h-12 w-12 text-accent" />
+                    </div>
+                  )}
                 </div>
 
                 <CardHeader className="pb-3">
