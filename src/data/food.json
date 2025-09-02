@@ -3,6 +3,7 @@
     "title": "Luwombo",
     "link": "/food/luwombo",
     "icon": "pot-icon",
+    "image": "/luwombo-dish.jpg",
     "metadata": { "Tribe": "Baganda", "Type": "Main Course" },
     "teaser": "A traditional stew steamed in banana leaves.",
     "detail": "Can be made with chicken, beef, or mushrooms."
@@ -11,6 +12,7 @@
     "title": "Rolex",
     "link": "/food/rolex",
     "icon": "wrap-icon",
+    "image": "/rolex-street-food.jpg",
     "metadata": { "Origin": "Urban", "Type": "Street Food" },
     "teaser": "A popular Ugandan street food, a chapati rolled with eggs.",
     "detail": "A quick and delicious meal, famous across the country."
