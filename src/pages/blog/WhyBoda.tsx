@@ -1,4 +1,4 @@
-import storyImage from "@/assets/hero-boda-rider.jpg";
+import storyImage from "@/assets/hero-boda-passenger-view.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const WhyBoda = () => {
             <div className="absolute inset-0">
               <img
                 src={storyImage}
-                alt="Boda-boda rider on a scenic road"
+                alt="First-person view from a boda-boda passenger amid Uganda's hills and morning mist"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
