@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, ArrowRight } from "lucide-react";
-import heroBodaRider from "@/assets/hero-boda-rider.jpg";
+import heroPassengerView from "@/assets/hero-boda-passenger-view.jpg";
 
 const Home = () => {
   const quickPathCards = [
@@ -29,8 +29,8 @@ const Home = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src={heroBodaRider} 
-            alt="Boda rider at golden hour in Uganda" 
+            src={heroPassengerView} 
+            alt="First-person view from boda-boda passenger riding through Uganda's beautiful landscape" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
