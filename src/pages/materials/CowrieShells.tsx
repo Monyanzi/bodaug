@@ -1,4 +1,3 @@
-import materialImage from "@/assets/cowrie-shells.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,7 @@ const CowrieShells = () => {
           <div className="relative py-16 md:py-20 rounded-xl mb-8 overflow-hidden">
             <div className="absolute inset-0">
               <img
-                src={materialImage}
+                src="/cowrie-shells.jpg"
                 alt="Cowrie Shells"
                 className="w-full h-full object-cover"
               />

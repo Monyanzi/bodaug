@@ -1,4 +1,3 @@
-import nameImage from "@/assets/mugisha-blessing.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,7 @@ const Mugisha = () => {
           <div className="relative py-16 md:py-20 rounded-xl mb-8 overflow-hidden">
             <div className="absolute inset-0">
               <img
-                src={nameImage}
+                src="/mugisha-blessing.jpg"
                 alt="Mugisha - Blessing"
                 className="w-full h-full object-cover"
               />
