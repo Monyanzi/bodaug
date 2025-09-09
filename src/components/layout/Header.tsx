@@ -41,7 +41,6 @@ const Header = () => {
 
   const navigation = [
     { name: "Experiences", href: "/experiences" },
-    { name: "About", href: "/about" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
