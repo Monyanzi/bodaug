@@ -34,9 +34,12 @@ const Header = () => {
     { name: "Names", href: "/names" },
   ];
 
-  const navigation = [
+  const writingsLinks = [
     { name: "Stories", href: "/stories" },
     { name: "Blog", href: "/blog" },
+  ];
+
+  const navigation = [
     { name: "Experiences", href: "/experiences" },
     { name: "About", href: "/about" },
   ];
@@ -67,6 +70,19 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {cultureLinks.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.href}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
+                Writings <ChevronDown className="h-4 w-4 ml-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {writingsLinks.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
                     <Link to={item.href}>{item.name}</Link>
                   </DropdownMenuItem>
@@ -108,6 +124,19 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {cultureLinks.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link to={item.href}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
+                Writings <ChevronDown className="h-4 w-4 ml-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {writingsLinks.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
                     <Link to={item.href}>{item.name}</Link>
                   </DropdownMenuItem>
@@ -159,6 +188,19 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {cultureLinks.map((item) => (
+                    <DropdownMenuItem key={item.name} asChild>
+                      <Link to={item.href} onClick={() => setIsMenuOpen(false)}>{item.name}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-muted-foreground rounded-md hover:text-accent hover:bg-muted">
+                  Writings <ChevronDown className="h-4 w-4 ml-1" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {writingsLinks.map((item) => (
                     <DropdownMenuItem key={item.name} asChild>
                       <Link to={item.href} onClick={() => setIsMenuOpen(false)}>{item.name}</Link>
                     </DropdownMenuItem>
