@@ -17,6 +17,9 @@ import Gomesi from "./pages/attire/Gomesi";
 import Kanzu from "./pages/attire/Kanzu";
 import BarkCloth from "./pages/materials/BarkCloth";
 import Mukasa from "./pages/names/Mukasa";
+import Nambi from "./pages/names/Nambi";
+import Mugisha from "./pages/names/Mugisha";
+import CowrieShells from "./pages/materials/CowrieShells";
 import Luwombo from "./pages/food/Luwombo";
 import RolexPage from './pages/food/RolexPage';
 import WhyBoda from "./pages/blog/WhyBoda";
@@ -65,7 +68,10 @@ const App = () => (
               <Route path="/attire/gomesi" element={<Gomesi />} />
               <Route path="/attire/kanzu" element={<Kanzu />} />
               <Route path="/materials/bark-cloth" element={<BarkCloth />} />
+              <Route path="/materials/cowrie-shells" element={<CowrieShells />} />
               <Route path="/names/mukasa" element={<Mukasa />} />
+              <Route path="/names/nambi" element={<Nambi />} />
+              <Route path="/names/mugisha" element={<Mugisha />} />
               <Route path="/food/luwombo" element={<Luwombo />} />
               <Route path="/food/rolex" element={<RolexPage />} />
               <Route path="/stories/gipir-and-labong" element={<GipirAndLabong />} />

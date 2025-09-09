@@ -20,14 +20,15 @@ const Footer = () => {
               Just like boda-bodas connect people across Uganda, we connect you to the rich tapestry of traditions, stories, and heritage that make Uganda extraordinary.
             </p>
             <div className="flex items-center space-x-4">
-              <Link 
-                to="https://ko-fi.com/boda" 
-                target="_blank"
-                className="inline-flex items-center space-x-2 text-sm text-muted-foreground hover:text-accent boda-underline"
-              >
+            <a 
+              href="https://ko-fi.com/boda" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 text-sm text-muted-foreground hover:text-accent boda-underline"
+            >
                 <Heart className="h-4 w-4" />
                 <span>Support on Ko-fi</span>
-              </Link>
+              </a>
             </div>
           </div>
 
