@@ -5,11 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { Check, X, Book } from "lucide-react";
-import definitiveEditionImage from "@/assets/book-definitive-edition-mockup.jpg";
-import travelerEditionImage from "@/assets/book-traveler-edition-mockup.jpg";
-import childrenEditionImage from "@/assets/book-children-edition-mockup.jpg";
-import scholarEditionImage from "@/assets/book-scholar-edition-mockup.jpg";
-import investorEditionImage from "@/assets/book-investor-edition-mockup.jpg";
+import definitiveEditionImage from "@/assets/boda-definitive-edition.jpg";
+import travellersEditionImage from "@/assets/boda-travellers-edition.jpg";
+import childrensEditionImage from "@/assets/boda-childrens-edition.jpg";
+import scholarEditionImage from "@/assets/boda-scholar-edition.jpg";
+import investorEditionImage from "@/assets/boda-investor-edition.jpg";
 
 const Preorder = () => {
   const [formData, setFormData] = useState({
@@ -33,31 +33,31 @@ const Preorder = () => {
   const editions = [
     {
       id: "definitive",
-      name: "Definitive Edition",
+      name: "Boda: Definitive Edition",
       description: "The complete cultural encyclopedia of Uganda",
       features: ["Premium hardcover", "500+ pages", "Exclusive photography", "Cultural maps"],
       badge: "Most Complete",
       image: definitiveEditionImage
     },
     {
-      id: "traveler",
-      name: "Travel Guide",
+      id: "traveller",
+      name: "Boda: Travellers Edition",
       description: "Pocket-friendly guide for explorers",
       features: ["Compact size", "Essential insights", "Travel-ready", "Quick reference"],
       badge: "Getting Around",
-      image: travelerEditionImage
+      image: travellersEditionImage
     },
     {
       id: "children",
-      name: "Children's Edition",
+      name: "Boda: Children's Edition",
       description: "Stories and traditions for young minds",
       features: ["Colorful illustrations", "Simple language", "Interactive elements", "Age 6-12"],
       badge: "Family Friendly",
-      image: childrenEditionImage
+      image: childrensEditionImage
     },
     {
       id: "scholar",
-      name: "Scholar Edition",
+      name: "Boda: Scholar Edition",
       description: "Academic research and detailed analysis",
       features: ["Extensive references", "Research notes", "Academic format", "University-grade"],
       badge: "In-Depth",
@@ -65,7 +65,7 @@ const Preorder = () => {
     },
     {
       id: "investor",
-      name: "Investor Edition",
+      name: "Boda: Investor Edition",
       description: "Business and investment opportunities",
       features: ["Market analysis", "Investment guides", "Business culture", "Economic insights"],
       badge: "Business Focus",
