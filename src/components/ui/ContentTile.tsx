@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Scroll, Utensils, Shirt, Gem } from "lucide-react";
 
 interface ContentTileProps {
   title: string;
@@ -11,6 +11,21 @@ interface ContentTileProps {
   teaser: string;
   detail: string;
 }
+
+const getIconComponent = (iconName: string) => {
+  const iconMap: Record<string, React.ComponentType<any>> = {
+    'story-icon': Scroll,
+    'food-icon': Utensils,
+    'dress-icon': Shirt,
+    'attire-icon': Shirt,
+    'material-icon': Gem,
+    'name-icon': Scroll,
+    'default': ArrowUpRight
+  };
+  
+  const IconComponent = iconMap[iconName] || iconMap['default'];
+  return <IconComponent className="h-5 w-5 text-accent" />;
+};
 
 export const ContentTile = ({ title, link, icon, metadata, teaser, detail }: ContentTileProps) => {
   return (
@@ -22,8 +37,7 @@ export const ContentTile = ({ title, link, icon, metadata, teaser, detail }: Con
               {title}
             </CardTitle>
             <div className="p-2 bg-muted rounded-full">
-              {/* Placeholder for icon */}
-              <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
+              {getIconComponent(icon)}
             </div>
           </div>
           <div className="flex flex-wrap gap-2 pt-2">

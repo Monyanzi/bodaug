@@ -2,7 +2,7 @@
   {
     "title": "Gomesi",
     "link": "/attire/gomesi",
-    "icon": "dress-icon",
+    "icon": "attire-icon",
     "image": "/gomesi-traditional.jpg",
     "metadata": { "Tribe": "Baganda", "Occasion": "Ceremony" },
     "teaser": "A symbol of elegance and modesty in formal ceremonies.",
@@ -11,7 +11,7 @@
   {
     "title": "Kanzu",
     "link": "/attire/kanzu",
-    "icon": "shirt-icon",
+    "icon": "attire-icon",
     "image": "/kanzu-traditional.jpg",
     "metadata": { "Tribe": "Baganda", "Gender": "Men" },
     "teaser": "A dignified, simple garment worn for formal events.",

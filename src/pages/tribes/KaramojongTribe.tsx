@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Sun, MapPin, Shield } from "lucide-react";
-import tribeImage from "@/assets/uganda-tribes-collage.jpg"; // Placeholder
+import tribeImage from "@/assets/karamojong-tribe-hero.jpg";
 
 const KaramojongTribe = () => {
   return (

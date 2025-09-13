@@ -5,6 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { Check, X, Book } from "lucide-react";
+import definitiveEditionImage from "@/assets/book-definitive-edition-mockup.jpg";
+import travelerEditionImage from "@/assets/book-traveler-edition-mockup.jpg";
+import childrenEditionImage from "@/assets/book-children-edition-mockup.jpg";
+import scholarEditionImage from "@/assets/book-scholar-edition-mockup.jpg";
+import investorEditionImage from "@/assets/book-investor-edition-mockup.jpg";
 
 const Preorder = () => {
   const [formData, setFormData] = useState({
@@ -31,35 +36,40 @@ const Preorder = () => {
       name: "Definitive Edition",
       description: "The complete cultural encyclopedia of Uganda",
       features: ["Premium hardcover", "500+ pages", "Exclusive photography", "Cultural maps"],
-      badge: "Most Complete"
+      badge: "Most Complete",
+      image: definitiveEditionImage
     },
     {
       id: "traveler",
       name: "Travel Guide",
       description: "Pocket-friendly guide for explorers",
       features: ["Compact size", "Essential insights", "Travel-ready", "Quick reference"],
-      badge: "Getting Around"
+      badge: "Getting Around",
+      image: travelerEditionImage
     },
     {
       id: "children",
       name: "Children's Edition",
       description: "Stories and traditions for young minds",
       features: ["Colorful illustrations", "Simple language", "Interactive elements", "Age 6-12"],
-      badge: "Family Friendly"
+      badge: "Family Friendly",
+      image: childrenEditionImage
     },
     {
       id: "scholar",
       name: "Scholar Edition",
       description: "Academic research and detailed analysis",
       features: ["Extensive references", "Research notes", "Academic format", "University-grade"],
-      badge: "In-Depth"
+      badge: "In-Depth",
+      image: scholarEditionImage
     },
     {
       id: "investor",
       name: "Investor Edition",
       description: "Business and investment opportunities",
       features: ["Market analysis", "Investment guides", "Business culture", "Economic insights"],
-      badge: "Business Focus"
+      badge: "Business Focus",
+      image: investorEditionImage
     }
   ];
 
@@ -179,19 +189,25 @@ const Preorder = () => {
               {editions.map((edition) => (
                 <Card
                   key={edition.id}
-                  className={`boda-card cursor-pointer transition-all ${
+                  className={`boda-card cursor-pointer transition-all overflow-hidden ${
                     selectedEditions.some(e => e.id === edition.id) ? 'border-accent border-2' : ''
                   }`}
                   onClick={() => handleAddEdition(edition.id)}
                 >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={edition.image} 
+                      alt={`${edition.name} book cover mockup`}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    />
+                  </div>
                   <CardHeader className="pb-3">
                     <div className="flex items-start justify-between">
-                      <Book className="h-8 w-8 text-accent" />
+                      <CardTitle className="text-lg">{edition.name}</CardTitle>
                       <Badge variant="secondary" className="text-xs">
                         {edition.badge}
                       </Badge>
                     </div>
-                    <CardTitle className="text-lg">{edition.name}</CardTitle>
                     <p className="text-sm text-muted-foreground">
                       {edition.description}
                     </p>
