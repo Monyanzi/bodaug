@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Book, Users, GraduationCap, Briefcase, Baby } from "lucide-react";
 import bookSeriesImage from "@/assets/boda-book-series.jpg";
+import readingBodaBook from "@/assets/reading-boda-book.jpg";
+import definitiveEditionImage from "@/assets/boda-definitive-edition.jpg";
+import travellersEditionImage from "@/assets/boda-travellers-edition.jpg";
+import childrensEditionImage from "@/assets/boda-childrens-edition.jpg";
+import scholarEditionImage from "@/assets/boda-scholar-edition.jpg";
+import investorEditionImage from "@/assets/boda-investor-edition.jpg";
 
 const BookPage = () => {
   const editions = [
@@ -14,7 +20,7 @@ const BookPage = () => {
       format: "Premium hardcover, 500+ pages",
       description: "The complete cultural encyclopedia of Uganda with exclusive photography and detailed cultural maps.",
       features: ["Premium hardcover binding", "500+ pages of content", "Exclusive photography", "Cultural heritage maps", "Limited edition numbering"],
-      mockup: "/book-definitive-edition.jpg",
+      mockup: definitiveEditionImage,
       badge: "Most Complete",
       icon: Book
     },
@@ -25,7 +31,7 @@ const BookPage = () => {
       format: "Compact paperback, travel-ready",
       description: "Essential cultural guide perfect for travelers who want to connect authentically with Uganda.",
       features: ["Pocket-friendly size", "Essential cultural insights", "Quick reference guides", "Travel etiquette tips", "Waterproof cover"],
-      mockup: "/book-traveler-edition.jpg",
+      mockup: travellersEditionImage,
       badge: "Most Popular",
       icon: Users
     },
@@ -36,7 +42,7 @@ const BookPage = () => {
       format: "Illustrated storybook format",
       description: "Colorful stories and traditions designed to introduce young minds to Uganda's rich cultural heritage.",
       features: ["Beautiful illustrations", "Age-appropriate language", "Interactive elements", "Cultural activities", "Parent/teacher guides"],
-      mockup: "/book-children-edition.jpg",
+      mockup: childrensEditionImage,
       badge: "Family Friendly",
       icon: Baby
     },
@@ -47,7 +53,7 @@ const BookPage = () => {
       format: "Academic reference, 600+ pages", 
       description: "Comprehensive academic resource with extensive research, citations, and detailed cultural analysis.",
       features: ["Extensive bibliography", "Research methodologies", "Academic citations", "Peer-reviewed content", "University-grade analysis"],
-      mockup: "/book-scholar-edition.jpg",
+      mockup: scholarEditionImage,
       badge: "In-Depth",
       icon: GraduationCap
     },
@@ -58,8 +64,8 @@ const BookPage = () => {
       format: "Business guide, market insights",
       description: "Business-focused guide covering investment opportunities, market culture, and economic insights.",
       features: ["Market analysis", "Investment opportunities", "Business etiquette", "Economic data", "Success case studies"],
-      mockup: "/book-investor-edition.jpg",
-      badge: "Business Focus", 
+      mockup: investorEditionImage,
+      badge: "Business Focus",
       icon: Briefcase
     }
   ];
@@ -101,14 +107,34 @@ const BookPage = () => {
           </div>
         </div>
 
+        {/* Inspiration Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src={readingBodaBook} 
+              alt="Person immersed in reading Boda book in a cozy setting"
+              className="w-full h-96 object-cover"
+            />
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Join thousands of readers discovering Uganda's rich cultural heritage through our comprehensive book series.
+            </p>
+          </div>
+        </div>
+
         {/* Editions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {editions.map((edition, index) => {
             const IconComponent = edition.icon;
             return (
               <Card key={index} className="boda-card overflow-hidden">
-                <div className="aspect-[3/4] bg-gradient-to-br from-accent/20 to-muted flex items-center justify-center relative">
-                  <IconComponent className="h-16 w-16 text-accent" />
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <img 
+                    src={edition.mockup} 
+                    alt={`${edition.title} book cover mockup`}
+                    className="w-full h-full object-cover"
+                  />
                   <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
                     {edition.badge}
                   </Badge>

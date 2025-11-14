@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MessageSquare, Phone, MapPin } from "lucide-react";
+import contactHero from "@/assets/contact-hero.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -110,11 +111,23 @@ const Contact = () => {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
+          {/* Hero Image */}
+          <div className="relative mb-12 rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src={contactHero} 
+              alt="Get in touch with Boda - connecting Uganda's culture with the world"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-white">
+                Get in Touch
+              </h1>
+            </div>
+          </div>
+          
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
-              Get in Touch
-            </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Whether you have cultural stories to share, partnership ideas, or just want to say hello - 
               we'd love to hear from you. Every conversation helps us build a richer cultural resource.
