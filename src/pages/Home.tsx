@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, ArrowRight } from "lucide-react";
+import { Play, ArrowRight, Check } from "lucide-react";
 import heroPassengerView from "@/assets/hero-boda-passenger-view.jpg";
+import culturalGreetings from "@/assets/cultural-greetings-respect.jpg";
 
 const Home = () => {
   const quickPathCards = [
@@ -55,10 +56,12 @@ const Home = () => {
                     Explore Culture
                   </BodaButton>
                 </Link>
-                <BodaButton variant="ghost" size="lg" className="flex items-center gap-2">
-                  <Play className="h-5 w-5" />
-                  Watch 60-sec intro
-                </BodaButton>
+                <Link to="/blog/why-boda">
+                  <BodaButton variant="ghost" size="lg" className="flex items-center gap-2">
+                    <Play className="h-5 w-5" />
+                    Watch 60-sec intro
+                  </BodaButton>
+                </Link>
               </div>
             </div>
             
@@ -106,21 +109,32 @@ const Home = () => {
       {/* Featured Guide */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              Cultural Etiquette 101
+            </h2>
+            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Image */}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={culturalGreetings} 
+                  alt="Traditional Ugandan greeting showing cultural respect and connection"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Content */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Cultural Etiquette 101
-                </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground mb-6">
                   Master the essential cultural practices that will help you connect authentically with Ugandan communities.
                 </p>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {featuredHighlights.map((highlight, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground text-sm">{highlight}</span>
+                    <li key={index} className="flex items-start gap-4">
+                      <Check className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                      <span className="text-muted-foreground">{highlight}</span>
                     </li>
                   ))}
                 </ul>
@@ -130,15 +144,6 @@ const Home = () => {
                     Read the Full Guide
                   </BodaButton>
                 </Link>
-              </div>
-              
-              <div className="bg-muted rounded-lg aspect-video flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Play className="h-8 w-8 text-accent-foreground" />
-                  </div>
-                  <p className="text-muted-foreground">Cultural Etiquette Preview</p>
-                </div>
               </div>
             </div>
           </div>

@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Heart, Users, BookOpen, Globe, Mail, Phone } from "lucide-react";
+import culturalResearchTeam from "@/assets/cultural-research-team.jpg";
+import editorialStandards from "@/assets/editorial-standards-workspace.jpg";
+import partnershipCollaboration from "@/assets/partnership-collaboration.jpg";
 
 const About = () => {
   return (
@@ -35,6 +38,17 @@ const About = () => {
                 accessible knowledge for future generations.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Cultural Research Image */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src={culturalResearchTeam} 
+              alt="Cultural researchers collaborating with Ugandan elders to document traditional knowledge"
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
 
@@ -89,6 +103,13 @@ const About = () => {
               <CardTitle className="text-2xl">Editorial Standards</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
+              <div className="mb-6 rounded-lg overflow-hidden">
+                <img 
+                  src={editorialStandards} 
+                  alt="Editorial workspace with research materials and cultural artifacts"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Research Methodology</h3>
                 <p className="text-muted-foreground mb-3">
@@ -117,10 +138,17 @@ const About = () => {
         </div>
 
         {/* Partnerships Section */}
-        <div id="partnerships" className="max-w-4xl mx-auto mb-16">
+        <div id="partnerships" className="max-w-6xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-foreground text-center mb-8">
             Partnerships
           </h2>
+          <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src={partnershipCollaboration} 
+              alt="Diverse partners collaborating on cultural preservation initiatives in Uganda"
+              className="w-full h-80 object-cover"
+            />
+          </div>
           <Card className="boda-card">
             <CardContent className="p-8">
               <p className="text-muted-foreground mb-6 text-center">
