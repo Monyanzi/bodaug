@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import culturalStoriesImage from "@/assets/cultural-stories-blog.jpg";
 import { BodaButton } from "@/components/ui/boda-button";
 
@@ -73,7 +74,7 @@ const Blog = () => {
           {/* Featured Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {filteredArticles.map((article, index) => (
-              <a key={index} href={article.href} className="group boda-card block">
+              <Link key={index} to={article.href} className="group boda-card block">
                 <div className="bg-card border border-border rounded-lg overflow-hidden">
                   <div className="bg-muted h-48 flex items-center justify-center">
                     <span className="text-muted-foreground">Featured Image</span>
@@ -91,7 +92,7 @@ const Blog = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,6 +10,7 @@ const Join = () => {
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const benefits = [
     {
@@ -67,10 +69,10 @@ const Join = () => {
               In the meantime, start exploring Uganda's rich heritage.
             </p>
             <div className="space-y-3">
-              <BodaButton variant="primary" className="w-full" onClick={() => window.location.href = "/tribes"}>
+              <BodaButton variant="primary" className="w-full" onClick={() => navigate("/tribes")}>
                 Explore Tribes
               </BodaButton>
-              <BodaButton variant="secondary" className="w-full" onClick={() => window.location.href = "/preorder"}>
+              <BodaButton variant="secondary" className="w-full" onClick={() => navigate("/preorder")}>
                 Pre-order Books
               </BodaButton>
             </div>
