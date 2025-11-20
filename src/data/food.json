@@ -1,20 +1,186 @@
 [
   {
+    "id": "luwombo",
     "title": "Luwombo",
     "link": "/food/luwombo",
-    "icon": "food-icon",
+    "icon": "Utensils",
     "image": "/luwombo-dish.jpg",
     "metadata": { "Tribe": "Baganda", "Type": "Main Course" },
     "teaser": "A traditional stew steamed in banana leaves.",
-    "detail": "Can be made with chicken, beef, or mushrooms."
+    "detail": "Can be made with chicken, beef, or mushrooms.",
+    "description": "The Royal Steamed Delicacy of Buganda",
+    "intro": "Discover the traditional cooking method that transforms simple ingredients into a feast fit for kings. Learn about the royal dish of Buganda - its history, preparation, and cultural significance.",
+    "sections": {
+      "introduction": {
+        "title": "The Royal Feast",
+        "content": [
+          "Luwombo is more than just a cooking method—it's a culinary art form that has graced the tables of Buganda royalty for centuries. This traditional steaming technique transforms simple ingredients into an aromatic feast, wrapped in banana leaves that infuse every bite with earthy, tropical flavors.",
+          "Named after its inventor, the legendary Baganda cook Luwombo, this dish represents the pinnacle of traditional Ugandan cuisine, combining protein, vegetables, and spices in perfect harmony."
+        ],
+        "sidebar": {
+          "title": "Royal Origins",
+          "items": [
+            "Originally prepared for the Kabaka (King) of Buganda",
+            "Traditional cooking method dates back over 200 years",
+            "Banana leaves were chosen for their natural antimicrobial properties",
+            "Each family has its own secret spice combinations"
+          ]
+        }
+      },
+      "process": {
+        "title": "The Traditional Luwombo Method",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Prepare Ingredients",
+            "description": "Season chicken, beef, or fish with traditional spices including ginger, garlic, and curry powder."
+          },
+          {
+            "step": "2",
+            "title": "Wrap in Leaves",
+            "description": "Place seasoned protein and vegetables in fresh banana leaves, creating individual packets."
+          },
+          {
+            "step": "3",
+            "title": "Steam Slowly",
+            "description": "Steam the wrapped packets in a large pot for 2-3 hours, allowing flavors to meld perfectly."
+          },
+          {
+            "step": "4",
+            "title": "Serve Hot",
+            "description": "Unwrap the aromatic packets to reveal tender, flavorful meat and vegetables."
+          }
+        ]
+      },
+      "varieties": {
+        "title": "Varieties",
+        "items": [
+          {
+            "name": "Enkoko Luwombo",
+            "description": "Traditional chicken luwombo with onions, tomatoes, and green peppers",
+            "ingredients": ["Free-range chicken", "Fresh ginger", "Curry powder", "Green vegetables"]
+          },
+          {
+            "name": "Ente Luwombo",
+            "description": "Tender beef luwombo slow-cooked with traditional spices",
+            "ingredients": ["Lean beef cuts", "Garlic cloves", "Bay leaves", "Local herbs"]
+          },
+          {
+            "name": "Ekyennyanja Luwombo",
+            "description": "Fresh fish luwombo featuring tilapia or other lake fish",
+            "ingredients": ["Fresh tilapia", "Lemon grass", "Tomatoes", "Onions"]
+          }
+        ]
+      },
+      "context": {
+        "columns": [
+          {
+            "title": "Cultural Significance",
+            "content": [
+              "Luwombo is more than sustenance—it's a cultural connector. Families gather to prepare it together, with elders passing down secret spice combinations and techniques to younger generations.",
+              "The communal aspect of unwrapping and sharing luwombo strengthens family bonds and creates lasting memories, making every meal a celebration of heritage and togetherness."
+            ]
+          },
+          {
+            "title": "Modern Adaptations",
+            "content": [
+              "While traditional luwombo requires banana leaves and hours of steaming, modern cooks have adapted the technique using aluminum foil and pressure cookers without compromising the essential flavors.",
+              "Restaurants across Uganda now serve luwombo, making this royal dish accessible to everyone while maintaining respect for its traditional preparation methods."
+            ]
+          }
+        ]
+      },
+      "experience": {
+        "title": "Experience Authentic Luwombo",
+        "text": "Taste this royal delicacy at traditional restaurants or join a cooking class to learn the time-honored techniques.",
+        "buttons": [
+          { "text": "Find Luwombo Restaurants", "variant": "primary" },
+          { "text": "Join Cooking Experience", "variant": "secondary" }
+        ]
+      }
+    }
   },
   {
+    "id": "rolex",
     "title": "Rolex",
     "link": "/food/rolex",
-    "icon": "food-icon",
+    "icon": "Utensils",
     "image": "/rolex-street-food.jpg",
     "metadata": { "Origin": "Urban", "Type": "Street Food" },
     "teaser": "A popular Ugandan street food, a chapati rolled with eggs.",
-    "detail": "A quick and delicious meal, famous across the country."
+    "detail": "A quick and delicious meal, famous across the country.",
+    "description": "The Ugandan Rolex: A National Treasure Wrapped in a Chapati",
+    "intro": "Discover the story behind the iconic street food that fuels Uganda, a delicious and clever play on \"rolled eggs.\"",
+    "sections": {
+      "introduction": {
+        "content": [
+          "Across Uganda, from the bustling streets of Kampala to quiet village trading posts, there is one sound that promises a quick, delicious, and satisfying meal: the sizzle of eggs on a hot plate. This is the sound of the Rolex being born. Far from a luxury timepiece, the Ugandan Rolex is the country's undisputed king of street food—a warm chapati embracing a savory omelette filled with fresh tomatoes and onions. It's a cultural unifier, enjoyed by students, business people, and travelers alike. It's not just food; it's a piece of Ugandan identity."
+        ]
+      },
+      "anatomy": {
+        "title": "The Anatomy of a Perfect Rolex 🍳",
+        "intro": "At its heart, the Rolex is beautifully simple, but the magic is in the combination of fresh, hot ingredients, cooked right before your eyes.",
+        "items": [
+          {
+            "title": "The Foundation (The Chapati)",
+            "text": "A soft, flaky, and slightly chewy flatbread, cooked to a perfect golden-brown on a griddle. It's the vessel that holds everything together."
+          },
+          {
+            "title": "The Heart (The Eggs)",
+            "text": "Two or three eggs are whisked and fried into a thin, wide omelette. This isn't a fluffy French omelette; it's a robust, flavorful sheet of egg that becomes the savory core."
+          },
+          {
+            "title": "The Crunch & Flavour (The Vegetables)",
+            "text": "Finely chopped fresh ingredients are mixed into the eggs or added on top before rolling. The holy trinity is: Tomatoes, Onions, and Cabbage."
+          }
+        ]
+      },
+      "process": {
+        "title": "The Theatre of the Street: How It's Made",
+        "intro": "Watching a Rolex vendor—or \"Rolex guy\"—is pure street theatre. The process is a rapid, mesmerizing dance of skill and efficiency.",
+        "steps": [
+          {
+            "step": "1",
+            "title": "The Sizzle",
+            "description": "A ladle of oil hits the hot flat-top griddle with a satisfying sizzle."
+          },
+          {
+            "step": "2",
+            "title": "The Pour",
+            "description": "The whisked egg and vegetable mixture is poured onto the griddle, spreading out into a thin circle."
+          },
+          {
+            "step": "3",
+            "title": "The Flip",
+            "description": "With a flick of the wrist and a wide spatula, the omelette is expertly flipped."
+          },
+          {
+            "step": "4",
+            "title": "The Union",
+            "description": "A ready-made chapati is placed on top of the cooking omelette, warming it through and fusing the two together."
+          },
+          {
+            "step": "5",
+            "title": "The Roll",
+            "description": "The entire combination is lifted from the griddle, placed on a piece of paper, and rolled tightly into a delicious, portable cylinder. It's handed to you piping hot, ready to eat on the go."
+          }
+        ]
+      },
+      "quote": {
+        "text": "\"It's perfect for this time of day here in Johannesburg, just after 3 PM. In Kampala, this is prime time for grabbing a Rolex to power through the rest of the afternoon.\""
+      },
+      "extras": {
+        "title": "Make It Your Own: Popular Variations",
+        "text": "While the classic Rolex is perfect as is, many vendors offer extras to customize your meal. Common additions include avocado, beans, sausage, or spiced minced meat."
+      },
+      "cta": {
+        "title": "Want the ultimate food guide for your trip?",
+        "text": "The Boda **Traveler's Edition** book features a dedicated chapter on street food, with maps to the best spots and a guide to can't-miss dishes beyond the Rolex.",
+        "button": {
+            "text": "Pre-order the Traveler's Edition",
+            "link": "/preorder"
+        }
+      }
+    }
   }
 ]

@@ -1,20 +1,96 @@
 [
   {
+    "id": "bark-cloth",
     "title": "Bark Cloth",
     "link": "/materials/bark-cloth",
-    "icon": "material-icon",
+    "icon": "Home",
     "image": "/bark-cloth-making.jpg",
     "metadata": { "Tribe": "Baganda", "Use": "Textiles" },
     "teaser": "An ancient craft of creating cloth from tree bark.",
-    "detail": "Recognized by UNESCO as a masterpiece of oral and intangible heritage."
+    "detail": "Recognized by UNESCO as a masterpiece of oral and intangible heritage.",
+    "description": "Ancient Fabric Tradition of Uganda",
+    "intro": "Explore the time-honored craft of bark cloth making, its deep cultural symbolism, and how this sustainable traditional practice continues today.",
+    "sections": {
+      "introduction": {
+        "title": "A Living Heritage",
+        "content": [
+          "Bark cloth, known locally as \"olubugo,\" represents one of Uganda's most ancient and sustainable textile traditions. Made from the inner bark of the mutuba tree (Ficus natalensis), this remarkable fabric has clothed royalty, served in ceremonies, and embodied the ingenuity of Ugandan craftsmanship for centuries.",
+          "In 2005, UNESCO recognized the art of bark cloth making in Uganda as a Masterpiece of Oral and Intangible Heritage of Humanity, cementing its place as a treasure of world cultural heritage."
+        ],
+        "sidebar": {
+          "title": "Did You Know?",
+          "items": [
+            "Bark cloth predates woven textiles by thousands of years",
+            "The mutuba tree can be harvested without killing it",
+            "Royal bark cloth was traditionally dyed with natural pigments",
+            "One tree can provide bark cloth for decades"
+          ]
+        }
+      },
+      "process": {
+        "title": "The Traditional Making Process",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Harvesting",
+            "description": "Carefully strip bark from mature mutuba trees during the rainy season when sap flows freely."
+          },
+          {
+            "step": "2",
+            "title": "Preparation",
+            "description": "Remove the outer bark and soak the inner bark in water to soften the fibers."
+          },
+          {
+            "step": "3",
+            "title": "Beating",
+            "description": "Use traditional wooden mallets to beat the bark on a log, spreading and softening the fibers."
+          },
+          {
+            "step": "4",
+            "title": "Finishing",
+            "description": "Shape and size the cloth, then dry it in the sun to create the final fabric."
+          }
+        ]
+      },
+      "significance": {
+        "columns": [
+          {
+            "title": "Royal and Ceremonial Use",
+            "content": [
+              "Bark cloth holds deep cultural significance in Buganda kingdom. The finest pieces, known as \"ekitambala,\" were reserved for the Kabaka (king) and royal family. Different patterns and colors indicated social status, with white bark cloth being the most sacred.",
+              "Traditional ceremonies still feature bark cloth garments, connecting modern Ugandans to their ancestral heritage. The fabric serves as burial shrouds, ceremonial dress, and decorative elements in important cultural events."
+            ]
+          },
+          {
+            "title": "Modern Revival",
+            "content": [
+              "Today, bark cloth artisans are working to preserve this ancient craft while finding contemporary applications. Modern designers incorporate bark cloth into fashion, home décor, and art pieces, creating new markets for traditional skills.",
+              "Organizations support bark cloth makers through training programs, fair trade initiatives, and cultural tourism, ensuring this UNESCO-recognized heritage continues for future generations."
+            ]
+          }
+        ]
+      },
+      "cta": {
+        "title": "Experience Bark Cloth Tradition",
+        "text": "Visit bark cloth making workshops, support traditional artisans, and witness this ancient craft in action.",
+        "buttons": [
+          { "text": "Find Workshop Experiences", "variant": "primary" },
+          { "text": "Support Artisan Communities", "variant": "secondary" }
+        ]
+      }
+    }
   },
   {
+    "id": "cowrie-shells",
     "title": "Cowrie Shells",
     "link": "/materials/cowrie-shells",
-    "icon": "material-icon",
+    "icon": "Home",
     "image": "/cowrie-shells.jpg",
     "metadata": { "Use": "Currency, Adornment", "Region": "Various" },
     "teaser": "Once used as a form of currency, now used in crafts.",
-    "detail": "Symbolizes wealth, spirituality, and fertility."
+    "detail": "Symbolizes wealth, spirituality, and fertility.",
+    "description": "Currency, Adornment & Spirituality",
+    "intro": "Once used as a form of currency, now used in crafts. Symbolizes wealth, spirituality, and fertility.",
+    "comingSoon": true
   }
 ]

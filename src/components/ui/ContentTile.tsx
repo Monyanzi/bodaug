@@ -13,7 +13,7 @@ interface ContentTileProps {
 }
 
 const getIconComponent = (iconName: string) => {
-  const iconMap: Record<string, React.ComponentType<any>> = {
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     'story-icon': Scroll,
     'food-icon': Utensils,
     'dress-icon': Shirt,

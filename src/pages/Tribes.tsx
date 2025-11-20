@@ -4,8 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Users, MapPin, Filter } from "lucide-react";
-import tribesCollageImage from "@/assets/uganda-tribes-collage.jpg";
 import tribes from "@/data/tribes.json";
+
+const tribesCollageImage = "/uganda-tribes-collage.jpg";
 
 const Tribes = () => {
   const regions = ["All", ...Array.from(new Set(tribes.map(t => t.region)))];
