@@ -107,56 +107,65 @@ const StoryDetails = () => {
                 )}
 
                 {/* Parting/Imbalu/FinalTest/Consequence/Rejection/Departure/HiddenPrince/Prophecy */}
-                {(story.sections?.parting || story.sections?.imbalu || story.sections?.finalTest || story.sections?.consequence || story.sections?.rejection || story.sections?.departure || story.sections?.hiddenPrince || story.sections?.prophecy) && (
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                        <div>
-                            <h2 className="text-2xl font-semibold text-foreground mb-4">
-                                {(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince || story.sections.prophecy)?.title}
-                            </h2>
-                            {(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince || story.sections.prophecy)?.content.map((para, index) => (
-                                <p key={index} className="text-muted-foreground leading-relaxed mb-4">
-                                    {para}
-                                </p>
-                            ))}
-                        </div>
-                         {/* Second section like Hidden Prince for Ndahura */}
-                        {(story.id === 'ndahura-at-the-gate-of-bukuku' && story.sections?.prophecy && story.sections?.hiddenPrince) && (
-                           <div className="col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-8">
-                                 <div>
-                                    <h2 className="text-2xl font-semibold text-foreground mb-4">
-                                        {story.sections.prophecy.title}
-                                    </h2>
-                                    {story.sections.prophecy.content.map((para, index) => (
-                                        <p key={index} className="text-muted-foreground leading-relaxed mb-4">
-                                            {para}
-                                        </p>
-                                    ))}
-                                </div>
-                                <div className="bg-card border border-border rounded-lg p-6">
-                                    <h3 className="font-semibold text-foreground mb-3">{story.sections.prophecy.sidebar.title}</h3>
-                                    <p className="text-muted-foreground text-sm mb-4">
-                                        {story.sections.prophecy.sidebar.text}
+                {(() => {
+                    const section = story.sections?.parting || story.sections?.imbalu || story.sections?.finalTest || story.sections?.consequence || story.sections?.rejection || story.sections?.departure || story.sections?.hiddenPrince || story.sections?.prophecy;
+                    if (!section || !('content' in section)) return null;
+                    
+                    const sidebarSection = story.sections?.parting || story.sections?.imbalu || story.sections?.finalTest || story.sections?.consequence || story.sections?.rejection || story.sections?.departure || story.sections?.hiddenPrince;
+                    
+                    return (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div>
+                                <h2 className="text-2xl font-semibold text-foreground mb-4">
+                                    {section.title}
+                                </h2>
+                                {section.content.map((para, index) => (
+                                    <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                                        {para}
                                     </p>
-                                </div>
-                           </div>
-                        )}
-
-                        {/* Sidebar for Parting/Imbalu/FinalTest/Consequence/Rejection/Departure/HiddenPrince */}
-                        {(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince)?.sidebar && (
-                            <div className="bg-card border border-border rounded-lg p-6">
-                                <h3 className="font-semibold text-foreground mb-3">{(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince)?.sidebar.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-4">
-                                    {(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince)?.sidebar.text}
-                                </p>
-                                {(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince)?.sidebar.items && (
-                                    <ul className="space-y-2 text-sm text-muted-foreground">
-                                        {(story.sections.parting || story.sections.imbalu || story.sections.finalTest || story.sections.consequence || story.sections.rejection || story.sections.departure || story.sections.hiddenPrince)?.sidebar.items.map((item, i) => (
-                                            <li key={i}>• {item}</li>
-                                        ))}
-                                    </ul>
-                                )}
+                                ))}
                             </div>
-                        )}
+                             {/* Second section like Hidden Prince for Ndahura */}
+                            {(story.id === 'ndahura-at-the-gate-of-bukuku' && story.sections?.prophecy && story.sections?.hiddenPrince) && (
+                               <div className="col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-8">
+                                     <div>
+                                        <h2 className="text-2xl font-semibold text-foreground mb-4">
+                                            {story.sections.prophecy.title}
+                                        </h2>
+                                        {story.sections.prophecy.content.map((para, index) => (
+                                            <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                                                {para}
+                                            </p>
+                                        ))}
+                                    </div>
+                                    <div className="bg-card border border-border rounded-lg p-6">
+                                        <h3 className="font-semibold text-foreground mb-3">{story.sections.prophecy.sidebar.title}</h3>
+                                        <p className="text-muted-foreground text-sm mb-4">
+                                            {story.sections.prophecy.sidebar.text}
+                                        </p>
+                                    </div>
+                               </div>
+                            )}
+
+                            {/* Sidebar for Parting/Imbalu/FinalTest/Consequence/Rejection/Departure/HiddenPrince */}
+                            {sidebarSection && 'sidebar' in sidebarSection && sidebarSection.sidebar && (
+                                <div className="bg-card border border-border rounded-lg p-6">
+                                    <h3 className="font-semibold text-foreground mb-3">{sidebarSection.sidebar.title}</h3>
+                                    <p className="text-muted-foreground text-sm mb-4">
+                                        {sidebarSection.sidebar.text}
+                                    </p>
+                                    {'items' in sidebarSection.sidebar && Array.isArray(sidebarSection.sidebar.items) && (
+                                        <ul className="space-y-2 text-sm text-muted-foreground">
+                                            {(sidebarSection.sidebar.items as string[]).map((item, i) => (
+                                                <li key={i}>• {item}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    );
+                })()}
                          {/* Specific handling for Ndahura's hidden prince section which is grid */}
                          {story.id === 'ndahura-at-the-gate-of-bukuku' && story.sections?.hiddenPrince && (
                             <div className="col-span-2 bg-secondary rounded-lg p-8 mt-8">
@@ -175,8 +184,6 @@ const StoryDetails = () => {
                                 </div>
                             </div>
                          )}
-                    </div>
-                )}
 
                 {/* Relevance */}
                 {story.sections?.relevance && (
