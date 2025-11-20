@@ -1,58 +1,368 @@
 [
   {
+    "id": "kintu-and-nambi",
     "title": "Kintu and Nambi",
     "description": "The creation story of the Baganda people, a foundational myth of Uganda.",
     "date": "2024-01-01",
     "href": "/stories/kintu-and-nambi",
-    "image": "/kintu-nambi-story.jpg"
+    "image": "/kintu-nambi-story.jpg",
+    "subtitle": "The Creation of the Baganda People",
+    "intro": "This is the foundational creation story for the Baganda people, the largest ethnic group in Uganda. It is a tale of love, loss, and the origins of death.",
+    "comingSoon": true
   },
   {
+    "id": "gipir-and-labong",
     "title": "The Parting of Gipir and Labong",
     "description": "The classic version, centered on the bead and the spear, that explains the origin of the Acholi and Alur peoples.",
     "date": "2024-01-03",
     "href": "/stories/gipir-and-labong",
-    "image": "/gipir-labong-story.jpg"
+    "image": "/gipir-labong-story.jpg",
+    "subtitle": "The Origin of the Acholi and Alur Peoples",
+    "intro": "From the Luo peoples of northern Uganda, this foundational myth explains the historic separation of the Acholi and Alur. It is a deeply resonant story about how pride and rigid adherence to principle can fracture even the strongest bonds of kinship.",
+    "sections": {
+      "introduction": {
+        "title": "A Bond Broken by Pride",
+        "content": [
+          "Listen, and I will tell you of Gipir and Labong, two brothers, sons of a great chief, who lived as one heart in two bodies. Their bond was the envy of their clan, and their strength together was a shield for their people."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "A minor dispute, when fueled by pride, can sever the deepest ties of kinship forever."
+        }
+      },
+      "dispute": {
+        "title": "The Bead and The Spear",
+        "columns": [
+          {
+            "title": "The Swallowed Bead",
+            "text": "One day, as the sun sat high and hot, a treasured family bead, small and smooth as a drop of water, was accidentally swallowed by a young goat belonging to Gipir. When Labong, whose household was responsible for the bead, learned of this, he went to his brother. “Brother,” he said, “a misfortune has happened. Let me give you a hundred goats to replace the one that swallowed your bead.” But Gipir’s pride was a stone in his throat. “No. I want that very bead.” And so, with a heavy heart, Labong was forced to kill the young goat to retrieve the heirloom. The brotherhood between them grew cold from that day."
+          },
+          {
+            "title": "The Lost Spear",
+            "text": "Not long after, a great elephant, its hide the colour of twilight, wandered into Labong’s garden, trampling the young millet. Labong, seeing his family's food destroyed, took up Gipir’s sacred spear—a spear passed down from their ancestors—and struck the beast. The elephant, wounded but mighty, fled into the deep forest with the spear still lodged in its side. When Gipir discovered his ancestral spear was gone, his anger was a storm. \"That spear is the spirit of our lineage,\" he roared. \"You will walk until you find it.\""
+          }
+        ]
+      },
+      "parting": {
+        "title": "The Parting of Ways",
+        "content": [
+          "Labong’s pleas were dust in the wind. Gipir would not be moved. So Labong began his journey, following the trail of the wounded elephant for many days and nights. He grew thin and weary, but he finally found the beast, dead, in a clearing. He retrieved the spear, but he was in a strange land, far from home. The people there, the Alur, nursed him to health and, seeing his wisdom, eventually made him their chief. When he finally returned home, he looked at Gipir and said, “Our paths are now different. I will go west, and you will remain here.” At the bank of the great Nile, they divided their heritage and parted, never to meet again."
+        ],
+        "sidebar": {
+          "title": "Cultural Lesson",
+          "text": "This story teaches several important cultural values:",
+          "items": [
+            "Pride can fracture the strongest bonds.",
+            "The significance of ancestral heritage.",
+            "How disputes can lead to the creation of new peoples.",
+            "The tragic consequences of unyielding principles."
+          ]
+        }
+      },
+      "relevance": {
+        "title": "Living Heritage",
+        "text": "From them grew two great peoples: the Acholi and the Alur, forever separated by a spear and a bead. The story of Gipir and Labong remains a powerful cautionary tale in Luo culture, often retold to emphasize the importance of compromise."
+      }
+    }
   },
   {
+    "id": "covenant-of-masaba",
     "title": "The Covenant of Masaba",
     "description": "The foundational story of the Bagisu and the first Imbalu, as commanded by the mountain's spirit.",
     "date": "2024-01-04",
     "href": "/stories/covenant-of-masaba",
-    "image": "/covenant-masaba-story.jpg"
+    "image": "/covenant-masaba-story.jpg",
+    "subtitle": "The Origin of the Bagisu People",
+    "intro": "This is the origin story of the Bagisu people who live on the slopes of Mount Elgon (which they call Masaba). The tale is deeply intertwined with their most significant cultural ritual, the Imbalu.",
+    "sections": {
+      "introduction": {
+        "title": "The Hunter and the Mountain",
+        "content": [
+          "In the beginning, the plains below the great mountain were vast and empty. From these plains came a man named Masaba, a hunter strong and solitary. One day, he followed a mighty antelope up the slopes of the colossal mountain that scraped the sky, a place shrouded in a mist that felt like the breath of the gods."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "True leadership is born from courage, embracing one's destiny, and founding a legacy through sacred tradition."
+        }
+      },
+      "covenant": {
+        "title": "The Serpent's Test",
+        "columns": [
+          {
+            "title": "The Spirit of the Mountain",
+            "text": "As he climbed higher, he encountered a serpent of immense size, its scales shimmering with all the colours of the earth. This was no ordinary snake; it was a spirit of the mountain. It spoke to him, its voice like the rustling of a thousand leaves, telling him that this mountain would only welcome him as its son if he proved his courage."
+          },
+          {
+            "title": "The Blood Covenant",
+            "text": "To claim the land and found a people, he had to perform a sacred act: a covenant of blood, an offering of his own flesh. Masaba descended the mountain, his mind filled with the serpent’s prophecy. He journeyed to find a wife to be the mother of his nation, and brought her back to the foot of the mountain."
+          }
+        ]
+      },
+      "imbalu": {
+        "title": "The First Imbalu",
+        "content": [
+          "With her as his witness, Masaba prepared for the serpent’s test. He took a sharpened blade and, in an act of ultimate bravery and commitment to his destiny, circumcised himself. His cry of pain echoed through the valleys, and in that moment of sacrifice, the mountain seemed to sigh in acceptance. The mists cleared, and the land felt settled, claimed. He was no longer just a man; he was the first of the Bagisu, the father of a nation."
+        ],
+        "sidebar": {
+          "title": "Cultural Lesson",
+          "text": "The Imbalu ritual teaches several important cultural values:",
+          "items": [
+            "Courage as the foundation of manhood.",
+            "The importance of sacrifice for community.",
+            "The sacred bond between the Bagisu and their land.",
+            "The transformation from boyhood to adulthood."
+          ]
+        }
+      },
+      "relevance": {
+        "title": "Living Heritage",
+        "text": "His sons, and their sons after them, followed his example, creating the sacred Imbalu ritual. To this day, when the drums of the Imbalu beat across the slopes of Mount Elgon, it is the spirit of Masaba being honoured—the story of a brave hunter who, through a single act of courage, carved a people out of a mountain."
+      }
+    }
   },
   {
+    "id": "sorrow-of-ishe-katabazi",
     "title": "The Sorrow of Ishe-Katabazi",
     "description": "The great Ankole epic of the hero who challenged the underworld for his family.",
     "date": "2024-01-05",
     "href": "/stories/sorrow-of-ishe-katabazi",
-    "image": "/ishe-katabazi-story.jpg"
+    "image": "/ishe-katabazi-story.jpg",
+    "subtitle": "An Ankole Heroic Epic",
+    "intro": "From the Ankole kingdom, this epic follows a hero who dares to challenge the natural order, reflecting beliefs in a creator god, Ruhanga, and an underworld, okuzimu.",
+    "sections": {
+      "introduction": {
+        "title": "War on Death Itself",
+        "content": [
+          "There once lived a man in Ankole named Ishe-Katabazi, whose strength was as great as his love for his family. But a shadow fell upon his house: one by one, his children and beloved wife were taken by sickness and vanished from the world of the living. Mad with grief, Ishe-Katabazi swore an oath to wage war on Death itself."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "Even the greatest of mortals cannot conquer death, for the cycles of life and loss are the foundation of the world's order."
+        }
+      },
+      "underworld": {
+        "title": "The Journey to Okuzimu",
+        "columns": [
+          {
+            "title": "Confronting the King",
+            "text": "He journeyed to the edge of the world and found the path leading down to okuzimu, the underworld. It was a place of shadows and silence, ruled by the king of the dead. Ishe-Katabazi stormed the king’s throne and demanded the return of his family."
+          },
+          {
+            "title": "The Impossible Tests",
+            "text": "The king, ancient and weary, was intrigued by his defiance and offered him a series of impossible tests to win them back, which Ishe-Katabazi, with the help of grateful animals he had once saved, miraculously passed."
+          }
+        ]
+      },
+      "finalTest": {
+        "title": "The One Condition",
+        "content": [
+          "Bound by his word, the king agreed to release the family, but with one final condition: \"You may lead them out, but you must not look back until you are fully in the world of the living. If you do, they will be mine forever.\" Ishe-Katabazi began the long climb, his family following silently behind him. He could hear their footsteps on the dusty path, a sound of impossible joy."
+        ],
+        "sidebar": {
+          "title": "A Moment of Doubt",
+          "text": "He felt the warmth of the sun on his face as he stepped back into the world of light. But in his moment of relief, he heard the footsteps of his children, but not his wife's. Overcome by a sudden, terrible fear that she had been left behind, his love and doubt overwhelmed his discipline. He turned. He saw his children right behind him, but his wife was only halfway out of the shadow of the underworld. At his glance, they all dissolved like smoke, pulled back into darkness, lost to him forever."
+        }
+      },
+      "relevance": {
+        "title": "A Tragic Lesson",
+        "text": "He had matched wits with Death and won, but he could not overcome the final test of faith. He returned to the world above a broken, empty man, a living testament that the laws of life and death cannot be unwritten by mortal hands."
+      }
+    }
   },
   {
+    "id": "man-who-faced-adroa",
     "title": "The Man Who Faced Adroa",
     "description": "The cautionary tale from the Lugbara about the half-bodied spirit and the price of greed.",
     "date": "2024-01-06",
     "href": "/stories/man-who-faced-adroa",
-    "image": "/man-faced-adroa-story.jpg"
+    "image": "/man-faced-adroa-story.jpg",
+    "subtitle": "A Lugbara Cautionary Tale",
+    "intro": "This tale from the Lugbara people features Adroa, a complex deity who is both creator and a dark, earthly aspect. The adroa are feared spirits who punish the greedy.",
+    "sections": {
+      "introduction": {
+        "title": "A Sickness of Greed",
+        "content": [
+          "In a village nestled among the rolling hills of Lugbaraland, there lived a man whose greed was a sickness. He was never content. One evening, as twilight bled across the sky, he was walking home through a grove of tamarind trees, a place the elders warned was a haunt of spirits."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "Greed and a lack of respect for the spirit world will lead to ruin, for some forces are not meant to be understood, only revered."
+        }
+      },
+      "encounter": {
+        "title": "The Half-Bodied Spirit",
+        "columns": [
+          {
+            "title": "The Meeting",
+            "text": "He was grumbling to himself when he suddenly felt a chill that had nothing to do with the night air. Standing before him was a figure, tall and white, glowing faintly in the gloom. The man’s breath caught in his throat. The being had only one eye in the centre of its forehead, one arm, and one leg, upon which it hopped with an unnerving silence. It was Adroa."
+          },
+          {
+            "title": "Avarice Over Fear",
+            "text": "The man knew he should fall to his knees and pray for his life. But his greed was stronger than his fear. He saw that Adroa was carrying a bag that bulged with something heavy. \"What is in your bag, spirit?\" the man asked, his voice trembling but audacious. Adroa’s single eye fixed upon him, holding no warmth, only ancient knowledge. The spirit did not speak but opened the bag, and from it tumbled countless shimmering cowrie shells, more than the man had ever seen."
+          }
+        ]
+      },
+      "consequence": {
+        "title": "The Price of Greed",
+        "content": [
+          "The man’s heart pounded with avarice. \"Give them to me!\" he demanded. Emboldened by the spirit's silence, he reached out to grab the bag. The moment his fingers touched the cloth, a searing cold shot up his arm, and the world went dark."
+        ],
+        "sidebar": {
+          "title": "A Living Warning",
+          "text": "He awoke the next morning at the edge of the grove. The bag of cowries was gone, and so was Adroa. But the man was changed. His right arm was withered and useless, his right leg was lame, and the vision in his right eye was gone. He was left with only half a body, a living echo of the spirit he had tried to rob, a walking warning to all who saw him that you must never let greed blind you to the power of the unseen world."
+        }
+      },
+      "relevance": {
+        "title": "Living Heritage",
+        "text": "The story of the man who faced Adroa is a powerful reminder in Lugbara culture about the dangers of disrespecting the spirit world and the self-destructive nature of greed."
+      }
+    }
   },
   {
+    "id": "indecision-of-the-bat",
     "title": "The Indecision of the Bat",
     "description": "The well-known Baganda fable explaining why the bat is a creature of the night.",
     "date": "2024-01-07",
     "href": "/stories/indecision-of-the-bat",
-    "image": "/indecision-bat-story.jpg"
+    "image": "/indecision-bat-story.jpg",
+    "subtitle": "A Baganda Fable",
+    "intro": "This classic fable from the Baganda serves as a moral lesson about loyalty, integrity, and the consequences of opportunism.",
+    "sections": {
+      "introduction": {
+        "title": "War Between Land and Sky",
+        "content": [
+          "Long, long ago, a great war erupted between the Animals of the Land and the Birds of the Air. The Lion commanded the beasts, and the mighty Eagle led the birds. The fighting was fierce, shaking the forests and darkening the skies. In this time of conflict lived the Bat, a strange creature with the furry body of a mouse but the leathery wings of a bird."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "Those who refuse to choose a side in times of conflict out of self-interest will ultimately be rejected by all and live in shame."
+        }
+      },
+      "switching": {
+        "title": "An Opportunist's Game",
+        "columns": [
+          {
+            "title": "With the Beasts",
+            "text": "Being a cunning opportunist, he decided to wait and see who was winning. On the first day, the armies of the Lion were victorious. That evening, the Bat flew to the Lion’s camp. \"I am with you!\" he declared, puffing out his chest to show his furry body and sharp teeth. \"I am a beast of the land!\" The Lion, pleased, welcomed him."
+          },
+          {
+            "title": "With the Birds",
+            "text": "But the next day, the Eagle rallied his forces and attacked from the sky, driving the animals back. That night, the Bat quietly slipped away and flew to the Eagle's roost. \"My true brothers!\" he squeaked, spreading his wings wide. \"Look at these wings! I am one of you, a creature of the air!\" The Eagle, suspicious but needing more fighters, allowed him to join."
+          }
+        ]
+      },
+      "rejection": {
+        "title": "Cast Out by All",
+        "content": [
+          "For days, the Bat switched his allegiance back and forth. Finally, the wisest of the animals and birds grew tired of the endless fighting and made a lasting peace. As the two sides gathered to celebrate, the Bat flew confidently into the centre of the clearing. But a silence fell over the crowd."
+        ],
+        "sidebar": {
+          "title": "A Life of Shame",
+          "text": "The Lion looked at him with contempt. \"You are no beast,\" he growled. The Eagle glared down from his perch. \"And you are no bird,\" he screeched. Both sides, the animals and the birds, turned their backs on him. Cast out and despised for his disloyalty, the Bat was overcome with a shame so deep he could no longer bear the light of day."
+        }
+      },
+      "relevance": {
+        "title": "Creature of the Night",
+        "text": "And that is why, to this very day, he hides in dark caves, emerging only in the twilight shadows of the night, forever flying alone. The story remains a popular cautionary tale about the importance of loyalty and conviction."
+      }
+    }
   },
   {
+    "id": "ndahura-at-the-gate-of-bukuku",
     "title": "Ndahura at the Gate of Bukuku",
     "description": "The origin epic of the Bachwezi dynasty, establishing their rightful rule.",
     "date": "2024-01-08",
     "href": "/stories/ndahura-at-the-gate-of-bukuku",
-    "image": "/ndahura-bukuku-story.jpg"
+    "image": "/ndahura-bukuku-story.jpg",
+    "subtitle": "The Foundational Epic of the Bachwezi",
+    "intro": "This is the foundational epic of the Bunyoro-Kitara kingdom, explaining the origin of the semi-divine Bachwezi dynasty and the rise of their first king, Ndahura.",
+    "sections": {
+      "introduction": {
+        "title": "The Usurper King",
+        "content": [
+          "The age of the Batembuzi kings ended in shadow when the great king, Isaza, vanished into the underworld. In his place, his chief gatekeeper, Bukuku, seized the throne of Kitara. But Bukuku was not of the royal line, and he ruled through fear, not love. An oracle warned him that a grandson born of his own daughter would one day kill him and take the kingdom."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "Destiny cannot be avoided by force or fear; the rightful order will always find a path to restore itself, even from the most unlikely of beginnings."
+        }
+      },
+      "hiddenPrince": {
+        "title": "The Imprisoned Princess",
+        "columns": [
+          {
+            "title": "Nyinamwiru's Fate",
+            "text": "Terrified, Bukuku took his only child, the beautiful princess Nyinamwiru, and locked her away in a compound with no door, hoping to keep her from ever meeting a man. Some say he even had one of her eyes and one of her breasts removed to make her undesirable."
+          },
+          {
+            "title": "A Secret Union",
+            "text": "But destiny is a river that carves its own path. Isaza’s son, the handsome prince Isimbwa, returned from the underworld. He heard whispers of the imprisoned princess and, guided by his heart, he found her hidden compound. He climbed the high fence and descended into the enclosure, where he and Nyinamwiru fell in love. In time, a son was born: a boy named Ndahura."
+          }
+        ]
+      },
+      "prophecy": {
+        "title": "The Royal Well",
+        "content": [
+          "When Bukuku heard the baby's cry, his rage was boundless. He seized the child and ordered him cast into the river. But a servant took pity on the infant and instead placed him among the reeds. He was discovered by a potter named Rubumbi, who rescued the boy and raised him as his own. Ndahura grew into a young man of incredible strength and charisma. One day, during a great drought, Ndahura drove his foster-father's cattle to the royal well, reserved for Bukuku’s herds."
+        ],
+        "sidebar": {
+          "title": "Destiny's Return",
+          "text": "When the king’s herdsmen tried to chase him away, Ndahura fought them off. News of this insolent youth reached Bukuku, who stormed down to the well himself. Bukuku hurled his royal spear, but Ndahura dodged it, seized the weapon, and threw it back with all his might, striking the usurper and killing him instantly. The prophecy was fulfilled."
+        }
+      },
+      "relevance": {
+        "title": "The First Bachwezi King",
+        "text": "When the people saw the dead king and the fearless young man, and when the old potter revealed the truth of his origins, they knew their rightful ruler had returned. Ndahura was crowned the first king of the Bachwezi, and he ushered in a golden age of wisdom and prosperity for the kingdom of Kitara."
+      }
+    }
   },
   {
+    "id": "departure-of-the-bachwezi",
     "title": "The Departure of the Bachwezi",
     "description": "The legendary conclusion to the Bachwezi saga, explaining their mystical disappearance.",
     "date": "2024-01-09",
     "href": "/stories/departure-of-the-bachwezi",
-    "image": "/departure-bachwezi-story.jpg"
+    "image": "/departure-bachwezi-story.jpg",
+    "subtitle": "The Great Mythological Epic of the Bunyoro-Kitara",
+    "intro": "The legendary dynasty of demigod rulers revered for their wisdom and supernatural abilities. Their sudden, mysterious vanishing is a pivotal event in the region's mythology.",
+    "sections": {
+      "introduction": {
+        "title": "The Fading Golden Age",
+        "content": [
+          "There was a time when the lands of Kitara were ruled not by men, but by beings of smoke and light called the Bachwezi. They were tall and fair-skinned, and their reign under their last king, Wamara, was a golden age of peace and prosperity. But even the brightest day must surrender to dusk."
+        ],
+        "sidebar": {
+          "title": "Core Message",
+          "text": "Even the most divine power is impermanent, and all great eras must eventually yield to the inevitable march of time and fate."
+        }
+      },
+      "omens": {
+        "title": "Dark Omens",
+        "columns": [
+          {
+            "title": "The Death of Bihogo",
+            "text": "The end of their time began not with a war, but with a series of omens. Wamara’s favourite cow, Bihogo, grew sick and died, an event that sent a tremor of fear through the court. Wamara summoned his diviners, who read the entrails and cast the cowries."
+          },
+          {
+            "title": "The Prophecy",
+            "text": "Their faces were grim. \"The signs are dark, oh great king,\" they announced. \"Your reign is ending. A new people, dull and dark, will come from the north to rule in your place.\" Wamara, in his pride, refused to believe it and commanded great rituals to be performed, but every attempt to reverse the prophecy failed. The magic of the Bachwezi was fading."
+          }
+        ]
+      },
+      "departure": {
+        "title": "The Great Procession",
+        "content": [
+          "Seeing that fate was a river that could not be dammed, Wamara accepted the truth. He gathered the Bachwezi chiefs from all corners of the empire. He stood before them, not as a defeated king, but as a ruler guiding his people into eternity. \"Our time in the world of men is over,\" he declared. \"We will not be conquered. We will not die. We will simply depart.\""
+        ],
+        "sidebar": {
+          "title": "Walking into Water",
+          "text": "He led his people on a great procession, leaving behind their royal drums and earthly possessions. They walked south towards the great lakes of the land. As they reached the shores, they did not stop. They walked directly into the water, their shimmering forms dissolving into the mist rising from the surface until not a single one was left. They did not die; they withdrew from the world."
+        }
+      },
+      "relevance": {
+        "title": "Living Heritage",
+        "text": "Their spirits became the guardians of the crater lakes and lonely hills. Soon after, as foretold, the Babiito clan arrived from the north to find a throne empty and a kingdom waiting, built upon the legend of the demigods who walked into water."
+      }
+    }
   }
 ]

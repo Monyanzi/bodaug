@@ -1,15 +1,322 @@
 [
   {
+    "id": "baganda",
     "name": "Baganda",
     "region": "Central",
     "language": "Luganda",
     "summary": "The kingdom builders and cultural custodians",
+    "description": "The Baganda people form the largest ethnic group in Uganda and are the core of the ancient Buganda Kingdom. Known for their sophisticated political system, rich cultural traditions, and influential role in Uganda's history, the Baganda have preserved centuries-old customs while adapting to modern times.",
     "proverb": "Obutaka bw'omukazi si bwamsigwa - A woman's land is not inherited",
     "image": "/baganda-tribe.jpg",
-    "href": "/tribes/baganda",
-    "featured": true
+    "heroImage": "/baganda-tribe.jpg",
+    "icon": "Crown",
+    "iconColor": "text-yellow-400",
+    "subtitle": "The Kingdom Builders",
+    "badges": [
+      { "icon": "MapPin", "text": "Central Uganda" },
+      { "text": "Buganda Kingdom" },
+      { "text": "Luganda Language" },
+      { "text": "Est. 14th Century" }
+    ],
+    "featured": true,
+    "sections": {
+      "overview": [
+        {
+          "title": "Cultural Identity",
+          "icon": "Users",
+          "content": [
+            {
+              "heading": "Kingdom Structure",
+              "text": "The Baganda maintain a sophisticated monarchical system with the Kabaka (king) at its center, supported by chiefs and clan leaders who govern different aspects of society."
+            },
+            {
+              "heading": "Clan System",
+              "text": "Society is organized around 52 clans (ebika), each with its own totem (muziro), taboos, and ancestral lands that define identity and marriage customs."
+            }
+          ]
+        },
+        {
+          "title": "Language & Literature",
+          "icon": "Book",
+          "content": [
+            {
+              "heading": "Luganda Language",
+              "text": "Luganda serves as both the native language and lingua franca of central Uganda, known for its tonal complexity and rich proverb tradition."
+            },
+            {
+              "heading": "Oral Traditions",
+              "text": "Stories, proverbs (engero), and praise songs preserve historical knowledge, moral teachings, and cultural values passed down through generations."
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "text": "\"Omukama w'eggwanga ye Kabaka\" - The king is the leader of the nation",
+        "subtext": "This proverb reflects the central role of the Kabaka in Baganda society and governance."
+      },
+      "clothing": [
+        {
+          "title": "Gomesi",
+          "description": "The elegant traditional dress for women, featuring a square neckline and sash",
+          "link": "/attire/gomesi",
+          "occasions": "Weddings, ceremonies, cultural events"
+        },
+        {
+          "title": "Kanzu",
+          "description": "Men's formal white robe worn during important ceremonies",
+          "link": "/attire/kanzu",
+          "occasions": "Royal functions, religious ceremonies, graduations"
+        }
+      ],
+      "food": {
+        "title": "Luwombo - The Royal Delicacy",
+        "description": "Luwombo is the signature dish of Buganda, traditionally prepared by steaming meat, fish, or chicken with vegetables and groundnut sauce wrapped in banana leaves.",
+        "link": "/food/luwombo",
+        "details": [
+          {
+            "heading": "Cultural Significance",
+            "items": [
+              "Originally prepared only for the Kabaka",
+              "Symbol of hospitality and celebration",
+              "Represents harmony of ingredients",
+              "Passed down through royal cooks"
+            ]
+          },
+          {
+            "heading": "Traditional Preparation",
+            "items": [
+              "Fresh banana leaves as wrapping",
+              "Slow steaming over charcoal",
+              "Groundnuts (peanuts) for sauce base",
+              "Local spices and herbs"
+            ]
+          }
+        ]
+      },
+      "names": {
+        "featured": {
+          "name": "Mukasa",
+          "link": "/names/mukasa",
+          "description": "Mukasa is one of the most important traditional names in Buganda, associated with lake spirits and divine protection.",
+          "context": "Connected to Mukasa, the god of Lake Victoria and fertility in traditional Baganda religion."
+        }
+      }
+    },
+    "relatedContent": [
+      { "title": "Gomesi", "description": "Traditional women's attire", "href": "/attire/gomesi", "icon": "Shirt" },
+      { "title": "Kanzu", "description": "Traditional men's garment", "href": "/attire/kanzu", "icon": "Shirt" },
+      { "title": "Bark Cloth", "description": "Ancient fabric tradition", "href": "/materials/bark-cloth", "icon": "Home" },
+      { "title": "Luwombo", "description": "Steamed delicacy", "href": "/food/luwombo", "icon": "Utensils" },
+      { "title": "Mukasa", "description": "Lake spirit name", "href": "/names/mukasa", "icon": "Book" },
+      { "title": "Kintu & Nambi", "description": "Creation story", "href": "/stories/kintu-and-nambi", "icon": "Book" }
+    ],
+    "relatedTribes": [
+      { "name": "Banyoro", "description": "Western neighbors with shared history" },
+      { "name": "Basoga", "description": "Eastern cousins along the Nile" },
+      { "name": "Batooro", "description": "Mountain kingdom connections" }
+    ]
   },
   {
+    "id": "alur",
+    "name": "Alur",
+    "region": "Northern",
+    "language": "Alur",
+    "summary": "Highland people with a rich history of chiefdoms",
+    "description": "The Alur are a resilient highland people from the West Nile region of Uganda, distinguished by their sophisticated chiefdom system and profound spiritual connection to the mountainous terrain they call home. Known for their warrior traditions and skilled craftsmanship, the Alur have maintained their cultural identity while serving as guardians of Uganda's northwestern frontiers.",
+    "proverb": "Wang ma gweno pe neno, gweno neno - What the eye of a chicken doesn't see, the chicken sees",
+    "image": "/alur-culture-card.jpg",
+    "heroImage": "/alur-tribe-hero.jpg",
+    "icon": "Shield",
+    "iconColor": "text-blue-400",
+    "subtitle": "The Highland People",
+    "badges": [
+      { "icon": "MapPin", "text": "West Nile Region" },
+      { "text": "Alur Kingdom" },
+      { "text": "Luo Language Family" }
+    ],
+    "sections": {
+      "overview": [
+        {
+          "title": "Highland Warriors",
+          "icon": "Shield",
+          "content": [
+            {
+              "heading": "Chiefdom Structure",
+              "text": "The Alur maintain one of Uganda's most sophisticated traditional governance systems, with hereditary chiefs (Rwodi) who serve as both political and spiritual leaders of their communities, bridging ancient wisdom with modern administration."
+            },
+            {
+              "heading": "Mountain Guardians",
+              "text": "Living in the highland regions along the Congo border, the Alur have developed unique agricultural and cultural practices adapted to mountainous terrain, making them expert cultivators of highland crops and skilled metalworkers."
+            }
+          ]
+        },
+        {
+          "title": "Cultural Identity",
+          "icon": "Book",
+          "content": [
+            {
+              "heading": "Luo Heritage",
+              "text": "As part of the larger Luo language family, the Alur share linguistic and cultural connections with communities across East Africa, while maintaining their distinct highland identity and traditions."
+            },
+            {
+              "heading": "Oral Traditions",
+              "text": "Alur history is preserved through powerful oral narratives that tell of migrations, battles, and the establishment of chiefdoms, with specialized storytellers keeping these traditions alive across generations."
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "text": "\"Rwodi mar alur - tek ma tiyo kod jogi\"",
+        "subtext": "\"The Alur chief works together with the people\" - This proverb emphasizes the collaborative leadership style central to Alur governance."
+      },
+      "clothingDetails": [
+        {
+            "title": "Traditional Warrior Attire",
+            "content": "Alur warriors traditionally wear distinctive leather garments decorated with cowrie shells and metal ornaments. The iconic war shield (lwedo) features geometric patterns that identify clan lineage and spiritual protection.",
+            "meta": [
+                {"label": "Materials", "value": "Leather, cowrie shells, metals"},
+                {"label": "Significance", "value": "Clan identity, spiritual protection"}
+            ]
+        },
+        {
+            "title": "Ceremonial Dress",
+            "content": "During important ceremonies, Alur people wear elaborate headdresses made from feathers and beads, with colorful cloth wraps that indicate social status and ceremonial role within the community.",
+            "meta": [
+                {"label": "Occasions", "value": "Chieftaincy ceremonies, festivals"},
+                {"label": "Colors", "value": "Earth tones, royal blues, whites"}
+            ]
+        }
+      ],
+      "foodDetails": {
+          "title": "Highland Cuisine",
+          "content": "Alur cuisine reflects their highland environment with hearty root vegetables, mountain greens, and river fish. Meals are communal affairs that strengthen family bonds and community relationships.",
+          "columns": [
+              {
+                  "heading": "Signature Dishes",
+                  "items": [
+                      "**Malakwang** - Wild vegetables cooked with ground simsim",
+                      "**Boo** - Fermented millet bread, a highland staple",
+                      "**Ngara fish** - River fish prepared with local herbs",
+                      "**Sweet potato dishes** - Various preparations of highland tubers"
+                  ]
+              },
+              {
+                  "heading": "Cultural Significance",
+                  "items": [
+                      "Communal eating reinforces social bonds",
+                      "Seasonal foods connect people to the land",
+                      "Special foods for ceremonies and rituals",
+                      "Food sharing demonstrates hospitality"
+                  ]
+              }
+          ]
+      },
+      "traditionsDetails": {
+        "title": "Sacred Ceremonies",
+        "content": "Alur ceremonial life centers around the installation of chiefs, seasonal festivals, and life transition rituals that connect the living with ancestral spirits and ensure community harmony.",
+        "columns": [
+            {
+                "heading": "Chief Installation",
+                "text": "The ceremony of installing a new Rwodi involves ritual purification, ancestral invocation, and community blessing. Sacred objects are passed down, symbolizing the continuity of leadership and spiritual protection."
+            },
+            {
+                "heading": "Harvest Celebrations",
+                "text": "Annual harvest festivals include traditional dances, communal feasting, and gratitude ceremonies to mountain spirits who bless the highland crops with abundance."
+            }
+        ]
+      },
+      "namesDetails": {
+          "title": "Traditional Names",
+          "content": "Alur names carry deep cultural significance, often reflecting circumstances of birth, family lineage, spiritual beliefs, or aspirations for the child's future within the community.",
+          "columns": [
+              {
+                  "heading": "Common Male Names",
+                  "items": [
+                      "**Okello** - Born after twins",
+                      "**Ojok** - Born in the dry season",
+                      "**Otim** - Born during difficult times",
+                      "**Odong** - Born during war"
+                  ]
+              },
+              {
+                  "heading": "Common Female Names",
+                  "items": [
+                      "**Akello** - Born after twins (female)",
+                      "**Ayok** - Born in the dry season (female)",
+                      "**Atim** - Born during difficult times (female)",
+                      "**Adong** - Born during war (female)"
+                  ]
+              }
+          ]
+      },
+      "placesDetails": {
+          "title": "Cultural Landmarks",
+          "content": "The Alur homeland features sacred sites, historical settlements, and natural landmarks that hold deep spiritual and cultural significance for the community.",
+          "columns": [
+              {
+                  "heading": "Sacred Sites",
+                  "items": [
+                      "**Pakwach** - Historic crossing point on the Nile",
+                      "**Nebbi** - Traditional administrative center",
+                      "**Mount Otzi** - Sacred mountain for rituals",
+                      "**River Nyagak** - Spiritual cleansing site"
+                  ]
+              },
+              {
+                  "heading": "Cultural Significance",
+                  "items": [
+                      "Ancient migration routes and settlements",
+                      "Traditional fishing and farming areas",
+                      "Sites of historical battles and victories",
+                      "Sacred groves for ancestral worship"
+                  ]
+              }
+          ]
+      }
+    }
+  },
+  {
+    "id": "lango",
+    "name": "Lango",
+    "region": "Northern",
+    "language": "Lango",
+    "summary": "Plains people known for their hunting and farming skills",
+    "description": "The Lango people are master cultivators of the fertile plains of north-central Uganda, renowned for their advanced agricultural techniques and legendary hunting traditions. Their society celebrates the harmony between human settlement and the natural world, with customs that have evolved from centuries of successful adaptation to the savanna ecosystem.",
+    "proverb": "Apwoyo pe dong iye abila - A rabbit does not return to a burnt field",
+    "image": "/lango-culture-card.jpg",
+    "heroImage": "/lango-tribe-hero.jpg",
+    "icon": "Sun",
+    "iconColor": "text-orange-400",
+    "subtitle": "The Plains People",
+    "badges": [
+      { "icon": "MapPin", "text": "North-Central Uganda" },
+      { "text": "Luo Language Family" },
+      { "text": "Farming & Hunting" }
+    ],
+    "sections": {}
+  },
+  {
+    "id": "karamojong",
+    "name": "Karamojong",
+    "region": "North-Eastern",
+    "language": "Karamojong",
+    "summary": "Pastoralist warriors of the semi-arid plains",
+    "description": "The Karamojong are a proud, semi-nomadic pastoralist people from the semi-arid plains of northeastern Uganda, renowned for their fierce warrior traditions and deep cultural attachment to cattle.",
+    "proverb": "Akinu ngesi akolong - The sun is the shield",
+    "image": "/karamojong-culture-card.jpg",
+    "heroImage": "/karamojong-tribe-hero.jpg",
+    "icon": "Shield",
+    "iconColor": "text-red-400",
+    "subtitle": "The Warrior Pastoralists",
+    "badges": [
+      { "icon": "MapPin", "text": "North-Eastern Uganda" },
+      { "text": "Nilotic Language Family" },
+      { "text": "Pastoralism & Cattle" }
+    ],
+    "sections": {}
+  },
+  {
+    "id": "banyoro",
     "name": "Banyoro",
     "region": "Western",
     "language": "Runyoro",
@@ -19,6 +326,7 @@
     "href": "/tribes/banyoro"
   },
   {
+    "id": "bakiga",
     "name": "Bakiga",
     "region": "Western",
     "language": "Rukiga",
@@ -28,6 +336,7 @@
     "href": "/tribes/bakiga"
   },
   {
+    "id": "basoga",
     "name": "Basoga",
     "region": "Eastern",
     "language": "Lusoga",
@@ -37,6 +346,7 @@
     "href": "/tribes/basoga"
   },
   {
+    "id": "iteso",
     "name": "Iteso",
     "region": "Eastern",
     "language": "Ateso",
@@ -46,6 +356,7 @@
     "href": "/tribes/iteso"
   },
   {
+    "id": "acholi",
     "name": "Acholi",
     "region": "Northern",
     "language": "Luo",
@@ -55,6 +366,7 @@
     "href": "/tribes/acholi"
   },
   {
+    "id": "lugbara",
     "name": "Lugbara",
     "region": "Northern",
     "language": "Lugbara",
@@ -64,6 +376,7 @@
     "href": "/tribes/lugbara"
   },
   {
+    "id": "bakonzo",
     "name": "Bakonzo",
     "region": "Western",
     "language": "Lukonzo",
@@ -71,32 +384,5 @@
     "proverb": "Omukama w'orukonzo - The king of Konzo land",
     "image": "/bakonzo-tribe.jpg",
     "href": "/tribes/bakonzo"
-  },
-  {
-    "name": "Alur",
-    "region": "Northern",
-    "language": "Alur",
-    "summary": "Highland people with a rich history of chiefdoms",
-    "proverb": "Wang ma gweno pe neno, gweno neno - What the eye of a chicken doesn't see, the chicken sees",
-    "image": "/alur-culture-card.jpg",
-    "href": "/tribes/alur"
-  },
-  {
-    "name": "Lango",
-    "region": "Northern",
-    "language": "Lango",
-    "summary": "Plains people known for their hunting and farming skills",
-    "proverb": "Apwoyo pe dong iye abila - A rabbit does not return to a burnt field",
-    "image": "/lango-culture-card.jpg",
-    "href": "/tribes/lango"
-  },
-  {
-    "name": "Karamojong",
-    "region": "North-Eastern",
-    "language": "Karamojong",
-    "summary": "Pastoralist warriors of the semi-arid plains",
-    "proverb": "Akinu ngesi akolong - The sun is the shield",
-    "image": "/karamojong-culture-card.jpg",
-    "href": "/tribes/karamojong"
   }
 ]

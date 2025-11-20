@@ -1,20 +1,199 @@
 [
   {
+    "id": "gomesi",
     "title": "Gomesi",
     "link": "/attire/gomesi",
-    "icon": "attire-icon",
+    "icon": "Shirt",
     "image": "/gomesi-traditional.jpg",
     "metadata": { "Tribe": "Baganda", "Occasion": "Ceremony" },
     "teaser": "A symbol of elegance and modesty in formal ceremonies.",
-    "detail": "Characterized by its pointed shoulders and floor-length sash."
+    "detail": "Characterized by its pointed shoulders and floor-length sash.",
+    "description": "The elegant traditional dress of Baganda women",
+    "tribeId": "baganda",
+    "tribeName": "Baganda",
+    "sections": {
+      "overview": {
+        "title": "About the Gomesi",
+        "content": [
+          "The Gomesi is a traditional Ugandan dress worn by women, particularly among the Baganda people. Known for its distinctive square neckline, colorful sash (omusuka), and floor-length design, the Gomesi represents elegance, cultural pride, and Ugandan femininity.",
+          "The dress features a unique silhouette with puffed shoulders, a fitted bodice, and a flowing skirt that gracefully sweeps the ground. The omusuka (sash) is worn around the waist and serves both decorative and symbolic purposes."
+        ]
+      },
+      "history": {
+        "title": "History & Cultural Significance",
+        "items": [
+          {
+            "heading": "Origins",
+            "text": "The Gomesi evolved from traditional bark cloth garments and was influenced by Victorian-era dressing styles during the colonial period. It became standardized in the early 20th century as a symbol of cultural identity and resistance."
+          },
+          {
+            "heading": "Cultural Meaning",
+            "text": "Beyond clothing, the Gomesi represents dignity, cultural continuity, and Ugandan womanhood. The way it's worn, the colors chosen, and the occasions for wearing it all carry cultural significance and social messages."
+          },
+          {
+            "heading": "Modern Evolution",
+            "text": "Today's Gomesi maintains its traditional structure while incorporating modern fabrics, colors, and subtle design variations. It remains a source of pride for Ugandan women both at home and in the diaspora."
+          }
+        ]
+      },
+      "design": {
+        "title": "Design Elements",
+        "columns": [
+          {
+            "heading": "Key Features",
+            "items": [
+              "Square neckline (distinctive identifier)",
+              "Puffed shoulders and sleeves",
+              "Fitted bodice with princess seaming",
+              "Floor-length flowing skirt",
+              "Omusuka (decorative sash)",
+              "Traditional button closure"
+            ]
+          },
+          {
+            "heading": "Fabric Choices",
+            "items": [
+              "Silk (premium occasions)",
+              "Cotton (everyday wear)",
+              "Kitenge fabric (colorful patterns)",
+              "Linen (formal events)",
+              "Modern synthetic blends",
+              "Traditional bark cloth (ceremonial)"
+            ]
+          }
+        ]
+      },
+      "sidebar": {
+        "quickFacts": [
+          { "icon": "Users", "text": "Primarily Baganda women" },
+          { "icon": "MapPin", "text": "Central Uganda origin" },
+          { "icon": "Calendar", "text": "Evolved early 1900s" }
+        ],
+        "occasions": [
+          "Wedding ceremonies (bride and guests)",
+          "Cultural celebrations and festivals",
+          "Graduation ceremonies",
+          "Religious services (Sunday best)",
+          "Traditional kingdom functions",
+          "Important family gatherings",
+          "Cultural presentations abroad"
+        ],
+        "etiquette": [
+          "Always wear appropriate undergarments",
+          "Sash should be tied properly on the side",
+          "Hem should touch the ground gracefully",
+          "Choose colors appropriate for occasion",
+          "Maintain modest posture and movement",
+          "Respect the cultural significance"
+        ],
+        "related": [
+          { "text": "Kanzu (Men's traditional wear)", "link": "/attire/kanzu" },
+          { "text": "Bark Cloth (Traditional fabric)", "link": "/materials/bark-cloth" },
+          { "text": "Baganda Culture Overview", "link": "/tribes/baganda" }
+        ]
+      }
+    }
   },
   {
+    "id": "kanzu",
     "title": "Kanzu",
     "link": "/attire/kanzu",
-    "icon": "attire-icon",
+    "icon": "Shirt",
     "image": "/kanzu-traditional.jpg",
     "metadata": { "Tribe": "Baganda", "Gender": "Men" },
     "teaser": "A dignified, simple garment worn for formal events.",
-    "detail": "Often worn with a modern suit jacket."
+    "detail": "Often worn with a modern suit jacket.",
+    "description": "The distinguished traditional robe of Baganda men",
+    "tribeId": "baganda",
+    "tribeName": "Baganda",
+    "heroIcon": "Crown",
+    "sections": {
+      "overview": {
+        "title": "About the Kanzu",
+        "content": [
+          "The Kanzu is a traditional white or cream-colored robe worn by Baganda men during formal occasions and cultural ceremonies. This flowing, ankle-length garment represents dignity, respect, and cultural identity in Ugandan society.",
+          "Characterized by its simple yet elegant design, the Kanzu features a round neckline, long sleeves, and a loose-fitting silhouette that allows for comfortable movement during ceremonies and formal gatherings."
+        ]
+      },
+      "history": {
+        "title": "History & Cultural Significance",
+        "items": [
+          {
+            "heading": "Royal Origins",
+            "text": "The Kanzu has deep roots in the Buganda Kingdom, traditionally worn by the Kabaka (king), chiefs, and court officials. Its design symbolizes purity, wisdom, and the wearer's respect for cultural traditions."
+          },
+          {
+            "heading": "Ceremonial Importance",
+            "text": "The Kanzu is essential attire for significant life events including weddings, graduations, religious ceremonies, and traditional court proceedings. The white color represents peace, truth, and spiritual purity."
+          },
+          {
+            "heading": "Modern Relevance",
+            "text": "Today, the Kanzu remains a powerful symbol of Ugandan cultural identity. It's worn with pride by men in the diaspora and continues to play a central role in preserving Baganda cultural heritage."
+          }
+        ]
+      },
+      "design": {
+        "title": "Design & Construction",
+        "columns": [
+          {
+            "heading": "Design Features",
+            "items": [
+              "Round neckline (no collar)",
+              "Long, loose-fitting sleeves",
+              "Ankle-length flowing design",
+              "Front button or tie closure",
+              "Minimal embellishment",
+              "Straight, comfortable cut"
+            ]
+          },
+          {
+            "heading": "Traditional Materials",
+            "items": [
+              "White cotton (most common)",
+              "Cream-colored linen",
+              "Fine cotton blends",
+              "Lightweight wool (special occasions)",
+              "High-quality cotton muslin",
+              "Silk (for royalty/VIPs)"
+            ]
+          }
+        ],
+        "extra": {
+          "heading": "Care & Maintenance",
+          "text": "The Kanzu requires careful maintenance to preserve its pristine white appearance. Traditional care involves hand washing, proper starching, and careful pressing to maintain the garment's dignity and symbolic purity."
+        }
+      },
+      "sidebar": {
+        "quickFacts": [
+          { "icon": "Users", "text": "Baganda men & boys" },
+          { "icon": "MapPin", "text": "Buganda Kingdom" },
+          { "icon": "Calendar", "text": "Centuries-old tradition" }
+        ],
+        "occasions": [
+          "Wedding ceremonies (groom & guests)",
+          "Graduation ceremonies",
+          "Religious services (special occasions)",
+          "Traditional court proceedings",
+          "Cultural festivals and celebrations",
+          "Funeral ceremonies (showing respect)",
+          "Government ceremonial events",
+          "International cultural presentations"
+        ],
+        "etiquette": [
+            "Ensure garment is clean and pressed",
+            "Wear appropriate undergarments",
+            "Maintain dignified posture",
+            "Avoid rushing or hurried movement",
+            "Respect the cultural significance",
+            "Consider the occasion's formality"
+        ],
+        "etiquetteTitle": "Proper Wearing",
+        "related": [
+          { "text": "Gomesi (Women's traditional dress)", "link": "/attire/gomesi" },
+          { "text": "Bark Cloth (Traditional material)", "link": "/materials/bark-cloth" },
+          { "text": "Baganda Culture Overview", "link": "/tribes/baganda" }
+        ]
+      }
+    }
   }
 ]

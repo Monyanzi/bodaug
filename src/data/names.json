@@ -1,20 +1,113 @@
 [
   {
+    "id": "mukasa",
+    "title": "Mukasa",
+    "link": "/names/mukasa",
+    "icon": "Book",
+    "image": "/mukasa-blessing.jpg",
+    "metadata": { "Meaning": "Blessing", "Origin": "Buganda" },
+    "teaser": "One of Uganda's most revered traditional names.",
+    "detail": "Connecting generations to the spiritual guardianship of Lake Victoria.",
+    "description": "The Lake Spirit Name of Prosperity and Protection",
+    "intro": "Explore the deep cultural significance of Mukasa, one of Uganda's most revered traditional names, connecting generations to the spiritual guardianship of Lake Victoria.",
+    "sections": {
+      "meaning": {
+        "title": "Divine Origins",
+        "content": [
+          "Mukasa is derived from the name of one of the most powerful deities in traditional Baganda religion—the god of Lake Victoria, fertility, and abundance. Parents who name their children Mukasa invoke divine protection and blessing upon their family lineage.",
+          "The name carries with it the hope that the child will be a source of prosperity, wisdom, and spiritual guidance for their community, much like the life-giving waters of Lake Victoria sustain the region."
+        ],
+        "sidebar": {
+          "title": "Name Variations",
+          "items": [
+            "**Mukasa:** The primary form (traditionally male)",
+            "**Namukasa:** Female version, meaning \"one who brings Mukasa's blessings\"",
+            "**Mukasangye:** Extended form meaning \"Mukasa who blesses\"",
+            "**Mukasadde:** Meaning \"father of Mukasa\" or \"Mukasa's successor\""
+          ]
+        }
+      },
+      "context": {
+        "title": "The Mukasa Deity in Baganda Culture",
+        "items": [
+          {
+            "aspect": "Lake Guardian",
+            "description": "Mukasa was believed to control the waters of Lake Victoria, ensuring safe fishing and abundant catches.",
+            "symbol": "🌊"
+          },
+          {
+            "aspect": "Fertility Provider",
+            "description": "Families prayed to Mukasa for children, successful harvests, and the prosperity of their livestock.",
+            "symbol": "🌱"
+          },
+          {
+            "aspect": "Weather Controller",
+            "description": "Mukasa influenced rainfall patterns, crucial for agriculture in the lake region communities.",
+            "symbol": "⛈️"
+          }
+        ]
+      },
+      "modernUsage": {
+        "columns": [
+          {
+            "title": "Contemporary Significance",
+            "content": [
+              "Today, Mukasa remains one of the most popular traditional names in Uganda, especially among the Baganda people. It's often given to children born during particularly abundant times or when families seek divine blessings.",
+              "Many successful business leaders, politicians, and community figures bear the name Mukasa, often attributed to the prosperity and leadership qualities associated with their namesake deity."
+            ]
+          },
+          {
+            "title": "Naming Ceremonies",
+            "content": [
+              "In traditional Baganda naming ceremonies, children named Mukasa receive special blessings from elders, often involving water rituals that connect the child symbolically to Lake Victoria.",
+              "These ceremonies typically include prayers for the child's future prosperity, wisdom in decision-making, and the ability to provide for their community as the lake provides for all."
+            ]
+          }
+        ]
+      },
+      "famousBearers": {
+        "title": "Notable People Named Mukasa",
+        "items": [
+          "Traditional leaders who have guided communities through challenges",
+          "Successful entrepreneurs who embody the prosperity aspect of the name",
+          "Cultural custodians preserving Baganda heritage and traditions",
+          "Community organizers bringing people together like the unifying waters of the lake"
+        ]
+      },
+      "cta": {
+        "title": "Explore More Ugandan Names",
+        "text": "Discover the rich meanings and cultural stories behind traditional Ugandan names and their connections to heritage.",
+        "buttons": [
+          { "text": "Browse Name Meanings", "variant": "primary" },
+          { "text": "Learn About Naming Traditions", "variant": "secondary" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "mugisha",
     "title": "Mugisha",
     "link": "/names/mugisha",
-    "icon": "name-icon",
+    "icon": "Book",
     "image": "/mugisha-blessing.jpg",
     "metadata": { "Meaning": "Blessing", "Origin": "Ankole" },
     "teaser": "A common name given to boys, signifying good fortune.",
-    "detail": "Often used across different tribes in Western Uganda."
+    "detail": "Often used across different tribes in Western Uganda.",
+    "description": "Blessing - Ankole Origin",
+    "intro": "A common name given to boys, signifying good fortune. Often used across different tribes in Western Uganda.",
+    "comingSoon": true
   },
   {
+    "id": "nambi",
     "title": "Nambi",
     "link": "/names/nambi",
-    "icon": "name-icon",
+    "icon": "Book",
     "image": "/nambi-goddess.jpg",
     "metadata": { "Meaning": "Goddess of the Sky", "Origin": "Buganda" },
     "teaser": "A legendary name from the Baganda creation story.",
-    "detail": "Associated with beauty, grace, and royalty."
+    "detail": "Associated with beauty, grace, and royalty.",
+    "description": "Goddess of the Sky - Buganda Origin",
+    "intro": "A legendary name from the Baganda creation story, associated with beauty, grace, and royalty.",
+    "comingSoon": true
   }
 ]
