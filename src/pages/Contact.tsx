@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { BodaButton } from "@/components/ui/boda-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -17,6 +18,7 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const contactMethods = [
     {
@@ -94,7 +96,7 @@ const Contact = () => {
               Thank you for reaching out. We'll get back to you within 24-48 hours.
             </p>
             <div className="space-y-3">
-              <BodaButton variant="primary" className="w-full" onClick={() => window.location.href = "/"}>
+              <BodaButton variant="primary" className="w-full" onClick={() => navigate("/")}>
                 Return to Home
               </BodaButton>
               <BodaButton variant="secondary" className="w-full" onClick={() => window.location.reload()}>
