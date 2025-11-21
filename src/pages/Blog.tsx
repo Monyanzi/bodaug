@@ -44,13 +44,13 @@ const Blog = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
             </div>
             <div className="relative z-10 text-center text-white px-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
                 Stories & Guides
               </h1>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-xl text-white/95 mb-8 drop-shadow-md">
                 Discover Uganda's Rich Cultural Heritage
               </p>
-              <p className="text-white/80 max-w-2xl mx-auto">
+              <p className="text-white/90 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
                 Explore articles, guides, and stories about Ugandan culture, travel tips, and heritage insights from across the country.
               </p>
             </div>

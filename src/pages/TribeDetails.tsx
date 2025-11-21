@@ -46,9 +46,9 @@ const TribeDetails = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <Icon className={`h-16 w-16 ${iconColor} mx-auto mb-4`} />
-                  <h1 className="text-5xl font-bold mb-2">{tribe.name}</h1>
-                  <p className="text-xl">{tribe.subtitle}</p>
+                  <Icon className={`h-16 w-16 ${iconColor} mx-auto mb-4 drop-shadow-lg`} />
+                  <h1 className="text-5xl font-bold mb-2 drop-shadow-lg">{tribe.name}</h1>
+                  <p className="text-xl drop-shadow-md">{tribe.subtitle}</p>
                 </div>
               </div>
             </div>

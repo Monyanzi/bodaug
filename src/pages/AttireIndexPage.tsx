@@ -29,10 +29,10 @@ const AttireIndexPage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
           </div>
           <div className="relative z-10 text-center text-white px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
               Traditional Ugandan Attire
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
               Discover the rich heritage of Ugandan clothing traditions, where each garment carries deep cultural meaning and celebrates ancestral wisdom.
             </p>
           </div>
