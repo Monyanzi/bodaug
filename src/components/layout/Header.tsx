@@ -64,26 +64,30 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
-                Culture <ChevronDown className="h-4 w-4 ml-1" />
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-all duration-200">
+                Culture <ChevronDown className="h-4 w-4 ml-1 transition-transform group-hover:rotate-180" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="min-w-[180px] shadow-lg border-border">
                 {cultureLinks.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <Link to={item.href}>{item.name}</Link>
+                    <Link to={item.href} className="cursor-pointer hover:bg-accent/10 transition-colors duration-150">
+                      {item.name}
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
-                Writings <ChevronDown className="h-4 w-4 ml-1" />
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-muted-foreground hover:text-accent transition-all duration-200">
+                Writings <ChevronDown className="h-4 w-4 ml-1 transition-transform group-hover:rotate-180" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="min-w-[180px] shadow-lg border-border">
                 {writingsLinks.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <Link to={item.href}>{item.name}</Link>
+                    <Link to={item.href} className="cursor-pointer hover:bg-accent/10 transition-colors duration-150">
+                      {item.name}
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -93,9 +97,9 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors hover:text-accent boda-underline ${
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-accent boda-underline ${
                   isActive(item.href)
-                    ? "text-foreground"
+                    ? "text-foreground font-semibold"
                     : "text-muted-foreground"
                 }`}
               >
@@ -106,11 +110,17 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm" onClick={() => setIsSearchOpen(true)} aria-label="Search">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={() => setIsSearchOpen(true)} 
+              aria-label="Search"
+              className="hover:bg-accent/10 transition-all duration-200"
+            >
               <Search className="h-4 w-4" />
             </Button>
             <Link to="/preorder">
-              <Button className="btn-primary">Preorder</Button>
+              <Button className="btn-primary shadow-sm">Preorder</Button>
             </Link>
           </div>
           <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
