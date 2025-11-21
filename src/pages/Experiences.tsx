@@ -7,23 +7,23 @@ const Experiences = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
-          <div className="relative py-16 md:py-20 rounded-xl mb-8 overflow-hidden">
+          <div className="relative py-20 md:py-28 rounded-xl mb-12 overflow-hidden shadow-xl">
             <div className="absolute inset-0">
               <img 
                 src={experiencesImage} 
                 alt="Uganda cultural experiences and tourist destinations" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
             </div>
-            <div className="relative z-10 text-center text-white px-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <div className="relative z-10 text-center text-white px-8 animate-fade-in">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Cultural Experiences
               </h1>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-xl md:text-2xl text-white/90 mb-6 font-medium">
                 Discover Authentic Uganda
               </p>
-              <p className="text-white/80 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
                 Explore parks, cultural centers, traditional markets, and authentic lodges for genuine Ugandan cultural experiences.
               </p>
             </div>
@@ -32,7 +32,7 @@ const Experiences = () => {
           {/* Content Section */}
           <div className="space-y-12">
             {/* Experience Categories */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
                 {
                   title: "Cultural Centers",
@@ -50,13 +50,19 @@ const Experiences = () => {
                   items: ["Community-run Lodges", "Traditional Homesteads", "Cultural Camps", "Heritage Hotels"]
                 }
               ].map((category, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg p-6 boda-card">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{category.title}</h3>
-                  <p className="text-muted-foreground mb-4">{category.description}</p>
-                  <ul className="space-y-2">
+                <div 
+                  key={index} 
+                  className="bg-card border border-border rounded-xl p-6 md:p-8 boda-card group"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-200">
+                    {category.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{category.description}</p>
+                  <ul className="space-y-3">
                     {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></div>
+                      <li key={itemIndex} className="flex items-center text-sm md:text-base text-muted-foreground">
+                        <div className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></div>
                         {item}
                       </li>
                     ))}
@@ -66,11 +72,11 @@ const Experiences = () => {
             </div>
 
             {/* Featured Experiences */}
-            <div className="bg-secondary rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-foreground text-center mb-8">
+            <div className="bg-secondary rounded-xl p-8 md:p-12 shadow-sm">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
                 Featured Cultural Experiences
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 {[
                   {
                     title: "Royal Palace Tours",
@@ -85,22 +91,29 @@ const Experiences = () => {
                     duration: "Full Day"
                   }
                 ].map((experience, index) => (
-                  <div key={index} className="bg-card border border-border rounded-lg p-6">
-                    <h3 className="font-semibold text-foreground mb-2">{experience.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-3">{experience.description}</p>
-                    <div className="flex justify-between text-xs text-muted-foreground">
-                      <span>{experience.location}</span>
-                      <span>{experience.duration}</span>
+                  <div 
+                    key={index} 
+                    className="bg-card border border-border rounded-xl p-6 md:p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                  >
+                    <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-200">
+                      {experience.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm md:text-base mb-4 leading-relaxed">
+                      {experience.description}
+                    </p>
+                    <div className="flex justify-between items-center text-xs md:text-sm text-muted-foreground pt-3 border-t border-border">
+                      <span className="font-medium">📍 {experience.location}</span>
+                      <span className="font-medium">⏱️ {experience.duration}</span>
                     </div>
                   </div>
                 ))}
               </div>
               
-              <div className="text-center mt-8">
-                <p className="text-muted-foreground mb-4">
+              <div className="text-center mt-10">
+                <p className="text-muted-foreground mb-6 text-base md:text-lg">
                   More experiences and interactive partner directory launching soon
                 </p>
-                <BodaButton variant="primary">
+                <BodaButton variant="primary" size="lg">
                   Join Waitlist for Early Access
                 </BodaButton>
               </div>

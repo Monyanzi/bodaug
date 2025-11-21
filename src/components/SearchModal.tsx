@@ -46,8 +46,8 @@ export const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             acc[item.category].push(item);
             return acc;
           }, {} as { [key: string]: SearchableItem[] })
-        ).map(([category, items]) => (
-          <CommandGroup key={category} heading={category}>
+        ).map(([category, items], categoryIndex) => (
+          <CommandGroup key={`${category}-${categoryIndex}`} heading={category}>
             {items.map((item) => {
               const Icon = categoryIcons[category] || FileText;
               return (

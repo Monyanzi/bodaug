@@ -134,27 +134,31 @@
   /* Boda Button Variants */
   .btn-primary {
     @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium;
-    @apply hover:shadow-md hover:shadow-black/10 hover:border hover:border-primary;
-    @apply transition-all duration-150 ease-out;
+    @apply hover:shadow-md hover:shadow-black/10 hover:border hover:border-primary hover:scale-105;
+    @apply active:scale-95;
+    @apply transition-all duration-200 ease-out;
   }
   
   .btn-secondary {
     @apply bg-background text-foreground border border-primary px-6 py-3 rounded-lg font-medium;
-    @apply hover:border-2 hover:border-primary;
-    @apply transition-all duration-150 ease-out;
+    @apply hover:border-2 hover:border-primary hover:scale-105;
+    @apply active:scale-95;
+    @apply transition-all duration-200 ease-out;
   }
   
   .btn-ghost {
     @apply bg-transparent text-foreground px-6 py-3 rounded-lg font-medium;
-    @apply hover:bg-muted;
-    @apply transition-all duration-150 ease-out;
+    @apply hover:bg-muted hover:scale-105;
+    @apply active:scale-95;
+    @apply transition-all duration-200 ease-out;
   }
   
   /* Boda Cards */
   .boda-card {
     @apply bg-card border border-border rounded-lg;
-    @apply hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5;
-    @apply transition-all duration-200 ease-out;
+    @apply hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1;
+    @apply transition-all duration-300 ease-out;
+    @apply cursor-pointer;
   }
   
   /* Boda Chips/Filters */
