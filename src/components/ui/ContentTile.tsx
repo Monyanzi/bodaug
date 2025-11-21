@@ -33,10 +33,10 @@ export const ContentTile = ({ title, link, icon, metadata, teaser, detail }: Con
       <Card className="boda-card h-full overflow-hidden">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
-            <CardTitle className="text-xl group-hover:text-accent transition-colors">
+            <CardTitle className="text-xl group-hover:text-accent transition-colors duration-200">
               {title}
             </CardTitle>
-            <div className="p-2 bg-muted rounded-full">
+            <div className="p-2 bg-muted rounded-full group-hover:bg-accent/10 transition-colors duration-200">
               {getIconComponent(icon)}
             </div>
           </div>

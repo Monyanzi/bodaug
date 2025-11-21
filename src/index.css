@@ -128,6 +128,16 @@
   .prose {
     text-align: justify;
   }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus visibility for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
 }
 
 @layer components {
@@ -164,20 +174,22 @@
   /* Boda Chips/Filters */
   .boda-chip {
     @apply px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-medium;
-    @apply hover:bg-accent hover:text-accent-foreground;
-    @apply transition-all duration-150 ease-out;
+    @apply hover:bg-accent hover:text-accent-foreground hover:scale-105;
+    @apply active:scale-95;
+    @apply transition-all duration-200 ease-out cursor-pointer;
   }
   
-  .boda-chip.active {
-    @apply bg-accent text-accent-foreground border-b border-b-destructive;
+  .boda-chip.active, .boda-chip-active {
+    @apply bg-accent text-accent-foreground font-semibold;
   }
   
   /* Boda Form Elements */
   .boda-input {
     @apply w-full px-4 py-3 bg-background border border-border rounded-lg;
     @apply text-foreground placeholder:text-muted-foreground;
-    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent;
-    @apply transition-all duration-150 ease-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent focus:shadow-md;
+    @apply hover:border-muted-foreground;
+    @apply transition-all duration-200 ease-out;
     min-height: 48px; /* Accessibility requirement */
   }
   
@@ -214,5 +226,20 @@
   /* Alt section backgrounds */
   .boda-alt-section {
     @apply bg-secondary;
+  }
+  
+  /* Loading skeleton */
+  .boda-skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+  
+  /* Image loading with fade-in */
+  .boda-img-fade {
+    @apply animate-fade-in;
+  }
+  
+  /* Smooth page transitions */
+  .page-transition {
+    @apply animate-fade-in;
   }
 }

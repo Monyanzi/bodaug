@@ -34,7 +34,7 @@ const Home = () => {
             alt="First-person view from boda-boda passenger riding through Uganda's beautiful landscape" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/30"></div>
         </div>
         
         {/* Hero content */}
@@ -42,11 +42,11 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column - Main content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                 Discover Uganda Like Never Before
               </h1>
               
-              <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl">
+              <p className="text-xl text-white/95 mb-8 leading-relaxed max-w-2xl drop-shadow-md">
                 Just like boda-bodas connect people across Uganda, we connect you to the rich tapestry of traditions, stories, and heritage that make Uganda extraordinary.
               </p>
               

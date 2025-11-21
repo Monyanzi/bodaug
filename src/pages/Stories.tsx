@@ -53,19 +53,24 @@ const StoriesPage = () => {
             <Link key={index} to={story.href} className="group">
               <Card className="boda-card h-full overflow-hidden">
                 <div className="aspect-video bg-muted overflow-hidden">
-                  <img src={story.image} alt={story.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img 
+                    src={story.image} 
+                    alt={story.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                    loading="lazy"
+                  />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl group-hover:text-accent transition-colors">
+                  <CardTitle className="text-xl group-hover:text-accent transition-colors duration-200">
                     {story.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
                     {story.description}
                   </p>
                   <div className="flex items-center text-accent text-sm font-medium">
-                    Read more <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    Read more <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </CardContent>
               </Card>

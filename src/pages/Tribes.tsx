@@ -30,10 +30,10 @@ const Tribes = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
           </div>
           <div className="relative z-10 text-center text-white px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
               Ugandan Communities & Heritage
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
               Meet the remarkable communities that call Uganda home. Each tribe preserves ancient traditions and contributes unique stories to the nation's collective identity.
             </p>
           </div>
@@ -63,7 +63,7 @@ const Tribes = () => {
           {filteredTribes.map((tribe, index) => {
             return (
               <Link key={index} to={tribe.href} className="group">
-                <Card className="boda-card h-full overflow-hidden hover:scale-105 transition-transform duration-200">
+                <Card className="boda-card h-full overflow-hidden">
                   {tribe.featured && (
                     <div className="absolute top-4 left-4 z-10">
                       <Badge className="bg-accent text-accent-foreground">Featured</Badge>
