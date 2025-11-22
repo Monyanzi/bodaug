@@ -84,7 +84,7 @@ const BookPage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
           </div>
           <div className="relative z-10 text-center text-white px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               The Boda Book Series
             </h1>
             <p className="text-xl text-white/90 max-w-4xl mx-auto mb-6">
@@ -182,7 +182,7 @@ const BookPage = () => {
 
         {/* FAQ Section */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
@@ -224,7 +224,7 @@ const BookPage = () => {
 
         {/* CTA Section */}
         <div className="mt-16 text-center bg-secondary rounded-lg p-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Reserve Your Copy?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
