@@ -98,7 +98,7 @@ const Blog = () => {
 
           {/* Newsletter Signup */}
           <div className="bg-secondary rounded-lg p-8 text-center">
-            <h2 className="text-3xl font-bold text-primary mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Stay Updated with New Stories
             </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">

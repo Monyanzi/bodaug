@@ -73,7 +73,7 @@ const Experiences = () => {
 
             {/* Featured Experiences */}
             <div className="bg-secondary rounded-xl p-8 md:p-12 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
                 Featured Cultural Experiences
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -82,35 +82,47 @@ const Experiences = () => {
                     title: "Royal Palace Tours",
                     description: "Visit traditional kingdoms and learn about monarchy structures",
                     location: "Buganda Kingdom",
-                    duration: "Half Day"
+                    duration: "Half Day",
+                    image: "/kasubi-royal-tombs.jpg"
                   },
                   {
                     title: "Traditional Craft Workshops",
                     description: "Learn bark cloth making, pottery, and basket weaving",
                     location: "Various Villages",
-                    duration: "Full Day"
+                    duration: "Full Day",
+                    image: "/bark-cloth-making.jpg"
                   }
                 ].map((experience, index) => (
                   <div 
                     key={index} 
-                    className="bg-card border border-border rounded-xl p-6 md:p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                    className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
                   >
-                    <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-200">
-                      {experience.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm md:text-base mb-4 leading-relaxed">
-                      {experience.description}
-                    </p>
-                    <div className="flex justify-between items-center text-xs md:text-sm text-muted-foreground pt-3 border-t border-border">
-                      <span className="font-medium">📍 {experience.location}</span>
-                      <span className="font-medium">⏱️ {experience.duration}</span>
+                    <div className="aspect-video bg-muted overflow-hidden">
+                      <img 
+                        src={experience.image} 
+                        alt={experience.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6 md:p-8">
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-200">
+                        {experience.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm md:text-base mb-4 leading-relaxed">
+                        {experience.description}
+                      </p>
+                      <div className="flex justify-between items-center text-xs md:text-sm text-muted-foreground pt-3 border-t border-border">
+                        <span className="font-medium">📍 {experience.location}</span>
+                        <span className="font-medium">⏱️ {experience.duration}</span>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
               
               <div className="text-center mt-10">
-                <p className="text-muted-foreground mb-6 text-base md:text-lg">
+                <p className="text-white/90 mb-6 text-base md:text-lg">
                   More experiences and interactive partner directory launching soon
                 </p>
                 <BodaButton variant="primary" size="lg">
