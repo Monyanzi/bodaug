@@ -72,7 +72,7 @@ const FAQ = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Mail className="h-8 w-8 text-accent" />
                 </div>
-                <h2 className="text-2xl font-bold text-foreground mb-4">
+                <h2 className="text-2xl font-bold text-white mb-4">
                   Still Have Questions?
                 </h2>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
