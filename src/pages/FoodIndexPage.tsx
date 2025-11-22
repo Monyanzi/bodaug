@@ -103,7 +103,7 @@ const FoodIndexPage = () => {
 
         {/* CTA Section */}
         <div className="text-center bg-secondary rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-primary mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Hungry for More?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
