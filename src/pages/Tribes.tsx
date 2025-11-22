@@ -30,7 +30,7 @@ const Tribes = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
           </div>
           <div className="relative z-10 text-center text-white px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg text-white">
               Ugandan Communities & Heritage
             </h1>
             <p className="text-xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
@@ -111,7 +111,7 @@ const Tribes = () => {
 
         {/* CTA Section */}
         <div className="text-center bg-secondary rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Want to Learn More?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
