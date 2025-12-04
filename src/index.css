@@ -1,132 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Boda Design System - Uganda Flag-Inspired Palette */
+/* Boda Design System - Uganda Flag-Inspired Palette with Cultural Depth */
 
 @layer base {
   :root {
     /* Brand Colors - Flag-inspired palette */
-    --background: 0 0% 100%; /* White #FFFFFF */
-    --foreground: 0 0% 0%; /* Black #000000 */
+    --background: 45 20% 98%; /* Warm off-white with subtle warmth */
+    --foreground: 30 10% 8%; /* Deep warm black */
 
     /* Boda Brand Colors */
-    --boda-black: 0 0% 0%; /* #000000 */
-    --boda-yellow: 51 100% 50%; /* #FFD100 */
-    --boda-red: 357 75% 47%; /* #D21F26 */
-    --boda-white: 0 0% 100%; /* #FFFFFF */
+    --boda-black: 30 10% 8%; /* Warm black */
+    --boda-yellow: 45 100% 50%; /* Rich golden yellow */
+    --boda-red: 4 80% 50%; /* Vibrant terracotta red */
+    --boda-white: 45 20% 98%; /* Warm white */
     
-    /* Grays derived from black */
-    --boda-ink: 0 0% 7%; /* #111111 */
-    --boda-subheads: 0 0% 20%; /* #333333 */
-    --boda-hairlines: 0 0% 93%; /* #EDEDED */
-    --boda-alt-bg: 0 0% 97%; /* #F7F7F7 */
+    /* Grays with warmth */
+    --boda-ink: 30 8% 12%; /* Deep ink */
+    --boda-subheads: 30 5% 25%; /* Warm gray */
+    --boda-hairlines: 30 10% 90%; /* Warm hairlines */
+    --boda-alt-bg: 40 15% 96%; /* Warm alt background */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 45 20% 98%;
+    --card-foreground: 30 10% 8%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 45 20% 98%;
+    --popover-foreground: 30 10% 8%;
 
-    --primary: 0 0% 0%; /* Black for primary text/surfaces */
-    --primary-foreground: 0 0% 100%;
+    --primary: 30 10% 8%; /* Warm black for primary */
+    --primary-foreground: 45 20% 98%;
 
-    --secondary: 0 0% 97%; /* Alt background */
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 40 15% 96%; /* Warm alt background */
+    --secondary-foreground: 30 10% 8%;
 
-    --muted: 0 0% 93%; /* Hairlines */
-    --muted-foreground: 0 0% 20%; /* Subheads */
+    --muted: 30 10% 90%;
+    --muted-foreground: 30 5% 40%;
 
-    --accent: 51 100% 50%; /* Yellow accent */
-    --accent-foreground: 0 0% 0%;
+    --accent: 45 100% 50%; /* Golden accent */
+    --accent-foreground: 30 10% 8%;
 
-    --destructive: 357 75% 47%; /* Red for errors only */
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 4 80% 50%; /* Terracotta red */
+    --destructive-foreground: 45 20% 98%;
 
-    --border: 0 0% 93%; /* Hairlines */
-    --input: 0 0% 93%;
-    --ring: 51 100% 50%; /* Yellow focus rings */
+    --border: 30 10% 88%;
+    --input: 30 10% 90%;
+    --ring: 45 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 15% 96%;
+    --sidebar-foreground: 30 5% 25%;
+    --sidebar-primary: 30 10% 8%;
+    --sidebar-primary-foreground: 45 20% 98%;
+    --sidebar-accent: 40 10% 92%;
+    --sidebar-accent-foreground: 30 10% 8%;
+    --sidebar-border: 30 10% 88%;
+    --sidebar-ring: 45 100% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 30 15% 6%;
+    --foreground: 40 15% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 12% 10%;
+    --card-foreground: 40 15% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 12% 10%;
+    --popover-foreground: 40 15% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 40 15% 95%;
+    --primary-foreground: 30 15% 6%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 40 15% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 30 5% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 30 10% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 4 70% 45%;
+    --destructive-foreground: 40 15% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 45 100% 50%;
+
+    --sidebar-background: 30 12% 8%;
+    --sidebar-foreground: 40 15% 90%;
+    --sidebar-primary: 45 100% 50%;
+    --sidebar-primary-foreground: 30 10% 8%;
+    --sidebar-accent: 30 10% 15%;
+    --sidebar-accent-foreground: 40 15% 90%;
+    --sidebar-border: 30 10% 18%;
+    --sidebar-ring: 45 100% 50%;
   }
 
-  /* Typography - Inter font system */
+  /* Typography - Elegant dual font system */
   body {
-    @apply bg-background text-foreground font-inter;
-    font-feature-settings: "cv08", "cv11";
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply text-foreground font-medium;
+    @apply text-foreground font-heading font-semibold tracking-tight;
   }
   
-  h1 { @apply text-5xl leading-tight; } /* 48-56px */
-  h2 { @apply text-4xl leading-tight; } /* 36-40px */
-  h3 { @apply text-3xl leading-tight; } /* 28-32px */
+  h1 { 
+    @apply text-5xl md:text-6xl lg:text-7xl leading-[1.1]; 
+    letter-spacing: -0.02em;
+  }
+  h2 { 
+    @apply text-4xl md:text-5xl leading-[1.15]; 
+    letter-spacing: -0.01em;
+  }
+  h3 { 
+    @apply text-2xl md:text-3xl leading-[1.2]; 
+  }
   
   p, body {
-    @apply text-lg leading-relaxed; /* 18-20px, line-height 1.6 */
-  }
-  
-  /* Justified content class for better readability */
-  .prose {
-    text-align: justify;
+    @apply text-lg leading-relaxed font-body;
   }
   
   /* Smooth scrolling */
@@ -134,47 +129,52 @@
     scroll-behavior: smooth;
   }
   
-  /* Better focus visibility for accessibility */
+  /* Better focus visibility */
   *:focus-visible {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-accent/30 text-foreground;
   }
 }
 
 @layer components {
   /* Boda Button Variants */
   .btn-primary {
-    @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium;
-    @apply hover:shadow-md hover:shadow-black/10 hover:border hover:border-primary hover:scale-105;
-    @apply active:scale-95;
-    @apply transition-all duration-200 ease-out;
+    @apply bg-accent text-accent-foreground px-8 py-4 rounded-full font-body font-semibold;
+    @apply hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5;
+    @apply active:translate-y-0 active:shadow-md;
+    @apply transition-all duration-300 ease-out;
   }
   
   .btn-secondary {
-    @apply bg-background text-foreground border border-primary px-6 py-3 rounded-lg font-medium;
-    @apply hover:border-2 hover:border-primary hover:scale-105;
+    @apply bg-transparent text-foreground border-2 border-foreground px-8 py-4 rounded-full font-body font-semibold;
+    @apply hover:bg-foreground hover:text-background;
     @apply active:scale-95;
-    @apply transition-all duration-200 ease-out;
+    @apply transition-all duration-300 ease-out;
   }
   
   .btn-ghost {
-    @apply bg-transparent text-foreground px-6 py-3 rounded-lg font-medium;
-    @apply hover:bg-muted hover:scale-105;
-    @apply active:scale-95;
+    @apply bg-transparent text-foreground px-6 py-3 rounded-full font-body font-medium;
+    @apply hover:bg-foreground/5;
+    @apply active:bg-foreground/10;
     @apply transition-all duration-200 ease-out;
   }
   
-  /* Boda Cards */
+  /* Boda Cards with depth */
   .boda-card {
-    @apply bg-card border border-border rounded-lg;
-    @apply hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1;
+    @apply bg-card border border-border rounded-2xl;
+    @apply hover:shadow-xl hover:shadow-foreground/5 hover:-translate-y-1;
     @apply transition-all duration-300 ease-out;
     @apply cursor-pointer;
   }
   
   /* Boda Chips/Filters */
   .boda-chip {
-    @apply px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-medium;
-    @apply hover:bg-accent hover:text-accent-foreground hover:scale-105;
+    @apply px-5 py-2.5 bg-muted text-muted-foreground rounded-full text-sm font-body font-medium;
+    @apply hover:bg-accent hover:text-accent-foreground;
     @apply active:scale-95;
     @apply transition-all duration-200 ease-out cursor-pointer;
   }
@@ -185,12 +185,12 @@
   
   /* Boda Form Elements */
   .boda-input {
-    @apply w-full px-4 py-3 bg-background border border-border rounded-lg;
-    @apply text-foreground placeholder:text-muted-foreground;
-    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent focus:shadow-md;
-    @apply hover:border-muted-foreground;
+    @apply w-full px-5 py-4 bg-background border border-border rounded-xl;
+    @apply text-foreground font-body placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+    @apply hover:border-muted-foreground/50;
     @apply transition-all duration-200 ease-out;
-    min-height: 48px; /* Accessibility requirement */
+    min-height: 52px;
   }
   
   /* Boda Dividers */
@@ -199,17 +199,17 @@
   }
   
   .boda-divider-accent {
-    @apply w-full h-px bg-destructive;
+    @apply w-full h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent;
   }
   
-  /* Boda Underline Animation */
+  /* Elegant underline animation */
   .boda-underline {
     @apply relative;
   }
   
   .boda-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-0.5 bg-destructive;
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent;
     @apply scale-x-0 origin-bottom-right;
     @apply transition-transform duration-300 ease-out;
   }
@@ -218,28 +218,116 @@
     @apply scale-x-100 origin-bottom-left;
   }
   
-  /* Success state for forms */
-  .boda-success {
-    @apply bg-accent/10 text-foreground border border-accent/20;
+  /* Staggered animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  
+  /* Opacity 0 for animation start */
+  .animate-on-scroll {
+    opacity: 0;
   }
   
-  /* Alt section backgrounds */
-  .boda-alt-section {
-    @apply bg-secondary;
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(45 100% 60%) 100%);
   }
   
-  /* Loading skeleton */
-  .boda-skeleton {
-    @apply animate-pulse bg-muted rounded;
+  /* Atmospheric background patterns */
+  .bg-grain {
+    position: relative;
   }
   
-  /* Image loading with fade-in */
-  .boda-img-fade {
+  .bg-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+  
+  /* Hero gradient overlay */
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--foreground) / 0.85) 0%,
+      hsl(var(--foreground) / 0.6) 50%,
+      hsl(var(--foreground) / 0.4) 100%
+    );
+  }
+  
+  /* Card hover glow */
+  .card-glow:hover {
+    box-shadow: 
+      0 20px 40px -15px hsl(var(--foreground) / 0.1),
+      0 0 0 1px hsl(var(--accent) / 0.1);
+  }
+  
+  /* Section fade transitions */
+  .section-fade {
     @apply animate-fade-in;
+    animation-fill-mode: both;
+  }
+  
+  /* Image hover zoom */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+  
+  .img-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+  
+  .img-zoom:hover img {
+    @apply scale-110;
   }
   
   /* Smooth page transitions */
   .page-transition {
     @apply animate-fade-in;
+  }
+  
+  /* Loading skeleton with shimmer */
+  .boda-skeleton {
+    @apply bg-muted rounded;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted-foreground) / 0.1) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s linear infinite;
+  }
+}
+
+/* Custom scrollbar */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
   }
 }
