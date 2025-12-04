@@ -97,11 +97,11 @@ const Blog = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="bg-secondary rounded-lg p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="bg-foreground rounded-2xl p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stay Updated with New Stories
             </h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Get notified when we publish new cultural guides, travel stories, and heritage insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

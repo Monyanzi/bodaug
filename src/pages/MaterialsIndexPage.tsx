@@ -102,11 +102,11 @@ const MaterialsIndexPage = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-secondary rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="text-center bg-foreground rounded-2xl p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Craft Your Knowledge
           </h2>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-6 max-w-2xl mx-auto">
             The materials are just the beginning. See how they are used in traditional attire and cultural stories.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
