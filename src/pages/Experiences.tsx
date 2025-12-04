@@ -72,7 +72,7 @@ const Experiences = () => {
             </div>
 
             {/* Featured Experiences */}
-            <div className="bg-secondary rounded-xl p-8 md:p-12 shadow-sm">
+            <div className="bg-foreground rounded-2xl p-8 md:p-12 shadow-lg">
               <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
                 Featured Cultural Experiences
               </h2>
@@ -122,7 +122,7 @@ const Experiences = () => {
               </div>
               
               <div className="text-center mt-10">
-                <p className="text-white/90 mb-6 text-base md:text-lg">
+                <p className="text-white/80 mb-6 text-base md:text-lg">
                   More experiences and interactive partner directory launching soon
                 </p>
                 <BodaButton variant="primary" size="lg">

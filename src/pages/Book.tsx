@@ -182,7 +182,7 @@ const BookPage = () => {
 
         {/* FAQ Section */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
@@ -223,11 +223,11 @@ const BookPage = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center bg-secondary rounded-lg p-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="mt-16 text-center bg-foreground rounded-2xl p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Reserve Your Copy?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
             Join thousands of culture enthusiasts who are already pre-ordering their journey into Uganda's extraordinary heritage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

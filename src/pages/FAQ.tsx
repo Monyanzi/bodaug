@@ -67,15 +67,15 @@ const FAQ = () => {
 
           {/* Still Have Questions */}
           <div className="mt-16">
-            <Card className="boda-card bg-secondary">
+            <Card className="boda-card bg-foreground border-none">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Mail className="h-8 w-8 text-accent" />
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   Still Have Questions?
                 </h2>
-                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                <p className="text-white/70 mb-6 max-w-2xl mx-auto">
                   Can't find the answer you're looking for? Our team is here to help. 
                   Whether it's about cultural content, the book series, or partnerships - we'd love to hear from you.
                 </p>

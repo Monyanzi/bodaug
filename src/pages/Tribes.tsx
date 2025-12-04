@@ -110,11 +110,11 @@ const Tribes = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-secondary rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="text-center bg-foreground rounded-2xl p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Want to Learn More?
           </h2>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-6 max-w-2xl mx-auto">
             Each tribe page contains detailed information about clothing, food, traditions, names, places, and stories. Start your cultural journey with the Baganda people.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
