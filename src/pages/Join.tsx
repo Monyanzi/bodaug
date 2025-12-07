@@ -155,7 +155,7 @@ const Join = () => {
                   />
                 </div>
 
-                <BodaButton type="submit" variant="hero" size="lg" className="w-full">
+                <BodaButton type="submit" variant="primary" size="lg" className="w-full">
                   Join Boda Community
                 </BodaButton>
                 
