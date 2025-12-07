@@ -261,20 +261,27 @@
     );
   }
   
-  /* Card hover glow */
+  /* Card hover - shadow only, no translate */
   .card-glow:hover {
-    box-shadow: 
-      0 20px 40px -15px hsl(var(--foreground) / 0.1),
-      0 0 0 1px hsl(var(--accent) / 0.1);
+    box-shadow: 0 20px 40px -15px hsl(var(--foreground) / 0.1);
   }
   
-  /* Section fade transitions */
-  .section-fade {
-    @apply animate-fade-in;
-    animation-fill-mode: both;
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   
-  /* Image hover zoom */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Image hover zoom - subtle */
   .img-zoom {
     @apply overflow-hidden;
   }
