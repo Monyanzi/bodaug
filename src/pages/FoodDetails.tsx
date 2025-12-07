@@ -202,7 +202,7 @@ const FoodDetails = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     {food.sections.experience.buttons.map((btn, index) => (
-                        <BodaButton key={index} variant={btn.variant as "primary" | "secondary" | "ghost" | "hero" | "destructive" | null | undefined}>
+                        <BodaButton key={index} variant={btn.variant === "hero" ? "primary" : btn.variant as "primary" | "secondary" | "ghost" | "outline" | "destructive" | null | undefined}>
                             {btn.text}
                         </BodaButton>
                     ))}

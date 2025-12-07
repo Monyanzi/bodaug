@@ -141,42 +141,42 @@
 }
 
 @layer components {
-  /* Boda Button Variants */
+  /* Apple-style Button Variants - refined, minimal */
   .btn-primary {
-    @apply bg-accent text-accent-foreground px-8 py-4 rounded-full font-body font-semibold;
-    @apply hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5;
-    @apply active:translate-y-0 active:shadow-md;
-    @apply transition-all duration-300 ease-out;
-  }
-  
-  .btn-secondary {
-    @apply bg-transparent text-foreground border-2 border-foreground px-8 py-4 rounded-full font-body font-semibold;
-    @apply hover:bg-foreground hover:text-background;
-    @apply active:scale-95;
-    @apply transition-all duration-300 ease-out;
-  }
-  
-  .btn-ghost {
-    @apply bg-transparent text-foreground px-6 py-3 rounded-full font-body font-medium;
-    @apply hover:bg-foreground/5;
-    @apply active:bg-foreground/10;
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-xl font-body font-medium;
+    @apply hover:bg-accent/90;
+    @apply active:scale-[0.98];
     @apply transition-all duration-200 ease-out;
   }
   
-  /* Boda Cards with depth */
+  .btn-secondary {
+    @apply bg-transparent text-foreground border-2 border-foreground px-6 py-3 rounded-xl font-body font-medium;
+    @apply hover:bg-foreground hover:text-background;
+    @apply active:scale-[0.98];
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-foreground px-4 py-2 rounded-lg font-body font-medium;
+    @apply hover:bg-muted/50;
+    @apply active:bg-muted;
+    @apply transition-colors duration-150 ease-out;
+  }
+  
+  /* Cards - subtle shadow only, no translate */
   .boda-card {
-    @apply bg-card border border-border rounded-2xl;
-    @apply hover:shadow-xl hover:shadow-foreground/5 hover:-translate-y-1;
-    @apply transition-all duration-300 ease-out;
+    @apply bg-card rounded-2xl;
+    @apply shadow-sm hover:shadow-lg;
+    @apply transition-shadow duration-300 ease-out;
     @apply cursor-pointer;
   }
   
-  /* Boda Chips/Filters */
+  /* Chips/Filters - refined */
   .boda-chip {
-    @apply px-5 py-2.5 bg-muted text-muted-foreground rounded-full text-sm font-body font-medium;
+    @apply px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-body font-medium;
     @apply hover:bg-accent hover:text-accent-foreground;
-    @apply active:scale-95;
-    @apply transition-all duration-200 ease-out cursor-pointer;
+    @apply active:scale-[0.98];
+    @apply transition-all duration-150 ease-out cursor-pointer;
   }
   
   .boda-chip.active, .boda-chip-active {

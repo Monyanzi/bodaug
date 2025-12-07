@@ -312,7 +312,7 @@ const Preorder = () => {
 
                 <BodaButton
                   type="submit"
-                  variant="hero"
+                  variant="primary"
                   size="lg"
                   className="w-full"
                   disabled={selectedEditions.length === 0}
