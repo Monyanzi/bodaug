@@ -8,6 +8,7 @@ import tribes from "@/data/tribes.json";
 
 const tribesCollageImage = "/uganda-tribes-collage.jpg";
 
+// Tribes page component
 const Tribes = () => {
   const regions = useMemo(() => ["All", ...Array.from(new Set(tribes.map(t => t.region)))], []);
   const [activeFilter, setActiveFilter] = useState('All');
